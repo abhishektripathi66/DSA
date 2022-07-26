@@ -6,7 +6,8 @@ public class singledimensionarraytest {
 
     public static void main(String[] args) {
         
-        singledimensionarray sda = new singledimensionarray(4);
+        var sda = new singledimensionarray();
+        sda.init(4);
         System.out.println(Arrays.toString(sda.getarray()));
         sda.insert(0, 1);
         sda.insert(1, 2);

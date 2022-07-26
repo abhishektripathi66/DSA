@@ -7,10 +7,8 @@ public class singledimensionarray {
         return arr;
     }
 
-    public singledimensionarray(){
-        
-    }
-    public singledimensionarray(int sizeOfArray) {
+    
+    public void init(int sizeOfArray) {
         arr = new int[sizeOfArray];
         for(int i=0;i<sizeOfArray;i++){
             arr[i]=Integer.MIN_VALUE;
