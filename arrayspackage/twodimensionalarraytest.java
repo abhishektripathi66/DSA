@@ -11,6 +11,12 @@ public class twodimensionalarraytest {
         tda.insertelementinarray(1, 0, 2);
         tda.insertelementinarray(1, 1, 3);
         System.out.println(Arrays.deepToString(tda.arr));
+        tda.accesscell(1, 1);
+        tda.traverseArray();
+        tda.searchValue(3);
+        tda.searchValue(5);
+        tda.deletevalue(1, 1);
+        tda.traverseArray();
     }
     
 
