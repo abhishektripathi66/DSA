@@ -12,13 +12,13 @@ public class maxproduct {
     
     public static void main(String[] args) {
         maxproduct mp = new maxproduct();
-        mp.maxProduct(new int[]{10,20,30,40,50});
+        System.out.println(mp.maxProduct(new int[]{10,20,30,40,50}));
     }
 
     public String maxProduct(int[] intArray) {
         // TODO
         String out ="";
-        int prod =1;
+        int prod =0;
         for(int i=0;i<intArray.length;i++){
             for(int j=i+1;j<intArray.length;j++){
                 if((intArray[i]*intArray[j])>prod){
