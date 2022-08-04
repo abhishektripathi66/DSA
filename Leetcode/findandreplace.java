@@ -26,7 +26,7 @@ public class findandreplace {
         }
         
         public Boolean match(String str, String pattern){
-        
+            
             HashMap<Character, Character> hm = new HashMap<>();
             for(int i = 0; i < str.length(); i++){
                 if(!hm.containsKey(pattern.charAt(i))){
