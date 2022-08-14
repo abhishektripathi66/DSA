@@ -50,4 +50,39 @@ public class SinglyLinkedList{
     }
     size++;
  }
+
+ public void traverseLinkedList(Node head){
+        if(head==null){
+            System.out.println("The hea is null and there is no Linked List linked to it");
+            return;
+        }
+        
+            Node test = head;
+            while(test!=null){
+                System.out.print(test.value);
+                if(test.next!=null)
+                System.out.print("-->");
+                test=test.next;
+            }
+        System.out.println();
+ }
+
+ public boolean searchValueInLinkedList(int nodeValue){
+    if(head==null){
+        System.out.println("The Linked List is empty");
+        return false;
+    }
+            Node test = head; int i=0;
+            while(test!=null){
+                
+                if(test.value==nodeValue){
+                System.out.print(nodeValue+" is present at location "+i);
+                return true;
+                }
+                test=test.next;
+                i++;
+            }
+            System.out.println(nodeValue+" is not present in the linked list");
+            return false;
+ }
 }
