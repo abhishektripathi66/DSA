@@ -85,4 +85,58 @@ public class SinglyLinkedList{
             System.out.println(nodeValue+" is not present in the linked list");
             return false;
  }
+
+ public void deleteNode(int location){
+    if(head==null){
+        System.out.println("The Linked List is empty");
+        return ;
+    }
+    else if(location>size){
+        System.out.println("The number of nodes in the linked list is "+size);
+        return ;
+    }
+    else if(location == 1){
+        if(size == 1){
+            head = null; tail = null;
+        }
+        else{
+            head = head.next;
+        }
+    }
+    else if(location==size){
+        if(size == 1){
+            head = null; tail = null;
+        }
+        else{
+            Node test = head; 
+            while(test!=null){
+                
+                if(test.next==tail){
+                test.next=null;
+                tail=test;
+                return;
+                }
+                test=test.next;
+                
+            }
+        }
+    }
+    else{
+
+        Node test = head; int i=1;
+            while(test!=null){
+                
+                if(i==(location-1)){
+                Node ahead = test.next;
+                test.next=test.next.next;
+                ahead.next=null;
+                return;
+                }
+                test=test.next;
+                i++;
+                
+            }
+
+    }
+ }
 }
