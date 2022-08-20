@@ -17,5 +17,7 @@ public class testsinglelinkedlist {
         s.searchValueInLinkedList(10);
         s.deleteNode(4);
         s.traverseLinkedList(s.head);
+        s.deleteSingleLinkedList();
+        s.traverseLinkedList(s.head);
     }
 }
