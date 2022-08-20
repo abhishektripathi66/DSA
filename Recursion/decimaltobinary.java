@@ -2,7 +2,7 @@ public class decimaltobinary {
     
     public static void main(String[] args) {
         var d = new decimaltobinary();
-        System.out.println(d.dec2binary(8));
+        d.dec2binary(8);
     }
 
     public int dec2binary(int a) {
