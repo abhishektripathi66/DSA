@@ -53,7 +53,7 @@ public class SinglyLinkedList{
 
  public void traverseLinkedList(Node head){
         if(head==null){
-            System.out.println("The hea is null and there is no Linked List linked to it");
+            System.out.println("The head is null and there is no Linked List linked to it");
             return;
         }
         
@@ -138,5 +138,14 @@ public class SinglyLinkedList{
             }
 
     }
+ }
+
+ public void deleteSingleLinkedList(){
+    if(head==null) System.out.println("the single linked list is already empty");
+    else {
+        head=null;tail=null;
+        System.out.println("Single linked list is deleted");
+    }
+    return;
  }
 }
