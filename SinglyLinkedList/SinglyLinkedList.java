@@ -1,7 +1,5 @@
 package SinglyLinkedList;
 
-import org.w3c.dom.NodeList;
-
 public class SinglyLinkedList{
  public Node head;
  public Node tail;
