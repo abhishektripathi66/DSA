@@ -31,7 +31,7 @@ public class LongestSubstring {
     
     public static void main(String[] args) {
         var lss = new LongestSubstring();
-        System.out.println(lss.lengthOfLongestSubstring(s));
+        System.out.println(lss.lengthOfLongestSubstring("pwwkew"));
     }
 
     
