@@ -70,4 +70,24 @@ public class CircularSinglyLinkedList {
         System.out.println("All the elemenets are printed");
         System.out.println();
      }
+
+     public void findNodeInLinkedList(int nodevalue){
+        if(head==null){
+            System.out.println("There is no linked list present");
+            return;
+        }
+        Node test = head;
+        System.out.println("The elements are :");
+        System.out.println();
+        while(test.next!=head){
+            System.out.print(test.value);
+            test=test.next;
+            System.out.print("-->");
+            
+        }
+        System.out.println(test.value);
+        System.out.println();
+        System.out.println("All the elemenets are printed");
+        System.out.println();
+     }
 }
