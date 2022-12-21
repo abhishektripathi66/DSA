@@ -16,5 +16,8 @@ public class CircularSinglyLinkedListTest {
         csll.inserinLinkedlist(13,1);
         System.out.println("First value "+csll.head.value + " last value " +csll.tail.value);
         csll.traverseLinkedList();
+        System.out.println("value 10 is found : "+ csll.findNodeInLinkedList(10));
+        System.out.println("value 11 is found : "+ csll.findNodeInLinkedList(11));
+        System.out.println("value 14 is found : "+ csll.findNodeInLinkedList(14));
     }
 }
