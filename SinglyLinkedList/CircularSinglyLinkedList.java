@@ -71,23 +71,18 @@ public class CircularSinglyLinkedList {
         System.out.println();
      }
 
-     public void findNodeInLinkedList(int nodevalue){
+     public boolean findNodeInLinkedList(int nodevalue){
         if(head==null){
             System.out.println("There is no linked list present");
-            return;
+            return false;
         }
         Node test = head;
-        System.out.println("The elements are :");
-        System.out.println();
         while(test.next!=head){
-            System.out.print(test.value);
+            if(test.value == nodevalue) return true;
             test=test.next;
-            System.out.print("-->");
             
         }
-        System.out.println(test.value);
-        System.out.println();
-        System.out.println("All the elemenets are printed");
-        System.out.println();
+        if(test.value == nodevalue) return true;
+        return false;
      }
 }
