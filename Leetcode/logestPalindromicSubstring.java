@@ -1,4 +1,32 @@
-class logestPalindromicSubstring {
+package Leetcode;
+/**
+ * Given a string s, return the longest 
+palindromic
+ 
+substring
+ in s.
+
+ 
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+ 
+
+Constraints:
+
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+ */
+
+public class logestPalindromicSubstring {
+
     public String longestPalindrome(String s) {
         
          if (s.length() <= 1) {
@@ -33,5 +61,10 @@ class logestPalindromicSubstring {
         }
 
         return maxStr;
+    }
+
+    public static void main(String[] args) {
+        logestPalindromicSubstring lps = new logestPalindromicSubstring();
+        System.out.println(lps.longestPalindrome("babad"));
     }
 }
