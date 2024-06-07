@@ -31,12 +31,15 @@ class IncreasingTriplet {
         int a = Integer.MAX_VALUE;
         int b = Integer.MAX_VALUE;
         for(int num:nums){
+// used to get the first minimum value
             if(num<=a){
                 a=num;
             }
+// used to get the second minimum value
             else if(num<=b){
                 b=num;
             }
+// if found 3rd value then return true;
             else{
                 return true;
             }
