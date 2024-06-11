@@ -21,17 +21,18 @@ class SequenceSubset {
     public boolean isSubsequence(String s, String t) {
         int sp = 0;
         int tp = 0;
-
+        char[] sb = s.toCharArray();
+        char[] tb = t.toCharArray();
         // using two pointer
-        while (sp < s.length() && tp < t.length()) {
+        while (sp < sb.length && tp < tb.length) {
 
             // if it has the same character in both then increment s pointer along with t pointer else increment only t pointer
-            if (s.charAt(sp) == t.charAt(tp)) {
+            if (sb[sp] == tb[tp]) {
                 sp++;
             }
             tp++;
         }
 
-        return sp == s.length();        
+        return sp == s.length();         
     }
 }
