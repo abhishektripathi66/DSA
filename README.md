@@ -14,5 +14,5 @@ for NLP
 after configuring python run the command "pip install numpy"
 post that run "pip install nltk"
 
-[![Greetings](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml/badge.svg?branch=master)](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml)
+[![Greetings](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml)
 [![Labeler](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml)
