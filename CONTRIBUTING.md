@@ -1,4 +1,5 @@
 Contributing to [DSA](https://github.com/abhishektripathi66/DSA)
+
 Thank you for considering contributing to our DSA-focused Java project! We welcome contributions that improve the codebase, documentation, and algorithms. By following these guidelines, you help us maintain a high standard of quality and organization.
 
 Table of Contents
