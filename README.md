@@ -16,3 +16,4 @@ post that run "pip install nltk"
 
 [![Greetings](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml)
 [![Labeler](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml)
+[![CodeQL](https://github.com/abhishektripathi66/DSA/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/github-code-scanning/codeql)
