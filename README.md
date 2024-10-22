@@ -13,3 +13,5 @@ You can click the Preview link to take a look at your changes.
 for NLP
 after configuring python run the command "pip install numpy"
 post that run "pip install nltk"
+
+[![Greetings](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml/badge.svg?branch=master)](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml)
