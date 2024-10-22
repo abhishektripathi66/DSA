@@ -13,6 +13,7 @@ Coding Style
 Testing
 Commit Messages
 Pull Request Process
+License
 
 Code of Conduct
 Please review and follow our [Code of Conduct](https://github.com/abhishektripathi66/DSA/blob/master/CODE_OF_CONDUCT.md).
@@ -73,3 +74,6 @@ Submit a pull request with:
 A clear description of your changes.
 References to relevant issues, if any.
 Your PR will be reviewed, and feedback might be provided. Please be responsive to review comments.
+
+License
+By contributing to this repository, you agree that your contributions will be licensed under the [LICENSE](https://github.com/abhishektripathi66/DSA/blob/master/LICENSE) file in the repository.
