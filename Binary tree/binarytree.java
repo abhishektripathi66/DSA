@@ -74,6 +74,21 @@ public class binarytree {
         postOrderRec(root);
     }
 
+    // Level-order traversal: Root -> Level by Level
+    public void levelOrder() {
+        if (root == null) return;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node currentNode = queue.poll();
+            System.out.print(currentNode.nodedata + " ");
+            if (currentNode.left != null) queue.add(currentNode.left);
+            if (currentNode.right != null) queue.add(currentNode.right);
+        }
+    }
+
+
     private void postOrderRec(Node root) {
         if (root != null) {
             postOrderRec(root.left);
@@ -81,6 +96,56 @@ public class binarytree {
             System.out.print(root.nodedata + " ");
         }
     }
+
+    // Delete a node with the given data from the tree
+public void delete(int nodedata) {
+    root = deleteRec(root, nodedata);
+}
+
+private Node deleteRec(Node root, int nodedata) {
+    if (root == null) return root;
+
+    // Traverse the tree to find the node
+    if (nodedata < root.nodedata) {
+        root.left = deleteRec(root.left, nodedata);
+    } else if (nodedata > root.nodedata) {
+        root.right = deleteRec(root.right, nodedata);
+    } else {
+        // Node with only one child or no child
+        if (root.left == null) return root.right;
+        else if (root.right == null) return root.left;
+
+        // Node with two children: get the inorder successor
+        root.nodedata = minValue(root.right);
+        root.right = deleteRec(root.right, root.nodedata);
+    }
+    return root;
+}
+
+    // Helper method to find the minimum value in the subtree
+    private int minValue(Node root) {
+        int minValue = root.nodedata;
+        while (root.left != null) {
+            minValue = root.left.nodedata;
+            root = root.left;
+        }
+        return minValue;
+        }
+
+    // Calculate the height of the tree
+public int height() {
+    return height(root);
+}
+    
+
+private int height(Node node) {
+    if (node == null) return 0;
+    int leftHeight = height(node.left);
+    int rightHeight = height(node.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+}
+
+
 
     // Search for a value in the binary tree
     public boolean search(int nodedata) {
@@ -125,6 +190,16 @@ public class binarytree {
 
         System.out.println("\n\nPost-order traversal:");
         tree.postOrder(); // Output: 20 40 30 60 80 70 50
+
+        System.out.println("\n\nLevel-order traversal:");
+        tree.levelOrder(); // Output: 50 30 70 20 40 60 80
+        System.out.println("\n\nTree height: " + tree.height()); // Expected output: Height of tree
+
+
+        System.out.println("\n\nDeleting 20:");
+tree.delete(20);
+tree.inOrder(); // Expected output (without 20): 30 40 50 60 70 80
+
 
         // Searching for an element in the tree
         System.out.println("\n\nSearch for 60: " + tree.search(60)); // Output: true
