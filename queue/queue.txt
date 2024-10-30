@@ -1,0 +1,44 @@
+A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. This means that the first element added to the queue will be the first one to be removed. It's similar to a real-world queue, such as people standing in line: the person who gets in line first will be served first.
+
+Key Operations of a Queue:
+Enqueue: This operation adds an element to the end (rear) of the queue.
+Dequeue: This operation removes an element from the front of the queue.
+Peek: This operation allows you to look at the front element of the queue without removing it.
+IsEmpty: This checks if the queue is empty.
+IsFull: In cases where the queue has a fixed capacity, this checks if the queue is full.
+Traverse: This allows you to go through all the elements in the queue and display them in order.
+Queue Example:
+Imagine a line of people waiting at a coffee shop:
+
+Enqueue: When a person joins the line, they are added to the rear.
+Dequeue: When a person gets served, they leave from the front of the line.
+Peek: You can check who is at the front of the line without removing them.
+Types of Queues:
+Simple Queue (Linear Queue):
+
+The basic form of the queue where elements are added at the rear and removed from the front.
+Once an element is dequeued, the space it occupied cannot be reused, which may lead to inefficiency.
+Circular Queue:
+
+In a circular queue, the last position is connected back to the first, forming a circle.
+This allows for better space utilization, as the positions of dequeued elements can be reused.
+Priority Queue:
+
+In a priority queue, each element has a priority. Elements with higher priority are dequeued before elements with lower priority, regardless of their order of entry.
+Deque (Double-Ended Queue):
+
+This is a more advanced version where elements can be added or removed from both ends (front and rear).
+Queue Representation:
+Queues can be implemented using:
+
+Arrays: A fixed-size array is used to store elements. Circular queues are often implemented using arrays to reuse space efficiently.
+Linked Lists: In this implementation, each element (node) points to the next, and both front and rear pointers are maintained for efficient enqueue and dequeue operations.
+Queue Operations Complexity:
+Enqueue: O(1) (constant time) if there's space available.
+Dequeue: O(1) (constant time) since we directly remove from the front.
+Peek: O(1) (constant time) to look at the front element.
+Real-world Applications of Queues:
+Task Scheduling: Queues are used in operating systems to manage processes (e.g., in multi-tasking systems, the CPU schedules tasks using a queue).
+Print Queue: When multiple print jobs are sent to a printer, they are queued up and handled in the order they arrive.
+Breadth-First Search (BFS) in graph traversal: The queue is used to explore the graph level by level.
+Customer Service Systems: Queues are used in customer support systems where calls or requests are processed in the order they are received.
