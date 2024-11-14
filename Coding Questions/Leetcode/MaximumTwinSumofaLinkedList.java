@@ -22,8 +22,20 @@ Given the head of a linked list with even length, return the maximum twin sum of
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+
+import java.util.*;
+
+ class ListNode {
+         int val;
+         ListNode next;
+         ListNode() {}
+         ListNode(int val) { this.val = val; }
+         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     }
+
 /** My Solution **/
-class Solution {
+public class MaximumTwinSumofaLinkedList {
     public int pairSum(ListNode head) {
         List<Integer> a = new ArrayList<>();
         while(head!=null){
@@ -42,7 +54,7 @@ class Solution {
 }
 
 /** best solution **/
-class Solution {
+class Solution1 {
     private static int [] a = new int[100000];
     public int pairSum(ListNode head) {
 

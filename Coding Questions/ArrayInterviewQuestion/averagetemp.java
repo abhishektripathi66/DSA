@@ -1,5 +1,3 @@
-package arrayproject;
-
 import java.util.Scanner;
 
 public class averagetemp {

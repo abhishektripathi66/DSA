@@ -1,3 +1,6 @@
+package queue;
+
+
 // Queue class implemented using an array
 public class Queue {
     int[] queue;
