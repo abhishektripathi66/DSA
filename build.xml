@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+<project name = "fax" basedir = "." default = "build">
+   <property name = "src.dir" value = "/src"/>
+   <property name = "web.dir" value = "/builds"/>
+   <property name = "build.dir" value = "${web.dir}/WEB-INF/classes"/>
+   <property name = "name" value = "DSA"/>
+
+   <path id = "master-classpath">
+      <fileset dir = "${web.dir}/WEB-INF/lib">
+         <include name = "*.jar"/>
+      </fileset>
+      
+      <pathelement path = "${build.dir}"/>
+   </path>
+
+   <target name = "build" description = "Compile source tree java files">
+      <mkdir dir = "${build.dir}"/>
+      
+      <javac destdir = "${build.dir}" source = "1.5" target = "1.5">
+         <src path = "${src.dir}"/>
+         <classpath refid = "master-classpath"/>
+      </javac>
+   </target>
+ 
+   <target name = "clean" description = "Clean output directories">
+      <delete>
+         <fileset dir = "${build.dir}">
+            <include name = "**/*.class"/>
+         </fileset>
+      </delete>
+   </target>
+</project>
