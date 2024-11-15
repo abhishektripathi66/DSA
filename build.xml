@@ -1,7 +1,7 @@
 <?xml version = "1.0"?>
 <project name = "fax" basedir = "." default = "build">
-   <property name = "src.dir" value = "/src"/>
-   <property name = "web.dir" value = "/builds"/>
+   <property name = "src.dir" value = "/home/runner/work/DSA/DSA/src"/>
+   <property name = "web.dir" value = "/home/runner/work/DSA/DSA/builds"/>
    <property name = "build.dir" value = "${web.dir}/WEB-INF/classes"/>
    <property name = "name" value = "DSA"/>
 
