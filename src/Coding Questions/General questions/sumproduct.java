@@ -8,9 +8,9 @@ public class sumproduct {
             System.out.println(Arrays.toString(b));
             int[] a = {1,2,3,4,5,6,7,8,9,10};
             var sp = new sumproduct();
-            // sp.sumandproduct(a);
-            // sp.pairarray(a);
-            // sp.revresearray2(a);
+            sp.sumandproduct(a);
+            sp.pairarray(a);
+            sp.revresearray2(a);
         }
 
         public void sumandproduct(int[] a ) {

@@ -29,7 +29,7 @@ public class subset {
                          source[ch-'a']++;
                      }
                      
-                     if(subset(source,target)){
+                     if(subsets(source,target)){
                          result.add(word);
                      }
                  }
@@ -37,7 +37,7 @@ public class subset {
                  return result;
              }
              
-             private boolean subset(int[] parent,int[] child){
+             private boolean subsets(int[] parent,int[] child){
                  for(int i=0;i<26;i++){
                      if(parent[i]<child[i]) return false;
                  }

@@ -1,6 +1,5 @@
 package ArrayInterviewQuestion;
 
-import java.lang.reflect.Method;
 import java.util.Arrays;
 
 //Write a program to find all pairs of integers whose sum is equal to a given number.

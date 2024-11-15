@@ -15,7 +15,7 @@ public class MedianOfTwoArrays {
         else if((i==0 && j==1)){
             return nums2[0];
         }
-        int max = Math.max(i,j);
+        // int max = Math.max(i,j);
         int sum=i+j;
         int[] finals = new int[sum];
         int l=0;

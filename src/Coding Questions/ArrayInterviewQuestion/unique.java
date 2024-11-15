@@ -17,7 +17,7 @@ public class unique {
     }
 
     public boolean isUnique(int[] intArray) {
-        // TODO
+        
         for(int i=0;i<intArray.length;i++){
             for(int j=i+1;j<intArray.length;j++){
                 if(intArray[i]==intArray[j]) return false;
@@ -27,8 +27,8 @@ public class unique {
     }
 
     public boolean isUnique2(int[] intArray) {
-        // TODO
-        HashSet set = new HashSet<>();
+        
+        HashSet<Integer> set = new HashSet<>();
         for(int i=0;i<intArray.length;i++){
             if(!set.add(intArray[i])) return false;
         }

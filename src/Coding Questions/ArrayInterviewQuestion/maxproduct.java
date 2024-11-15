@@ -16,7 +16,6 @@ public class maxproduct {
     }
 
     public String maxProduct(int[] intArray) {
-        // TODO
         String out ="";
         int prod =0;
         for(int i=0;i<intArray.length;i++){

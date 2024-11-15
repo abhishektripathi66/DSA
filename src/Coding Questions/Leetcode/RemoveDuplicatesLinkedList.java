@@ -3,13 +3,12 @@ import DS.ListNode;
 public class RemoveDuplicatesLinkedList {
     
     public static void main(String[] args) {
-        var rdll = new RemoveDuplicatesLinkedList();
+         new RemoveDuplicatesLinkedList();
         
     }
 
     public ListNode deleteDuplicates(ListNode head) {
-        //Assigning minimum value to a variable
-        int val =Integer.MIN_VALUE;
+        
         // getting the head to a variable
         ListNode test = head;
         // having the head after getting first element with its next element
