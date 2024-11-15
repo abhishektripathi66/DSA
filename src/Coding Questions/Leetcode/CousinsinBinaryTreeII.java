@@ -28,7 +28,7 @@ Note that the depth of a node is the number of edges in the path from the root n
  *     }
  * }
  */
-class Solution {
+public class CousinsinBinaryTreeII {
     public TreeNode replaceValueInTree(TreeNode root) {
         dfs(new TreeNode[] {root});
         root.val = 0;

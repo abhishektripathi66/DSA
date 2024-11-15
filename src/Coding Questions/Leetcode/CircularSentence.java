@@ -18,7 +18,7 @@ For example, "leetcode exercises sound delightful", "eetcode", "leetcode eats so
 
 Given a string sentence, return true if it is circular. Otherwise, return false.
   **/
-class Solution {
+public class CircularSentence {
     public boolean isCircularSentence(String sentence) {
         if(sentence == null ){
             return false;

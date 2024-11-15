@@ -11,7 +11,7 @@ Given a string s, delete the minimum possible number of characters from s to mak
 
 Return the final string after the deletion. It can be shown that the answer will always be unique.
   **/
-class Solution {
+public class DeleteCharacterstoMakeFancyString {
     public String makeFancyString(String s) {
 
         if(s==null || s.length()<3) return s;

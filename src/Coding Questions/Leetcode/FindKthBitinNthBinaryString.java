@@ -19,7 +19,7 @@ S3 = "0111001"
 S4 = "011100110110001"
 Return the kth bit in Sn. It is guaranteed that k is valid for the given n.
   **/
-class Solution {
+public class FindKthBitinNthBinaryString {
     public char findKthBit(int n, int k) {
         // Base case: When n = 1, the binary string is "0"
         if (n == 1) return '0';

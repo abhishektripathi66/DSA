@@ -7,7 +7,7 @@ Companies
 Hint
 Given a m * n matrix of ones and zeros, return how many square submatrices have all ones.
   **/
-class Solution {
+public class CountSquareSubmatriceswithAllOnes {
     public int countSquares(int[][] matrix) {
         // Get dimensions of the matrix
         int n = matrix.length;    // number of rows

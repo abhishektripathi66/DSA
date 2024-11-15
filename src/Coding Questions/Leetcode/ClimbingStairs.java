@@ -1,4 +1,3 @@
-package Leetcode;
 
 public class ClimbingStairs {
     

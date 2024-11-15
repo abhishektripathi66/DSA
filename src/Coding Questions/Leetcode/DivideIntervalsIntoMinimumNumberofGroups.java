@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
 
 2406. Divide Intervals Into Minimum Number of Groups
@@ -14,7 +16,7 @@ Return the minimum number of groups you need to make.
 
 Two intervals intersect if there is at least one common number between them. For example, the intervals [1, 5] and [5, 8] intersect.
   **/
-class Solution {
+public class DivideIntervalsIntoMinimumNumberofGroups {
         public int minGroups(int[][] intervals) {
                 int n = intervals.length;
                 int[] start_times = new int[n]; 

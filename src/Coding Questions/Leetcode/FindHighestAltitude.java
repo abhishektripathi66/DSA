@@ -1,4 +1,4 @@
-//**
+/**
 
 There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
@@ -17,9 +17,9 @@ Input: gain = [-4,-3,-2,-1,4,3,2]
 Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
  
-**//
+**/
 
-  class FindHighestAltitude {
+ public class FindHighestAltitude {
     public int largestAltitude(int[] gain) {
        int max=0;
        int sum=0;

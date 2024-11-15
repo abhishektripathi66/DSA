@@ -27,7 +27,7 @@ If the node is found, delete the node.
  * }
  */
 
-class Solution {
+public class DeleteNodeinaBST{
     public TreeNode deleteNode(TreeNode root, int key) {
         //search
         if(root == null ) {

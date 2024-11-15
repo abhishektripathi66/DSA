@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
 
 432. All O`one Data Structure
@@ -7,9 +9,9 @@ Topics
 Companies
 Design a data structure to store the strings' count with the ability to return the strings with minimum and maximum counts.
 
-Implement the AllOne class:
+Implement the AllODataStructre432 class:
 
-AllOne() Initializes the object of the data structure.
+AllODataStructre432() Initializes the object of the data structure.
 inc(String key) Increments the count of the string key by 1. If key does not exist in the data structure, insert it with count 1.
 dec(String key) Decrements the count of the string key by 1. If the count of key is 0 after the decrement, remove it from the data structure. It is guaranteed that key exists in the data structure before the decrement.
 getMaxKey() Returns one of the keys with the maximal count. If no element exists, return an empty string "".
@@ -18,7 +20,7 @@ Note that each function must run in O(1) average time complexity.
 
   **/
 
-public class Node {
+ class Node {
     String key;
     int count;
     Node next;
@@ -31,12 +33,12 @@ public class Node {
         prev = null;
     }
 }
-class AllODataStructre432 {
-    private HashMap<String, Node> nodes = new HashMap();
+public class AllODataStructre432 {
+    private HashMap<String, Node> nodes = new HashMap<>();
     Node head;
     Node tail;
 
-    public AllOne() {
+    public AllODataStructre432() {
         head = new Node("", -1);
         tail = new Node("", Integer.MAX_VALUE);
         head.next = tail;
@@ -117,8 +119,8 @@ class AllODataStructre432 {
 }
 
 /**
- * Your AllOne object will be instantiated and called as such:
- * AllOne obj = new AllOne();
+ * Your AllODataStructre432 object will be instantiated and called as such:
+ * AllODataStructre432 obj = new AllODataStructre432();
  * obj.inc(key);
  * obj.dec(key);
  * String param_3 = obj.getMaxKey();

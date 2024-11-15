@@ -1,4 +1,4 @@
-package Leetcode;
+
 /*
  *
  * You are given an array of unique integers salary where salary[i] is the salary of the ith employee.

@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
 
 2352. Equal Row and Column Pairs
@@ -14,7 +16,7 @@ A row and column pair is considered equal if they contain the same elements in t
 **/
 
 
-class EqualRowColumn {
+public class EqualRowColumn {
 
   // My solution
     public int equalPairs(int[][] grid) {
