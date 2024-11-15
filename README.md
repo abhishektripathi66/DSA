@@ -7,7 +7,6 @@ all the algorithm related items are present in the Algorithm folder
 The interview related questions and its solution from different coding websites are in the Coding Questions.
 
 - 👋 Hi, I’m Abhishek Tripathi(@abhishektripathi66)
-- 👀 I’m interested in Java, DSA, Python, Springboot
 - 💞️ I’m looking to collaborate on DSA
 - 📫 How to reach me (mail @ abhishekji66@gmail.com)
 
