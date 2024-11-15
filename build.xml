@@ -14,6 +14,7 @@
    </path>
 
    <target name = "build" description = "Compile source tree java files">
+   <echo>${user.dir}</echo>
       <mkdir dir = "${build.dir}"/>
       
       <javac destdir = "${build.dir}" source = "1.5" target = "1.5">
