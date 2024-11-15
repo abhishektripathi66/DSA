@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
  * 
  * 1402. Reducing Dishes

@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
 1541. Minimum Insertions to Balance a Parentheses String
 Solved
@@ -44,7 +46,7 @@ class Solution {
 
 //with stack
 
-class Solution {
+class Solution1 {
     public int minInsertions(String s) {
         Stack<Character> stack=new Stack<>();
         int count=0;

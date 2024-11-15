@@ -1,5 +1,3 @@
-package Leetcode;
-
 public class StringtoInt {
     
     public static void main(String[] args) {

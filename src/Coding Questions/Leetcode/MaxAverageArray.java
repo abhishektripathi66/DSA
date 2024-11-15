@@ -1,4 +1,4 @@
-//**
+/**
 
 You are given an integer array nums consisting of n elements, and an integer k.
 
@@ -16,7 +16,7 @@ Example 2:
 Input: nums = [5], k = 1
 Output: 5.00000
 
-**//
+**/
 
 
 class MaxAverageArray {

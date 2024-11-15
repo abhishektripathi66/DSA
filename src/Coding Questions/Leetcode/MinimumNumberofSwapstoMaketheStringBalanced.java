@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
 1963. Minimum Number of Swaps to Make the String Balanced
 Solved
@@ -38,7 +40,7 @@ class Solution {
 
 // math soltuion
 // Approach - 02 [ Math - derived from above ]
-class Solution {
+class Solution1 {
     public int minSwaps(String s) {
         int girl = 0, boys = 0;
 
@@ -67,7 +69,7 @@ class Solution {
 
 //stack solution
 // Approach - 01 [ Stack ]
-class Solution {
+class Solution2 {
     public int minSwaps(String s) {
         Stack<Character> stack = new Stack<>();
 

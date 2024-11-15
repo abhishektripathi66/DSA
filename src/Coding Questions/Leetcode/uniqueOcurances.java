@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
 /**
  * 1207. Unique Number of Occurrences
 Solved

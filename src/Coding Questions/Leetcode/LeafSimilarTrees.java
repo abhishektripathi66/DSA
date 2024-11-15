@@ -7,6 +7,10 @@ Companies
 Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
 
 **/
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

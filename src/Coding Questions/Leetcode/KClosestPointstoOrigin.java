@@ -11,6 +11,9 @@ The distance between two points on the X-Y plane is the Euclidean distance (i.e.
 You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
 
  **/
+
+import java.util.Arrays;
+
 /** Mys soluion */
 class Solution {
     public int[][] kClosest(int[][] points, int k) {
@@ -40,7 +43,7 @@ class Solution {
 }
 
 /** best solution */
-class Solution {
+class Solution1 {
     public int[][] kClosest(int[][] points, int k) {
         int smallestK = quickSelect(points, 0, points.length - 1, k);
         return Arrays.copyOfRange(points, 0, smallestK);

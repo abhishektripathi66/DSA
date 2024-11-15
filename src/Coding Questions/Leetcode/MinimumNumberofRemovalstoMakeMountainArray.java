@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
 1671. Minimum Number of Removals to Make Mountain Array
 Solved

@@ -1,4 +1,4 @@
-package Leetcode;
+
 /**
 Runtime: 1 ms, faster than 72.47% of Java online submissions for Remove Nth Node From End of List.
 Memory Usage: 42.7 MB, less than 16.51% of Java online submissions for Remove Nth Node From End of List.

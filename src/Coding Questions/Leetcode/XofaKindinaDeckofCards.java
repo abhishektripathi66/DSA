@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
 914. X of a Kind in a Deck of Cards
 Solved

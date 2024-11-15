@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 /**
 1106. Parsing A Boolean Expression
 Solved
@@ -16,7 +18,7 @@ Given a string expression that represents a boolean expression, return the evalu
 
 It is guaranteed that the given expression is valid and follows the given rules.
   **/
-public class Solution {
+public class ParsingABooleanExpression {
 
     public boolean parseBoolExpr(String expression) {
         Stack<Character> st = new Stack<>();

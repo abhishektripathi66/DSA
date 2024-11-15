@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
 1233. Remove Sub-Folders from the Filesystem
 Solved

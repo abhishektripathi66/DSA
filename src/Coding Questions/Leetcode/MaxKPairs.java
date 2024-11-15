@@ -1,4 +1,6 @@
-//**
+import java.util.Arrays;
+
+/**
 
 You are given an integer array nums and an integer k.
 
@@ -31,7 +33,7 @@ Constraints:
 1 <= nums[i] <= 109
 1 <= k <= 109
 
-**//
+**/
 
 class MaxKPairs {
     public int maxOperations(int[] nums, int k) {

@@ -11,6 +11,10 @@ Return the smallest level x such that the sum of all the values of nodes at leve
   **/
 
 // Using Arrays
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -75,7 +79,7 @@ class Solution {
  *     }
  * }
  */
-class Solution {
+class Solution1 {
     int maxSum;
     int levels;
     Map<Integer,Integer> m = new HashMap<>();

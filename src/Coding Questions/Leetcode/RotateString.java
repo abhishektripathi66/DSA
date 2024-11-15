@@ -32,7 +32,7 @@ class Solution {
 }
 
 //fast solution
-class Solution {
+class Solution1 {
     public boolean rotateString(String s, String goal) {
         if(s.length()!=goal.length())
         return false;

@@ -1,4 +1,4 @@
-//**
+/**
 
 Given a string s, reverse only all the vowels in the string and return it.
 
@@ -15,7 +15,7 @@ Example 2:
 Input: s = "leetcode"
 Output: "leotcede"
 
-**//
+**/
 
 class ReverseVowels {
     public String reverseVowels(String s) {

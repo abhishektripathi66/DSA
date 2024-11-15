@@ -14,6 +14,10 @@ Return the length of the longest square streak in nums, or return -1 if there is
 A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
   **/
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
 Intuition
 The problem involves finding the longest "square streak" in a list of numbers, where each number in a streak is the square of the previous number. Observing the problem, one might realize that if we can store and reference each square root's streak length, we can build up streaks efficiently by iterating over a sorted list of numbers.
