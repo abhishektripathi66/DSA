@@ -1,4 +1,4 @@
-DSA repo
+**DSA repo**
 
 This repo is used for adding the DSA related stuffs
 
@@ -11,7 +11,8 @@ The interview related questions and its solution from different coding websites 
 - 📫 How to reach me (mail @ abhishekji66@gmail.com)
 
 This is the structure of the Project where we would be able to find the required solutions and even add the new solutions at the same place.
-Src
+
+-Src
     - Algorithm
         - Depth First Search
     - Coding Questions
@@ -28,7 +29,7 @@ Src
         - Doubly Linked List
         - Queue
         - Singly Linked List
-        
+
 [![Greetings](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/greetings.yml)
 [![Labeler](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/labeler.yml)
 [![CodeQL](https://github.com/abhishektripathi66/DSA/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/github-code-scanning/codeql)
