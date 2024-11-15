@@ -15,7 +15,7 @@ You can change any character in s to 0 or 1.
 
 Return the minimum number of changes required to make the string s beautiful.
   **/
-class Solution {
+public class MinimumNumberofChangestoMakeBinaryStringBeautiful {
     public int minChanges(String s) {
         int count = 0;
         for (int i = 0; i < s.length() - 1; i += 2) {

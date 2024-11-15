@@ -33,7 +33,7 @@ Output: [true,false,true]
 
 **/
 
-class MaxCandies {
+public class MaxCandies {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
        ArrayList<Boolean> ans=new ArrayList<>();
        int max=0;

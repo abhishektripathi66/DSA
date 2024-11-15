@@ -20,7 +20,7 @@ Return the minimum number of insertions needed to make s balanced.
   **/
 //without stack
 
-class Solution {
+public class MinimumInsertionstoBalanceaParenthesesString {
     public int minInsertions(String s) {
         int count=0;
         int open=0;
@@ -46,7 +46,7 @@ class Solution {
 
 //with stack
 
-class Solution1 {
+class MinimumInsertionstoBalanceaParenthesesString1 {
     public int minInsertions(String s) {
         Stack<Character> stack=new Stack<>();
         int count=0;

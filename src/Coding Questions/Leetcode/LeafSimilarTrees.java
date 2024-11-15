@@ -11,6 +11,8 @@ Consider all the leaves of a binary tree, from left to right order, the values o
 import java.util.ArrayList;
 import java.util.List;
 
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -26,7 +28,7 @@ import java.util.List;
  *     }
  * }
  */
-class Solution {
+public class LeafSimilarTrees {
     
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         

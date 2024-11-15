@@ -35,7 +35,7 @@ Constraints:
 
 **/
 
-class MaxKPairs {
+public class MaxKPairs {
     public int maxOperations(int[] nums, int k) {
         int res=0;
         int l=0;

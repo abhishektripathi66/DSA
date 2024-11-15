@@ -15,7 +15,7 @@ For example, if s = "()))", you can insert an opening parenthesis to be "(()))" 
 Return the minimum number of moves required to make s valid.
 
  **/
-class Solution {
+public class ValidParanthesis {
     public int minAddToMakeValid(String s) {
         int forward =0;
         int mismatch=0;

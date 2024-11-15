@@ -20,7 +20,7 @@ Output: ""
 
 **/
 
-class StringGCD {
+public class StringGCD {
      public String gcdOfStrings(String str1, String str2) {
         // Check if concatenated strings are equal or not, if not return ""
         if (!(str1 + str2).equals(str2 + str1))

@@ -25,7 +25,7 @@ Output: [0,0,9,0,0]
 
 
 
-class ProductArray {
+public class ProductArray {
     public int[] productExceptSelf(int[] nums) {
         
         int[] arr = new int[nums.length];

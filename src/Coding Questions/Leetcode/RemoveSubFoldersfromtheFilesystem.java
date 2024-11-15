@@ -17,7 +17,7 @@ The format of a path is one or more concatenated strings of the form: '/' follow
 
 For example, "/leetcode" and "/leetcode/problems" are valid paths while an empty string and "/" are not.
   **/
-class Solution {
+public class RemoveSubFoldersfromtheFilesystem {
     public List<String> removeSubfolders(String[] folder) {
         // Sort the folders lexicographically so parent folders come before their subfolders
         Arrays.sort(folder);

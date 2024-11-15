@@ -44,7 +44,7 @@ Map Setup: A map mp tracks the length of streaks associated with each number.
 Square Check and Update: For each number, we check if it’s a perfect square and if its square root has a streak in the map, extending that streak if both conditions are met. Otherwise, we initialize a new streak.
 Result Calculation: The maximum streak length is updated continuously, so at the end, res contains the length of the longest square streak.
   **/
-class Solution {
+public class LongestSquareStreakinanArray {
     public int longestSquareStreak(int[] nums) {
         Map<Integer, Integer> mp = new HashMap<>();
         Arrays.sort(nums);

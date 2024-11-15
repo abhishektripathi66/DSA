@@ -43,7 +43,7 @@ Space complexity:
     O(1)
  **/
 
-class Solution {
+public class MinimizedMaximumofProductsDistributedtoAnyStore {
     private boolean solve(int n, int[] quantities, int item) {
         if (item == 0) return false;
         int store = 0;

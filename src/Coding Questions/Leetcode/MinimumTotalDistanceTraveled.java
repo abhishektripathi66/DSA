@@ -29,7 +29,7 @@ If two robots move in opposite directions and they meet at some point, they do n
 If a robot passes by a factory that reached its limits, it crosses it as if it does not exist.
 If the robot moved from a position x to a position y, the distance it moved is |y - x|.
   **/
-class Solution {
+public class MinimumTotalDistanceTraveled {
     public long minimumTotalDistance(List<Integer> robot, int[][] factory) {
         // Sort robots and factories by position for optimal assignment
         Collections.sort(robot);

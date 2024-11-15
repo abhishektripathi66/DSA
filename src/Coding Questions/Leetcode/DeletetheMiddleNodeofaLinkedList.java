@@ -1,3 +1,5 @@
+import DS.ListNode;
+
 /**
 2095. Delete the Middle Node of a Linked List
 Solved

@@ -18,7 +18,7 @@ The larger the element, the larger the rank. If two elements are equal, their ra
 Rank should be as small as possible.
 
   **/
-class Solution {
+public class RankTransform {
     public int[] arrayRankTransform(int[] arr) {
         int n = arr.length,i=0;
         TreeMap<Integer,Integer> map = new TreeMap<>();

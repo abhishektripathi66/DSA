@@ -26,7 +26,7 @@ nums[i] is either 0 or 1.
 
 **/
 
-class MaxConsecutive {
+public class MaxConsecutive {
     public int longestOnes(int[] nums, int k) {
         
         int left = 0, right = 0, max = 0, kc = k;

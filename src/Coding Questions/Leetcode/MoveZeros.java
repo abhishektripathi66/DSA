@@ -16,7 +16,7 @@ Input: nums = [0]
 Output: [0]
 **/
 
-class MoveZeros {
+public class MoveZeros {
     public void moveZeroes(int[] nums) {
         int k=0;
         for(int i=0;i<nums.length;i++){

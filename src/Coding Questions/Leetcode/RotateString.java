@@ -10,7 +10,7 @@ A shift on s consists of moving the leftmost character of s to the rightmost pos
 
 For example, if s = "abcde", then it will be "bcdea" after one shift.
   **/
-class Solution {
+public class RotateString {
     public boolean rotateString(String s, String goal) {
         
         int i=0;
@@ -32,7 +32,7 @@ class Solution {
 }
 
 //fast solution
-class Solution1 {
+class RotateString1 {
     public boolean rotateString(String s, String goal) {
         if(s.length()!=goal.length())
         return false;

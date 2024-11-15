@@ -13,7 +13,7 @@ From a cell (row, col), you can move to any of the cells: (row - 1, col + 1), (r
 Return the maximum number of moves that you can perform.
 
  **/
-class Solution {
+public class MaximumNumberofMovesinaGrid {
     public int maxMoves(int[][] grid) {
         // Get dimensions of the grid
         int m = grid.length;    // number of rows

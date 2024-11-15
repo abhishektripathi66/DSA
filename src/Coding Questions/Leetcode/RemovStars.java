@@ -22,7 +22,7 @@ It can be shown that the resulting string will always be unique.
  
 **/
 
-class Solution {
+public class RemovStars {
     public String removeStars(String s) {
         Stack<Character> st = new Stack<>();
         for(int i=0;i<s.length();i++){

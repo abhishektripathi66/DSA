@@ -15,7 +15,7 @@ It is guaranteed that every call to ping uses a strictly larger value of t than 
 
   */
 
-class RecentCounter {
+public class RecentCounter {
     private static final int[] records = new int[10000]; //
     private int start;
     private int end;

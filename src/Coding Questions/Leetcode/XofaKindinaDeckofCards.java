@@ -16,7 +16,7 @@ All the cards in one group have the same integer written on them.
 Return true if such partition is possible, or false otherwise.
 
  */
-class Solution {
+public class XofaKindinaDeckofCards {
     public boolean hasGroupsSizeX(int[] deck) {
         if(deck.length<2) return false;
         Map<Integer,Integer> a = new HashMap<>();

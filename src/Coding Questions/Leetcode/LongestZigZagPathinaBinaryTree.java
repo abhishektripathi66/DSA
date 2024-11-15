@@ -19,6 +19,8 @@ Return the longest ZigZag path contained in that tree.
 
  **/
 
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -34,7 +36,7 @@ Return the longest ZigZag path contained in that tree.
  *     }
  * }
  */
-class Solution {
+public class LongestZigZagPathinaBinaryTree {
     int count=0;
     public int longestZigZag(TreeNode root) {
         

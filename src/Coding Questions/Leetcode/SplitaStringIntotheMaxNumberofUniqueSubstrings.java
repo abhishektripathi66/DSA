@@ -14,7 +14,7 @@ You can split string s into any list of non-empty substrings, where the concaten
 
 A substring is a contiguous sequence of characters within a string.
   **/
-class Solution {
+public class SplitaStringIntotheMaxNumberofUniqueSubstrings {
     public int maxUniqueSplit(String s) {
         return backtrack(s, 0, new HashSet<>());
     }

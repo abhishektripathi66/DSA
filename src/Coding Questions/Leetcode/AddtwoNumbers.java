@@ -8,6 +8,9 @@ Runtime: 4 ms, faster than 37.54% of Java online submissions for Add Two Numbers
 Memory Usage: 48.3 MB, less than 21.62% of Java online submissions for Add Two Numbers.
  * 
  */
+
+import DS.ListNode;
+
 public class AddtwoNumbers {
     
     public static void main(String[] args) {

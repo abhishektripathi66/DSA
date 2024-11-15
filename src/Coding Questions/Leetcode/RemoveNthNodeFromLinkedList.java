@@ -1,3 +1,4 @@
+import DS.ListNode;
 
 /**
 Runtime: 1 ms, faster than 72.47% of Java online submissions for Remove Nth Node From End of List.

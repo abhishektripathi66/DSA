@@ -17,7 +17,7 @@ Given two strings, word1 and word2, return true if word1 and word2 are close, an
 
 **/
 
-class Solution {
+public class StringClose {
     public boolean closeStrings(String word1, String word2) {
          int arr1[] = new int[26];
         int arr2[] = new int[26];

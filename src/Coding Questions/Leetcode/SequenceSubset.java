@@ -17,7 +17,7 @@ Output: false
 
 **/
 
-class SequenceSubset {
+public class SequenceSubset {
     public boolean isSubsequence(String s, String t) {
         int sp = 0;
         int tp = 0;

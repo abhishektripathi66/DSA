@@ -15,6 +15,8 @@ Return the smallest level x such that the sum of all the values of nodes at leve
 import java.util.HashMap;
 import java.util.Map;
 
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -30,7 +32,7 @@ import java.util.Map;
  *     }
  * }
  */
-class Solution {
+public class MaximumLevelSumofaBinaryTree {
     int maxSum;
     int levels;
     int[] arrSum = new int[10001];

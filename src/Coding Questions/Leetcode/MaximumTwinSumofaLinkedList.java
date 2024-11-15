@@ -26,13 +26,7 @@ Given the head of a linked list with even length, return the maximum twin sum of
 
 import java.util.*;
 
- class ListNode {
-         int val;
-         ListNode next;
-         ListNode() {}
-         ListNode(int val) { this.val = val; }
-         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     }
+import DS.ListNode;
 
 /** My Solution **/
 public class MaximumTwinSumofaLinkedList {
@@ -54,7 +48,7 @@ public class MaximumTwinSumofaLinkedList {
 }
 
 /** best solution **/
-class Solution1 {
+class MaximumTwinSumofaLinkedList1 {
     private static int [] a = new int[100000];
     public int pairSum(ListNode head) {
 

@@ -19,7 +19,7 @@ Output: 5.00000
 **/
 
 
-class MaxAverageArray {
+public class MaxAverageArray {
     public double findMaxAverage(int[] nums, int k) {
       
       double sum = Integer.MIN_VALUE;

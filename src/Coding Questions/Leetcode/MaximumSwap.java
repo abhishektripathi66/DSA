@@ -13,7 +13,7 @@ Return the maximum valued number you can get.
 
 
   **/
-class Solution {
+public class MaximumSwap {
     public int maximumSwap(int num) {
         List<Integer>arr = new ArrayList<>();
         int x = num;

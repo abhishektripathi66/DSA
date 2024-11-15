@@ -49,7 +49,7 @@ Time complexity: O(n)
 Space complexity: O(1)
 
   **/
-class Solution {
+public class RotateArray {
     public void rotate(int[] nums, int k) {
         k %= nums.length;
 

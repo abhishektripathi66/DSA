@@ -23,7 +23,7 @@ Output: 1
 **/
 
 // solution 1
-class WaterContainer {
+public class WaterContainer {
     public int maxArea(int[] height) {
         int start=0,area=0;
         int end= height.length-1;
@@ -47,7 +47,7 @@ class WaterContainer {
 
 //solution 2
 
-class Solution {
+class WaterContainer1 {
     public int maxArea(int[] height) {
         int size = height.length;
         if(size == 1){return 0;}

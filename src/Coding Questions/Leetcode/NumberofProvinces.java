@@ -12,7 +12,7 @@ You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith
 
 Return the total number of provinces.
   **/
-class Solution {
+public class NumberofProvinces {
     public int findCircleNum(int[][] isConnected) {
         int n = isConnected.length;
         boolean[] visited = new boolean[n];

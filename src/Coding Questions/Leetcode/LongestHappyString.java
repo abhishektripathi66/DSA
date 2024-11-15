@@ -19,7 +19,7 @@ A substring is a contiguous sequence of characters within a string.
 
   **/
 
-class Solution {
+public class LongestHappyString {
     public String longestDiverseString(int a, int b, int c) {
         StringBuilder sb = new StringBuilder();
 

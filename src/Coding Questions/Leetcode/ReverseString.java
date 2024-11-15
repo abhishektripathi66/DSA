@@ -29,7 +29,7 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 
 
 
-class ReverseString {
+public class ReverseString {
     public String reverseWords(String s) {
         s= s.trim();
         String[] arr = s.split(" ");

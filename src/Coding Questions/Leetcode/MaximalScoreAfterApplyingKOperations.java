@@ -20,7 +20,7 @@ Return the maximum possible score you can attain after applying exactly k operat
 The ceiling function ceil(val) is the least integer greater than or equal to val.
 
   **/
-class Solution {
+public class MaximalScoreAfterApplyingKOperations {
     public long maxKelements(int[] nums, int k) {
     PriorityQueue<Integer>pq = new PriorityQueue<>((a, b)->b-a);
     for(int x : nums)

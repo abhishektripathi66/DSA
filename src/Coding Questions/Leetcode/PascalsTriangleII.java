@@ -11,7 +11,7 @@ Given an integer rowIndex, return the rowIndexth (0-indexed) row of the Pascal's
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 **/
-class Solution {
+public class PascalsTriangleII {
     public List<Integer> getRow(int rowIndex) {
         List<Integer> l = new ArrayList<>();
         l.add(1);

@@ -15,7 +15,7 @@ A subarray is defined as a contiguous block of elements in the array.
 
 import java.util.HashMap;
 
-class MakeSumDivisible {
+public class MakeSumDivisible {
     public int minSubarray(int[] nums, int p) {
         long totalSum = 0;
         for (int num : nums) {

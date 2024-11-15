@@ -17,7 +17,7 @@ Output: "leotcede"
 
 **/
 
-class ReverseVowels {
+public class ReverseVowels {
     public String reverseVowels(String s) {
         
         String vowels = "aeiouAEIOU";

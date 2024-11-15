@@ -16,7 +16,7 @@ Return the chair number that the friend numbered targetFriend will sit on.
 **/
 import java.util.*;
 
-class Solution {
+public class SmallestOccupiedChar {
     public int smallestChair(int[][] times, int targetFriend) {
         int n = times.length;
         

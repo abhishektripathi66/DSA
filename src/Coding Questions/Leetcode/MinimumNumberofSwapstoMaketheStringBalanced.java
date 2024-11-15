@@ -19,7 +19,7 @@ You may swap the brackets at any two indices any number of times.
 Return the minimum number of swaps to make s balanced.
   **/
 // Best solution
-class Solution {
+public class MinimumNumberofSwapstoMaketheStringBalanced {
     public int minSwaps(String s) {
         if (s.length() == 0) return 0;
 
@@ -40,7 +40,7 @@ class Solution {
 
 // math soltuion
 // Approach - 02 [ Math - derived from above ]
-class Solution1 {
+class MinimumNumberofSwapstoMaketheStringBalanced1 {
     public int minSwaps(String s) {
         int girl = 0, boys = 0;
 
@@ -69,7 +69,7 @@ class Solution1 {
 
 //stack solution
 // Approach - 01 [ Stack ]
-class Solution2 {
+class MinimumNumberofSwapstoMaketheStringBalanced2 {
     public int minSwaps(String s) {
         Stack<Character> stack = new Stack<>();
 

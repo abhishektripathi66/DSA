@@ -30,7 +30,7 @@ nums[i] is either 0 or 1.
 
 **/
 
-  class longestsubarray {
+ public class longestsubarray {
     public int longestSubarray(int[] nums) {
         int count = 0, prevCount = 0, res = 0;
         for (int i = 0; i < nums.length; i++) {

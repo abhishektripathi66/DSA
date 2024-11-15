@@ -13,6 +13,8 @@ Note that the relative order inside both the even and odd groups should remain a
 You must solve the problem in O(1) extra space complexity and O(n) time complexity.
   **/
 
+import DS.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -23,7 +25,7 @@ You must solve the problem in O(1) extra space complexity and O(n) time complexi
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+public class OddEvenLinkedList {
     public ListNode oddEvenList(ListNode head) {
         if (head == null || head.next == null) return head;  // Handle edge cases
 

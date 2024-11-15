@@ -15,7 +15,7 @@ arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
 arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 Given an integer array nums​​​, return the minimum number of elements to remove to make nums​​​ a mountain array.
   **/
-class Solution {
+public class MinimumNumberofRemovalstoMakeMountainArray {
     public int minimumMountainRemovals(int[] nums) {
         int n = nums.length;
         int[] LIS = new int[n], LDS = new int[n];

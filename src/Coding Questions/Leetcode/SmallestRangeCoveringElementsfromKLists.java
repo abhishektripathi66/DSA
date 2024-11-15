@@ -26,7 +26,7 @@ class Tracker
  }   
 }
 
-class Solution {
+public class SmallestRangeCoveringElementsfromKLists {
     public int[] smallestRange(List<List<Integer>> nums) {
     PriorityQueue<Tracker>track = new PriorityQueue<>((a, b)-> a.val-b.val);
     int maxVal = Integer.MIN_VALUE;

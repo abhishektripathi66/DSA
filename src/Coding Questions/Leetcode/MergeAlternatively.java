@@ -31,7 +31,7 @@ word2:    p   q
 merged: a p b q c   d
 **/
 
-class MergeAlternatively {
+public class MergeAlternatively {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder result = new StringBuilder();
         int x = word1.length();

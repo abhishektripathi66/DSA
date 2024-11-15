@@ -15,7 +15,7 @@ In each step, you can choose two adjacent balls and swap them.
 Return the minimum number of steps to group all the black balls to the right and all the white balls to the left.
   **/
 
-class Solution {
+public class SeparateBlackandWhiteBalls {
     public long minimumSteps(String s) {
         long swap = 0;
         int black = 0; 

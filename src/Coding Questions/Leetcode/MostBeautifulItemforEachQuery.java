@@ -16,7 +16,7 @@ You are also given a 0-indexed integer array queries. For each queries[j], you w
 Return an array answer of the same length as queries where answer[j] is the answer to the jth query.
 
  **/
-class Solution {
+public class MostBeautifulItemforEachQuery {
     public int[] maximumBeauty(int[][] items, int[] queries) {
         Arrays.sort(items, (a, b) -> a[0] == b[0] ? b[1] - a[1] : a[0] - b[0]);
         int currMaxBeauty = 0;
