@@ -1,4 +1,4 @@
-//**
+/**
 
 You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 
@@ -15,7 +15,7 @@ Example 2:
 Input: flowerbed = [1,0,0,0,1], n = 2
 Output: false
 
-**//
+**/
 
 
 class FlowerPlacing {
