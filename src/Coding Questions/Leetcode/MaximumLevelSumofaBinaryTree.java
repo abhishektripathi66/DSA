@@ -81,7 +81,7 @@ public class MaximumLevelSumofaBinaryTree {
  *     }
  * }
  */
-class Solution1 {
+class MaximumLevelSumofaBinaryTree1 {
     int maxSum;
     int levels;
     Map<Integer,Integer> m = new HashMap<>();

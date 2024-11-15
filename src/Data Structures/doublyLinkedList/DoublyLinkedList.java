@@ -1,10 +1,10 @@
 // Node class representing each element of the doubly linked list
-class Node {
+class Nodec {
     int data;
-    Node prev, next;
+    Nodec prev, next;
 
     // Constructor to create a new node with a given data
-    public Node(int data) {
+    public Nodec(int data) {
         this.data = data;
         prev = next = null;
     }
@@ -12,7 +12,7 @@ class Node {
 
 // DoublyLinkedList class for basic operations
 public class DoublyLinkedList {
-    Node head;
+    Nodec head;
 
     // Constructor to initialize an empty doubly linked list
     public DoublyLinkedList() {
@@ -21,7 +21,7 @@ public class DoublyLinkedList {
 
     // Insert a new node at the end of the doubly linked list
     public void insert(int data) {
-        Node newNode = new Node(data);
+        Nodec newNode = new Nodec(data);
 
         // If the list is empty, make the new node the head
         if (head == null) {
@@ -30,7 +30,7 @@ public class DoublyLinkedList {
         }
 
         // Otherwise, traverse to the end of the list
-        Node last = head;
+        Nodec last = head;
         while (last.next != null) {
             last = last.next;
         }
@@ -44,7 +44,7 @@ public class DoublyLinkedList {
     public void delete(int data) {
         if (head == null) return; // List is empty, nothing to delete
 
-        Node current = head;
+        Nodec current = head;
 
         // Traverse the list to find the node to be deleted
         while (current != null && current.data != data) {
@@ -71,7 +71,7 @@ public class DoublyLinkedList {
 
     // Traverse the list from the head to the end
     public void traverseForward() {
-        Node current = head;
+        Nodec current = head;
         System.out.print("Doubly Linked List (forward): ");
         while (current != null) {
             System.out.print(current.data + " ");
@@ -85,7 +85,7 @@ public class DoublyLinkedList {
         if (head == null) return; // Empty list
 
         // Traverse to the last node
-        Node last = head;
+        Nodec last = head;
         while (last.next != null) {
             last = last.next;
         }
@@ -101,7 +101,7 @@ public class DoublyLinkedList {
 
     // Search for a node with the given data
     public boolean search(int data) {
-        Node current = head;
+        Nodec current = head;
 
         // Traverse the list to find the data
         while (current != null) {
