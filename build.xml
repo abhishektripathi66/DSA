@@ -17,7 +17,7 @@
    <echo>${user.dir}</echo>
       <mkdir dir = "${build.dir}"/>
       
-      <javac destdir = "${build.dir}" source = "1.8" target = "1.8">
+      <javac destdir = "${build.dir}" source = "11" target = "11">
          <src path = "${src.dir}"/>
          <classpath refid = "master-classpath"/>
       </javac>
