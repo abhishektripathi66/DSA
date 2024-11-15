@@ -1,5 +1,7 @@
 import java.util.HashMap;
 
+import DS.Node;
+
 /**
 
 432. All O`one Data Structure
@@ -20,19 +22,7 @@ Note that each function must run in O(1) average time complexity.
 
   **/
 
- class Node {
-    String key;
-    int count;
-    Node next;
-    Node prev;
 
-    public Node(String s, int n) {
-        count = n;
-        key = s;
-        next = null;
-        prev = null;
-    }
-}
 public class AllODataStructre432 {
     private HashMap<String, Node> nodes = new HashMap<>();
     Node head;

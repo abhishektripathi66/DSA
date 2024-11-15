@@ -13,6 +13,9 @@ Return the root of the modified tree.
 
 Note that the depth of a node is the number of edges in the path from the root node to it.
   **/
+
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

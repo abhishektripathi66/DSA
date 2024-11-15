@@ -14,7 +14,6 @@ public class AddtwoNumbers {
         
     }
 
-    class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
             ListNode l3 = null;
             ListNode firstNode = null;
@@ -94,5 +93,5 @@ public class AddtwoNumbers {
             return firstNode;
             
         }
-}
+
 }

@@ -17,7 +17,7 @@ The test cases are generated so that the length of the output will never exceed 
 
   **/
 
-class DecodeString {
+public class DecodeString {
     public String decodeString(String s) {
         Stack<Character> stack = new Stack<>();
         for(int i=0;i<s.length();i++){

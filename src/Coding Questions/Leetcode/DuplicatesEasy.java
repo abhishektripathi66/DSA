@@ -37,7 +37,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **/
 
-class DuplicatesEasy {
+public class DuplicatesEasy {
     public int removeDuplicates(int[] nums) {
        int j=1;
         int val =nums[0];

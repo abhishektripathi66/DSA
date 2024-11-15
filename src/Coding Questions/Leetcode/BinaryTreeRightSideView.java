@@ -10,6 +10,8 @@ Given the root of a binary tree, imagine yourself standing on the right side of 
 
 import java.util.*;
 
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -26,18 +28,7 @@ import java.util.*;
  * }
  */
 
- class TreeNode {
-         int val;
-         TreeNode left;
-         TreeNode right;
-         TreeNode() {}
-         TreeNode(int val) { this.val = val; }
-         TreeNode(int val, TreeNode left, TreeNode right) {
-             this.val = val;
-             this.left = left;
-             this.right = right;
-         }
-        }
+
 public class BinaryTreeRightSideView {
     int maxlevel = 0;
     public List<Integer> rightSideView(TreeNode root) {

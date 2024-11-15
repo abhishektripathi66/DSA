@@ -15,7 +15,7 @@ You may return the answer in any order. The answer is guaranteed to be unique (e
 import java.util.Arrays;
 
 /** Mys soluion */
-class Solution {
+public class KClosestPointstoOrigin {
     public int[][] kClosest(int[][] points, int k) {
         double[][] a = new double[points.length][2];
         int[][] out = new int[k][2];

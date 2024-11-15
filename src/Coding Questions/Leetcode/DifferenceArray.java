@@ -1,7 +1,7 @@
 import java.util.AbstractList;
 import java.util.*;
 
-class DifferenceArray {
+public class DifferenceArray {
 
     public static void main(String[] args) {
         DifferenceArray da = new DifferenceArray();

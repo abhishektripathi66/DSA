@@ -9,6 +9,8 @@ Given the root of a binary tree, return the level order traversal of its nodes' 
 
 import java.util.*;
 
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -24,7 +26,7 @@ import java.util.*;
  *     }
  * }
  */
-class Solution {
+public class BinaryTreeLevelOrderTraversal {
     List<List<Integer>> a = new ArrayList<>();
     public List<List<Integer>> levelOrder(TreeNode root) {
        

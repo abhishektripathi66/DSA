@@ -17,6 +17,9 @@ Note:
 The queries are independent, so the tree returns to its initial state after each query.
 The height of a tree is the number of edges in the longest simple path from the root to some node in the tree.
   **/
+
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -32,7 +35,7 @@ The height of a tree is the number of edges in the longest simple path from the 
  *     }
  * }
  */
-class Solution {
+public class HeightofBinaryTreeAfterSubtreeRemovalQueries {
 
     static final int[] heights = new int[100001];
     int maxHeight = 0;

@@ -16,7 +16,7 @@ The term lcm(a, b) denotes the least common multiple of a and b.
 
 The term gcd(a, b) denotes the greatest common divisor of a and b.
   **/
-class Solution {
+public class FindtheMaximumFactorScoreofArray {
     public long maxScore(int[] nums) {
         long bestScore = 0;
         int length = nums.length;

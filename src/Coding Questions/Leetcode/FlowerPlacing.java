@@ -18,7 +18,7 @@ Output: false
 **/
 
 
-class FlowerPlacing {
+public class FlowerPlacing {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         for (int i = 0; i < flowerbed.length; i++) {
             if (flowerbed[i] == 0) {

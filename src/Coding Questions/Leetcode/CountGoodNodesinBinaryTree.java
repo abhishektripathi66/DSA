@@ -10,6 +10,9 @@ Given a binary tree root, a node X in the tree is named good if in the path from
 Return the number of good nodes in the binary tree.
 
  **/
+
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -25,7 +28,7 @@ Return the number of good nodes in the binary tree.
  *     }
  * }
  */
-class Solution {
+public class CountGoodNodesinBinaryTree {
     
     int count=0;
     public int goodNodes(TreeNode root) {

@@ -40,7 +40,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 */
 
 
-class DuplicatesMedium {
+public class DuplicatesMedium {
     public int removeDuplicates(int[] nums) {
         int j=1;
         int k=1;
@@ -71,7 +71,7 @@ class DuplicatesMedium {
 two pointer approach
 
 **/
-class Solution {
+class DuplicatesMedium1 {
     public int removeDuplicates(int[] nums) {
         int j = 1;
         for (int i = 1; i < nums.length; i++) {

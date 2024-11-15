@@ -23,7 +23,7 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 **/
 
 
-class IncreasingTriplet {
+public class IncreasingTriplet {
     public boolean increasingTriplet(int[] nums) {
         
         

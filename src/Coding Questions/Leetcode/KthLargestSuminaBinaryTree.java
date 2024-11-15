@@ -32,7 +32,7 @@ import java.util.Collections;
  *     }
  * }
  */
-class Solution {
+public class KthLargestSuminaBinaryTree {
     private long[] sums = new long[100000];
     private int maxLevel = 0;
 

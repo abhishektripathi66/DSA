@@ -11,6 +11,9 @@ A binary tree X is flip equivalent to a binary tree Y if and only if we can make
 Given the roots of two binary trees root1 and root2, return true if the two trees are flip equivalent or false otherwise.
 
  **/
+
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -26,7 +29,7 @@ Given the roots of two binary trees root1 and root2, return true if the two tree
  *     }
  * }
  */
-class Solution {
+public class FlipEquivalentBinaryTrees {
   public boolean flipEquiv(TreeNode node1, TreeNode node2) {
     if (node1 == null && node2 == null)
       return true;

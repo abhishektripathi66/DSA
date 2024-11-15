@@ -39,7 +39,7 @@ public class DeleteCharacterstoMakeFancyString {
 }
 
 // best soltion 
-class Solution {
+class DeleteCharacterstoMakeFancyString1 {
     public String makeFancyString(String s) {
         int sameCount = 0;
         StringBuilder sb = new StringBuilder();

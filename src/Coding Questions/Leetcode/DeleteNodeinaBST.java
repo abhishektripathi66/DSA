@@ -11,6 +11,9 @@ Basically, the deletion can be divided into two stages:
 Search for a node to remove.
 If the node is found, delete the node.
  **/
+
+import DS.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

@@ -14,7 +14,7 @@ When you visit a room, you may find a set of distinct keys in it. Each key has a
 
 Given an array rooms where rooms[i] is the set of keys that you can obtain if you visited room i, return true if you can visit all the rooms, or false otherwise.
   **/
-class Solution {
+public class KeysandRooms {
     Set<Integer> keys = new HashSet<>();
     Set<Integer> visited = new HashSet<>();
     boolean newlyAdded = false;

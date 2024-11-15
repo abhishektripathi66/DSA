@@ -14,7 +14,7 @@ Return true If you can find a way to do that or false otherwise.
 
 **/
 
-class DivisibleByK {
+public class DivisibleByK {
     public boolean canArrange(int[] arr, int k) {
         int [] freq = new int[k];
         for(int num: arr){
