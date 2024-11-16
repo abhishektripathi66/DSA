@@ -73,7 +73,7 @@ public class BreathFirstSearch {
             }
         }
         //Recursive call
-        bfsRecursiveAux(queue, visited);
+        bfsRecursiveUtil(queue, visited);
     }
 
     //Main method to demonstrate BFS
