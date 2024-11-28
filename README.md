@@ -37,6 +37,4 @@ This is the structure of the Project where we would be able to find the required
 [![pages-build-deployment](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment)
 [![Mark stale issues and pull requests](https://github.com/abhishektripathi66/DSA/actions/workflows/stale.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/stale.yml)
 [![Java CI](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml)
-[![Deploy static content to Pages](https://github.com/abhishektripathi66/DSA/actions/workflows/static.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/static.yml)
-[![Deploy mdBook site to Pages](https://github.com/abhishektripathi66/DSA/actions/workflows/mdbook.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/mdbook.yml)
 [![Dependency review](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml)
