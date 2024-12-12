@@ -6,7 +6,7 @@ public class BreathFirstSearch {
     private List<List<Integer>> adjList;
 
     //BFS class constructor to the adjacency list
-    public BreathFirstSearch(int numVertices){
+    public BreadthFirstSearch(int numVertices){
         adjList = new ArrayList<>();
         for (int i = 0; i < numVertices; i++){
             adjList.add(new ArrayList<>());
@@ -78,7 +78,7 @@ public class BreathFirstSearch {
 
     //Main method to demonstrate BFS
     public static void main(String[] args) {
-        BreathFirstSearch graph = new BreathFirstSearch(6);
+        BreadthFirstSearch graph = new BreadthFirstSearch(6);
 
         //Adding edges to the graph
         graph.addEdge(0, 1);
