@@ -1,4 +1,4 @@
-# Overview of the Depth First Search (DFS) Code in Java 💻
+# Overview of the Breadth First Search (BFS) Code in Java 💻
 
 ## What's Happening in the Code? ❓
 The provided Java code implements Breath First Search (BFS), a fundamental graph traversal algorithm. Let's walk through the details!
@@ -11,10 +11,10 @@ private List<List<Integer>> adjList;
 ```
 
 ### 2. **Constructing the Graph** ⚙️
-The `BreathFirstSearch` constructor initializes the adjacency list with `numVertices` empty lists:
+The `BreadthFirstSearch` constructor initializes the adjacency list with `numVertices` empty lists:
 
 ```java
-public BreathFirstSearch(int numVertices){
+public BreadthFirstSearch(int numVertices){
     adjList = new ArrayList<>();
     for (int i = 0; i < numVertices; i++){
         adjList.add(new ArrayList<>());
@@ -108,11 +108,11 @@ private void bfsRecursiveUtil(Queue<Integer> queue, boolean[] visited){
 - **Recur**: For each unvisited neighbor, `bfsUtil` is called recursively.
 
 ### 6. **Main Method** 💪
-Finally, the `main` method demonstrates the DBFS by building a sample graph and starting the traversal from vertex `0`:
+Finally, the `main` method demonstrates the BFS by building a sample graph and starting the traversal from vertex `0`:
 
 ```java
 public static void main(String[] args) {
-    BreathFirstSearch graph = new BreathFirstSearch(6);
+    BreadthFirstSearch graph = new BreadthFirstSearch(6);
 
     //Adding edges to the graph
     graph.addEdge(0, 1);
@@ -135,13 +135,13 @@ public static void main(String[] args) {
 ### Example Output: ✅
 If you run the code, you might see an output like:
 ```
-Depth First Search starting from vertex 0:
+Breadth First Search starting from vertex 0:
 0 1 3 4
 ```
 This output shows the order in which the vertices are visited during the BFS traversal.
 
 ## Fun Fact: 🧐
-DFS is great for finding the shortest path in unweighted graphs, which is very useful for GPS Navigation systems.
+BFS is great for finding the shortest path in unweighted graphs, which is very useful for GPS Navigation systems.
 
 
 And that’s how BFS works in Java!
