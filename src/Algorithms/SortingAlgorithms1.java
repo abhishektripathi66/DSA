@@ -5,20 +5,16 @@ public class SortingAlgorithms1 {
 	public static void main(String[] args) {
 		int array[] = { 5, 8, 9, 1, 2, 6, 4 };
 
-		sort(array, 0, array.length - 1);
+	sort(array, 0, array.length - 1);
+        System.out.println("After Quick Sort:");
+        printArray(array);
 
-		System.out.println("Implementing Quick sort");
-		for (int i : array)
-		System.out.print(i);
-		System.out.println();
+        // Reset the array for subsequent sorts
+        array = new int[] { 5, 8, 9, 1, 2, 6, 4 };
 
-		divide(array);
-
-		System.out.println("Implementing Merge sort");
-		for (int i : array)
-		System.out.print(i);
-		System.out.println();
-
+        mergeSort(array);
+        System.out.println("After Merge Sort:");
+        printArray(array);
 	}
 
 	// Merge sort methods divide & conquer
