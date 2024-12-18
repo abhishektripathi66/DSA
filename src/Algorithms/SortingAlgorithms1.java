@@ -5,17 +5,26 @@ public class SortingAlgorithms1 {
 	public static void main(String[] args) {
 		int array[] = { 5, 8, 9, 1, 2, 6, 4 };
 
-	sort(array, 0, array.length - 1);
+		sort(array, 0, array.length - 1);
         System.out.println("After Quick Sort:");
         printArray(array);
 
         // Reset the array for subsequent sorts
         array = new int[] { 5, 8, 9, 1, 2, 6, 4 };
 
-        mergeSort(array);
+        divide(array);
         System.out.println("After Merge Sort:");
         printArray(array);
+
 	}
+	
+	// Helper method to print the array
+    public static void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 
 	// Merge sort methods divide & conquer
 	public static void divide(int[] array) {
@@ -46,7 +55,9 @@ public class SortingAlgorithms1 {
 		}
 
 		divide(LeftArray);
+
 		divide(RightArray);
+
 		conquer(LeftArray, RightArray, array);
 
 	}
