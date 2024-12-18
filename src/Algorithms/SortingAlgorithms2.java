@@ -1,74 +1,105 @@
-package in.smartprogramming.corejava;
+/*Bubble sort, Selection sort and Insertion sort Algorithms using iterative approach*/
 
 public class SortingAlgorithms2 {
 
-	public static void main(String[] args) {
-		// Bubble Sort
+    public static void main(String[] args) {
+        int arr[] = { 5, 8, 9, 1, 2, 6, 4 };
 
-		int ar1[] = { 5, 8, 9, 1, 2, 6, 4 };
+        System.out.println("Original Array:");
+        printArray(arr);
 
-		for (int i = 0; i < ar1.length; i++) {
-			for (int j = 0; j < ar1.length - i - 1; j++) {
-				if (ar1[j] > ar1[j + 1]) {
-					int temp = ar1[j];
-					ar1[j] = ar1[j + 1];
-					ar1[j + 1] = temp;
+        bubbleSort(arr);
+        System.out.println("After Bubble Sort:");
+        printArray(arr);
 
-				}
-			}
+        // Reset the array for subsequent sorts
+        arr = new int[] { 5, 8, 9, 1, 2, 6, 4 }; 
 
-		}
-		System.out.println("Implementing Bubble sort");
-		for (int i : ar1)
-			System.out.print(i);
+        selectionSort(arr);
+        System.out.println("After Selection Sort:");
+        printArray(arr);
 
-		// Selection sort
-		int ar2[] = { 5, 8, 9, 1, 2, 6, 4 };
+        // Reset the array for subsequent sorts
+        arr = new int[] { 5, 8, 9, 1, 2, 6, 4 }; 
 
-		int temp, min;
+        insertionSort(arr);
+        System.out.println("After Insertion Sort:");
+        printArray(arr);
+    }
 
-		for (int i = 0; i < ar2.length; i++) {
-			min = i;
-			for (int j = i + 1; j < ar2.length; j++) {
-				if (ar2[min] > ar2[j]) {
-					min = j;
+    /**
+     * Sorts an array using the Bubble Sort algorithm.
+     * Time Complexity: O(n^2) in the worst and average case.
+     * Space Complexity: O(1)
+     *
+     * @param arr the array to be sorted
+     */
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
 
-				}
+    /**
+     * Sorts an array using the Selection Sort algorithm.
+     * Time Complexity: O(n^2) in all cases.
+     * Space Complexity: O(1)
+     *
+     * @param arr the array to be sorted
+     */
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            // Swap arr[i] and arr[minIndex]
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
 
-			}
-			temp = ar2[i];
-			ar2[i] = ar2[min];
-			ar2[min] = temp;
-		}
+    /**
+     * Sorts an array using the Insertion Sort algorithm.
+     * Time Complexity: O(n^2) in the worst case, O(n) in the best case.
+     * Space Complexity: O(1)
+     *
+     * @param arr the array to be sorted
+     */
+    public static void insertionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
 
-		System.out.println();
-		System.out.println("Implementing Selection sort");
-		for (int i : ar2)
-			System.out.print(i);
+            /* Move elements of arr[0..i-1], that are 
+               greater than key, to one position ahead 
+               of their current position */
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
+    }
 
-		// Insertion sort
-
-		int ar3[] = { 5, 8, 9, 1, 2, 6, 4 };
-
-		for (int i = 1; i < ar3.length; i++) {
-
-			int temp1 = ar3[i];
-
-			int j = i - 1;
-
-			while (j >= 0 && ar3[j] > temp1) {
-
-				ar3[j + 1] = ar3[j];
-				j--;
-			}
-			ar3[j + 1] = temp1;
-		}
-
-		System.out.println();
-		System.out.println("Implementing Insertion sort");
-		for (int i : ar3)
-			System.out.print(i);
-
-	}
-
+    // Helper method to print the array
+    public static void printArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 }
