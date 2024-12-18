@@ -1,4 +1,4 @@
-package in.smartprogramming.corejava;
+/*Algorithms for Quick sort and Merge sort using recursive approach*/ 
 
 public class SortingAlgorithms1 {
 
@@ -9,20 +9,20 @@ public class SortingAlgorithms1 {
 
 		System.out.println("Implementing Quick sort");
 		for (int i : array)
-			System.out.print(i);
+		System.out.print(i);
 		System.out.println();
 
-		Divide(array);
+		divide(array);
 
 		System.out.println("Implementing Merge sort");
 		for (int i : array)
-			System.out.print(i);
+		System.out.print(i);
 		System.out.println();
 
 	}
 
-	// Merge sort methods Divide & Conquer
-	public static void Divide(int[] array) {
+	// Merge sort methods divide & conquer
+	public static void divide(int[] array) {
 
 		int length = array.length;
 
@@ -49,15 +49,13 @@ public class SortingAlgorithms1 {
 
 		}
 
-		Divide(LeftArray);
-
-		Divide(RightArray);
-
-		Conquer(LeftArray, RightArray, array);
+		divide(LeftArray);
+		divide(RightArray);
+		conquer(LeftArray, RightArray, array);
 
 	}
 
-	private static void Conquer(int[] leftArray, int[] rightArray, int[] array) {
+	private static void conquer(int[] leftArray, int[] rightArray, int[] array) {
 		int length = array.length;
 		int leftsize = length / 2;
 		int rightsize = length - leftsize;
@@ -92,7 +90,7 @@ public class SortingAlgorithms1 {
 
 	}
 
-	// Quick Sort methods quickSort and partition
+	// Quick Sort methods sort and partition
 	private static void sort(int[] array, int start, int end) {
 		if (end <= start)
 			return;
