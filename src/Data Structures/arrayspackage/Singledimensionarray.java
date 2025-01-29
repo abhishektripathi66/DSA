@@ -1,6 +1,6 @@
 package arrayspackage;
 
-public class singledimensionarray {
+public class Singledimensionarray {
     int arr[] =null;
 
     public int[] getarray() {
