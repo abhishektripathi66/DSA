@@ -57,12 +57,12 @@ At this point, we check three possibilities:
 * **If the value is greater than the target** ⬇️ → The target must be on the **left** side. We reduce `fib` to search a smaller portion of the array.
 
 ```java
-    if (arr[i] < target) {  // Move right
+    if (arr[i] < target) {  // The element is on the righ
         fib = fib1;
         fib1 = fib2;
         fib2 = fib - fib1;
         offset = i;
-    } else if (arr[i] > target) {  // Move left
+    } else if (arr[i] > target) {  // The element is on the left
         fib = fib2;
         fib1 -= fib2;
         fib2 = fib - fib1;
@@ -72,52 +72,75 @@ At this point, we check three possibilities:
 }
 ```
 
-### 5. **DFS Utility Method** ❤️
+### 5. **Shrinking the Range with Fibonacci** 🔄
 
-The `dfsUtil` method is the heart of the algorithm. It recursively visits nodes and prints them as it goes:
+If the element is not found, we **update the Fibonacci numbers** to focus on the correct part of the array:
+
+* `fib = fib1` OR `fib = fib2`
+* `fib1 = fib2` OR `fib1 -= fib2`
+* `fib2 = fib - fib1`
+
+This maintains the structure of the search and progressively reduces the range, similar to binary search, but based on Fibonacci steps.
+
+### 6. **Repeating the Process Until Found** 🔁
+
+We continue checking indices and shrinking the Fibonacci numbers until:
+
+1. The target is found 🎉
+2. The search range becomes `1` and no more elements are left to check ❌
+
+### **7. Special Case: The Last Element** 🏁
+
+If only one element remains in the array and it matches the target, we return its index.
+Otherwise, it means the target  **is not in the array** , and we return `-1` to indicate  **not found** .
 
 ```java
-private void dfsUtil(int vertex, boolean[] visited) {
-    visited[vertex] = true;
-    System.out.print(vertex + " ");
-
-    for (int adj : adjList.get(vertex)) {
-        if (!visited[adj]) {
-            dfsUtil(adj, visited);
-        }
-    }
+if (fib1 == 1 && arr[offset + 1] == target) {
+    return offset + 1;
 }
+
+return -1;  // Element not found
+
 ```
 
-- **Visit**: The current node is marked as visited and printed.
-- **Recur**: For each unvisited neighbor, `dfsUtil` is called recursively.
 
-### 6. **Main Method** 💪
+### 8. **Main Method** 💪
 
-Finally, the `main` method demonstrates the DFS by building a sample graph and starting the traversal from vertex `0`:
+Finally, the `main` method demonstrates the Fibonacci Search by creating a sample sorted array and searching for a specific target value. This allows us to see the algorithm in action and verify its correctness.
+
+1. **We define a sorted array**  → The algorithm works only on sorted arrays, so we create one.
+2. **We set a target value**  → This is the number we are trying to find.
+3. **We call `fibonacciSearch`**  → The function is executed to locate the target.
+4. **We print the result**  → If found, we display its index; otherwise, we indicate it wasn’t found.
 
 ```java
 public static void main(String[] args) {
-    DepthFirstSearch graph = new DepthFirstSearch(6);
+    int[] arr = {1, 3, 7, 10, 14, 20, 25, 30, 35, 40}; // Sorted array
+    int target = 20; // The value to search for
 
-    // Adding edges to the graph
-    graph.addEdge(0, 1);
-    graph.addEdge(0, 2);
-    graph.addEdge(1, 3);
-    graph.addEdge(1, 4);
-    graph.addEdge(2, 5);
+    int result = fibonacciSearch(arr, target); // Perform Fibonacci Search
 
-    // Perform DFS starting from vertex 0
-    System.out.println("Depth First Search starting from vertex 0:");
-    graph.dfs(0);
+    if (result != -1) {
+        System.out.println("Element found at index: " + result);
+    } else {
+        System.out.println("Element not found.");
+    }
 }
+
 ```
+
+This `main` method ensures that the Fibonacci Search runs correctly and provides a simple test case for verification.
 
 ## What Happens When You Run It? ⏳
 
-1. The graph is created with 6 vertices.
-2. Edges are added between the vertices to form connections.
-3. DFS starts from vertex `0` and traverses through its neighbors, exploring as far as possible along each branch before backtracking.
+1. The sorted array is created with predefined values.
+1. The Fibonacci Search function is called with the target value.
+1. The algorithm generates Fibonacci numbers until the closest one greater than or equal to the array length is found.
+1. The search starts from the smallest index possible, updating Fibonacci numbers as needed.
+1. The algorithm moves through the array, comparing elements and adjusting the search range accordingly.
+1. If the target is found, the function returns its index.
+1. If the target is not in the array, the function returns `-1`, indicating the value was not found.
+1. The result is printed in the console, showing whether the number was located and at which index.
 
 ### Example Output: ✅
 
