@@ -2,11 +2,11 @@ package arrayspackage;
 
 import java.util.Arrays;
 
-public class singledimensionarraytest {
+public class Singledimensionarraytest {
 
     public static void main(String[] args) {
         
-        var sda = new singledimensionarray();
+        var sda = new Singledimensionarray();
         sda.traversal();
         sda.init(4);
         System.out.println(Arrays.toString(sda.getarray()));

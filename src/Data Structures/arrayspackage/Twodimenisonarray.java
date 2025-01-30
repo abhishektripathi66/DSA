@@ -2,7 +2,7 @@ package arrayspackage;
 
 import java.util.Arrays;
 
-public class twodimenisonarray {
+public class Twodimenisonarray {
     
     public static void main(String[] args) {
         
