@@ -134,13 +134,13 @@ This `main` method ensures that the Fibonacci Search runs correctly and provides
 ## What Happens When You Run It? ⏳
 
 1. The sorted array is created with predefined values.
-1. The Fibonacci Search function is called with the target value.
-1. The algorithm generates Fibonacci numbers until the closest one greater than or equal to the array length is found.
-1. The search starts from the smallest index possible, updating Fibonacci numbers as needed.
-1. The algorithm moves through the array, comparing elements and adjusting the search range accordingly.
-1. If the target is found, the function returns its index.
-1. If the target is not in the array, the function returns `-1`, indicating the value was not found.
-1. The result is printed in the console, showing whether the number was located and at which index.
+2. The Fibonacci Search function is called with the target value.
+3. The algorithm generates Fibonacci numbers until the closest one greater than or equal to the array length is found.
+4. The search starts from the smallest index possible, updating Fibonacci numbers as needed.
+5. The algorithm moves through the array, comparing elements and adjusting the search range accordingly.
+6. If the target is found, the function returns its index.
+7. If the target is not in the array, the function returns `-1`, indicating the value was not found.
+8. The result is printed in the console, showing whether the number was located and at which index.
 
 ### Example Output: ✅
 
