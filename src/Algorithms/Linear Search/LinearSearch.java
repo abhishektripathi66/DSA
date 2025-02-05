@@ -1,4 +1,4 @@
-/*
+/* 
 Linear search is one of the simplest searching algorithms. 
 It works by sequentially checking each element of a list (or array) until the desired element is found or the list is exhausted.
 
