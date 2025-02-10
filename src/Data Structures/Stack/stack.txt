@@ -1,0 +1,35 @@
+--- STACK ---
+- A Stack is a linear data structure that follows the "LIFO" prinicple, in other words Last In First Out.
+That means that the element that was first added to the stack will be the last element removed, and also
+that the last element added to the stack will be the first element removed.
+- Stacks can be easily and efficiently implemented using a Linked list data structure because of the time
+efficiency of removing from the end of the list and adding to it.
+- When initializing a stack we will specify the capacity it has.
+- Stack operations:
+	- push(type val), stacks push operation will add an element that is passed as an argument to the method
+	to the top of the stack, time efficiency of this operation is O(1)/constant (When an operation is done
+	in constant time that means that the time needed to execute an operation isn't depending on the size of
+	the stack itself.). If we tried to push an element to a stack that has reached full capacity we will
+	get a StackOverflow Exception.
+	- pop(), if the stack is not empty it will remove the element from the top and also return it to the
+	caller of the method. If by any means a pop method is callled on a empty stack, a StackUnderflow Exception
+	will be thrown. This method is also done in constant time!
+	- peek(), another constant time stack operation that will return the element from the top of the
+	stack but won't remove it as it's done by the pop operation.
+	- isEmpty(), stack method that will check if the stack content is empty, and all of the stack capacity
+	is available. If that is the case it will return a boolean value of true, in any other case it will
+	return false. This method is implemented so that it's executed in constant time since we are tracking
+	the usage of the capacity by modifying it after every pop operation where we will decrement the 
+	usedCapacity variable, and after every push operation where we will increment the previously mentioned
+	variable.
+	- isFull(), this method will check if the stacks maximum capacity has been reached, if that is the case
+	a boolean value of true will be return, in any other case a false value will be returned.
+- Nice to know is that there is a special type of stack that is called a monotonic stack. A monotonic stack is
+a stack that is always organized in a specific order (increasingly or decreasingly). Below you will have a simple
+example of a monotonic stack.
+	
+			--- Increasing Monotonic Stack ---
+		Bottom -> [1, 2, 3, 4, 5, 6, 8, 9, 100] <- Top
+			
+			--- Decreasing Monotonic Stack ---
+		Bottom -> [100, 80, 76, 15, 3, 2, 1, 0] <- Top
