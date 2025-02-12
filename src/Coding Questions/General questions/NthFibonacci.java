@@ -3,7 +3,7 @@ package GeneralQuestions;
 import java.util.Scanner;
 
 //Program to find out the Nth number in the fibonacci series
-class NthFibonacci {
+public class NthFibonacci {
 	 public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
