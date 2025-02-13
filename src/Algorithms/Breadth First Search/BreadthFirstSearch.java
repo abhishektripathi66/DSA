@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.Queue;
 
-public class BreathFirstSearch {
+public class BreadthFirstSearch {
     // Graph adjacency list
     private List<List<Integer>> adjList;
 
