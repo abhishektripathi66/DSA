@@ -1,4 +1,3 @@
-
 # Contributing to [DSA](https://github.com/abhishektripathi66/DSA)
 
 Thank you for considering contributing to our DSA-focused Java project! We welcome contributions that enhance the codebase, improve documentation, add new algorithms, or provide valuable insights. By following these guidelines, you'll help us maintain a high standard of quality and ensure consistency across the project.
@@ -57,13 +56,13 @@ We welcome code contributions! Please follow these guidelines to ensure consiste
 ### File Naming
 
 - Use descriptive and meaningful names for files that represent the data structure or algorithm implemented.
-    - Example: `BinarySearchTree.java`, `QuickSort.java`
+  - Example: `BinarySearchTree.java`, `QuickSort.java`
 
 ### Coding Style
 
 - Follow standard Java conventions:
-    - **Variables and methods:** Use camelCase.
-    - **Classes:** Use PascalCase.
+  - **Variables and methods:** Use camelCase.
+  - **Classes:** Use PascalCase.
 - Avoid redundant comments but document complex or non-obvious logic.
 - **Indentation:** Use 4 spaces, no tabs.
 - Limit each line to 100 characters.
@@ -78,7 +77,7 @@ We welcome code contributions! Please follow these guidelines to ensure consiste
 ### Commit Messages
 
 - Write clear and concise commit messages that explain the changes.
-    - Example: `Added QuickSort algorithm with tests` or `Fixed issue in LinkedList implementation`.
+  - Example: `Added QuickSort algorithm with tests` or `Fixed issue in LinkedList implementation`.
 - If your commit addresses an open issue, reference the issue number.
 
 ## Pull Request Process
@@ -86,11 +85,11 @@ We welcome code contributions! Please follow these guidelines to ensure consiste
 To submit your contributions, follow these steps:
 
 1. **Fork the repository** and create a new branch for your feature or bug fix.
-    - Naming convention for branches: `feature/algorithm-name` or `fix/issue-description`.
+  - Naming convention for branches: `feature/algorithm-name` or `fix/issue-description`.
 2. **Ensure no existing functionality is broken** by running tests before submitting your PR.
 3. **Submit a pull request (PR)** with:
-    - A clear description of the changes.
-    - References to relevant issues, if applicable.
+  - A clear description of the changes.
+  - References to relevant issues, if applicable.
 4. Your PR will be reviewed, and feedback may be provided. Please be responsive to review comments and adjust your PR accordingly.
 
 ## License
