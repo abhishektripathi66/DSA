@@ -30,7 +30,7 @@
 // Binary Search method
 
 
-public class BinarySearch{
+public class Binary_Search{
     public static int search(int[] arr, int target){
         int left = 0, right = arr.length - 1;
 
