@@ -1,0 +1,38 @@
+<?xml version = "1.0"?>
+<project name = "fax" basedir = "." default = "build">
+   <property name = "src.dir" value = "/home/runner/work/DSA/DSA/src"/>
+   <property name = "web.dir" value = "/home/runner/work/DSA/DSA/builds"/>
+   <property name = "build.dir" value = "${web.dir}/WEB-INF/classes"/>
+   <property name = "jar.dir" value = "/home/runner/work/DSA/DSA/build"/>
+   <property name = "name" value = "DSA"/>
+
+   <path id = "master-classpath">
+      <fileset dir = "${web.dir}/WEB-INF/lib">
+         <include name = "*.jar"/>
+      </fileset>
+      
+      <pathelement path = "${build.dir}"/>
+   </path>
+
+   <target name = "build" description = "Compile source tree java files">
+   <echo>${user.dir}</echo>
+      <mkdir dir = "${build.dir}"/>
+      <mkdir dir = "${jar.dir}"/>
+      <javac destdir = "${build.dir}" source = "11" target = "11">
+         <src path = "${src.dir}"/>
+         <classpath refid = "master-classpath"/>
+      </javac>
+      <jar destfile="${jar.dir}/SomeFunkyJar.jar"
+         basedir="${build.dir}"
+         includes="**/reports/*.class"/>
+         <antcall target="clean">
+   </target>
+ 
+   <target name = "clean" description = "Clean output directories">
+      <delete>
+         <fileset dir = "${build.dir}">
+            <include name = "**/*.class"/>
+         </fileset>
+      </delete>
+   </target>
+</project>
