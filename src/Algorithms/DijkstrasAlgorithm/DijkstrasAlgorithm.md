@@ -89,7 +89,7 @@ System.out.println("Shortest distances from source " + src + ": " + Arrays.toStr
 
 Example Output:
 
-Shortest distances from source 0: [0, 7, 3, 9, 5]
+Shortest distances from source 0: {0, 7, 3, 9, 5}
 This means:
 ✅ 0 → 0 (itself)
 ✅ 1 → 7
