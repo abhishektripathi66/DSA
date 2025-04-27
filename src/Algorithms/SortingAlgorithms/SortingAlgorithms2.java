@@ -1,3 +1,4 @@
+package SortingAlgorithms;
 /*Bubble sort, Selection sort and Insertion sort Algorithms using iterative approach*/
 
 public class SortingAlgorithms2 {

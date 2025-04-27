@@ -1,3 +1,4 @@
+package SortingAlgorithms;
 /*Algorithm for HeapSort */
 
 public class HeapSort {

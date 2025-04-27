@@ -1,3 +1,4 @@
+package SortingAlgorithms;
 /*Algorithms for Quick sort and Merge sort using recursive approach*/ 
 
 public class SortingAlgorithms1 {

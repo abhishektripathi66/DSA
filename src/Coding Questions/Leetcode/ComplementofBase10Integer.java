@@ -91,6 +91,19 @@ public class ComplementofBase10Integer {
         // return num;
 
         //approach 2
+        if(n==0) return 1;
+        int i=0,j=0;
+        i=1;
+        while(i<n){
+            // i+=Math.pow(2,j);j++;
+            //approach 3
+            // i=i<<1|1;
+            //approach 4
+            i=i*2+1;
+        }
+        return i-n;
+
+        //approach 5
         return Integer.parseInt(s.toString(),2);
 
         
