@@ -1,4 +1,5 @@
-###### Overview of Dijkstra’s Algorithm in Java 🚀
+###### Overview of Dijkstra’s Algorithm in Java 🚀\n
+
 ## What Does This Code Do? 🤔
 The Java code implements Dijkstra’s Algorithm, which finds the shortest path from a source node to all other nodes in a weighted graph. It uses a Priority Queue (Min-Heap) to always process the shortest known distance first.
 

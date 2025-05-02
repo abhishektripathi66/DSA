@@ -88,8 +88,8 @@ To submit your contributions, follow these steps:
   - Naming convention for branches: `feature/algorithm-name` or `fix/issue-description`.
 2. **Ensure no existing functionality is broken** by running tests before submitting your PR.
 3. **Submit a pull request (PR)** with:
-  - A clear description of the changes.
-  - References to relevant issues, if applicable.
+   - A clear description of the changes.
+   - References to relevant issues, if applicable.
 4. Your PR will be reviewed, and feedback may be provided. Please be responsive to review comments and adjust your PR accordingly.
 
 ## License

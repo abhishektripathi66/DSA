@@ -1,0 +1,136 @@
+Common loops
+
+for(int i=0;i<n;i=i+c){
+
+}
+
+time complexity : O(n) as loop runs ceil of n/c;
+
+for(int i=n;i>0;i=i-c){
+
+}
+
+time complexity : O(n) as loop runs ceil of n/c;
+
+for(int i=1;i<n;i=i*c){
+
+}
+c0,c,c,c,....c(k-1)
+c(k-1)<n
+k<logc(n)+1
+time complexity : logc(n)
+
+for(int i=n;i>1;i=i/c){
+
+
+}
+n/ck-1>1
+ck-1<n
+k-1<logcn
+k<logcn
+time complexity : logc(n)
+
+for(int i=2;i<n;i=pow(i,c)){
+
+}
+
+2,2^c,2^c^c,...2^c^k-1
+
+2^c^k-1<n
+c^k-1<log2(n)
+k-1<logc(log2(n))
+time complexity: logc(log2(n))
+
+void fun(int n){
+    for(int i=0;i<n;i++){
+            o(n)
+    }
+    for(int i=1;i<n;i=i*2){
+            o(logn)
+    }
+    for(int i=1;i<100;i++){
+            o(1)
+    }
+}
+
+timecomplexity: o(n);
+
+void fun(int n){
+
+    for(int i=0;i<n;i++){ O(n)
+        for(int j=1;j<n;j=j*2){ O(log(n))
+
+        }
+    }
+}
+time complexity : O(nlog(n))
+
+void fun(int n){
+    for(int i=0;i<n;i++){    o(n)
+        for(int j=1;j<n;j=j*2){  o(logn)
+                o(nlogn)
+        }
+    }
+    for(int i=0;i<n;i++){ o(n)
+        for(int j=1;j<n;j++){ o(n)
+                o(nm)
+        }
+    }
+}
+time complexity : o(n2)
+
+void fun(int n, int m){
+    for(int i=0;i<n;i++){ o(n)
+        for(int j=1;j<n;j=j*2){ o(log(n))
+                o(nlogn)
+        }
+    }
+    for(int i=0;i<m;i++){ o(m)
+        for(int j=1;j<m;j++){ o(m)
+            o(m2)
+        }
+    }
+}
+
+timecomplexity: o(nlogn+m2)
+
+
+Analysis of Recursion
+
+finding the recuress solution of the recurring problem
+void fun(int n){
+    if(n<=0) return;
+    print("hello");
+    fun(n/2);
+    fun(n/2);
+}
+n>0
+T(n)=T(n/2)+T(n/2)+0(1);
+T(n)=2T(n/2)+0(1);
+T(0)=0(1);
+
+void fun(int n){
+    if(n<=0) return;
+    for(int i=0;i<n;i++)
+        print("G+G");
+    fun(n/2);
+    fun(n/3);
+}
+
+n>0
+T(n)=T(n/2)+T(n/3)+T(n)+0(1)
+n<=0
+T(0)=0(1);
+
+void fun(int n){
+    if(n<=1) return;
+    print("a");
+    fun(n-1);
+}
+
+n>1
+T(n)=T(n-1)+0(1);
+n<1
+T(1)=0(1);
+
+cn

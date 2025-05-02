@@ -1,4 +1,4 @@
-# Jump Search Algorithm
+# Jump Search Algorithm\n
 Jump Search is an efficient searching algorithm used to find an element in a **sorted array**. It works by jumping ahead by a fixed number of steps instead of searching linearly, making it faster than linear search but slightly slower than binary search.
 
 ## **How Jump Search Works**
