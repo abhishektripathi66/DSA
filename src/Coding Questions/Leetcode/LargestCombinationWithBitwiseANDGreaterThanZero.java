@@ -38,16 +38,25 @@ Constraints:
 1 <= candidates[i] <= 107
 */
 class Solution {
-public:
-   int largestCombination(vector<int>& candidates) {
-        int res = 0, tmp = 0;
-        for(int i = 0; i < 25; i++){
-            tmp = 0;
-            for(auto j : candidates){
-                if(j & (1 << i)) tmp++;
+
+    public int largestCombination(int[] candidates) {
+        
+        int[] bitCount = new int[24];
+        for (int i = 0; i < 24; i++) {
+            for (int num : candidates) {
+                
+                if ((num & (1 << i)) != 0) {
+                    bitCount[i]++;
+                }
             }
-            res = max(res, tmp);
         }
-        return res;
+        
+        int max = 0;
+        for (int count : bitCount) {
+            if (count > max) {
+                max = count;
+            }
+        }
+        return max;
     }
-};
+}
