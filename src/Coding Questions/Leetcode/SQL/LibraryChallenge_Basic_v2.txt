@@ -1,0 +1,51 @@
+SQL Coding Challenge
+Problem Description
+You are managing a database for a local library. Your task is to analyze the current borrowing activity to understand which books are currently on loan and by whom.
+
+You need to retrieve a list that includes:
+
+The first_name, last_name, and email of all members.
+For each member, the title of any book they currently have on loan (meaning the return_date in the Loans table is NULL).
+If a member has no current loans, they should still be included in the list, with NULL for the book title.
+Additionally, for each book that is currently on loan, include its genre.
+
+Table Structure
+1. Members Table
+
+member_id (INT, PRIMARY KEY, AUTO_INCREMENT)
+first_name (VARCHAR(30) NOT NULL)
+last_name (VARCHAR(30) NOT NULL)
+email (VARCHAR(80) NOT NULL)
+membership_date (DATE NOT NULL)
+
+2. Books Table
+book_id (INT, PRIMARY KEY, AUTO_INCREMENT)
+title (VARCHAR(255) NOT NULL)
+author (VARCHAR(100) NOT NULL)
+genre (VARCHAR(50) NOT NULL)
+publication_year (INT)
+existing_copies (INT NOT NULL)
+
+3. Loans Table
+loan_id (INT, PRIMARY KEY, AUTO_INCREMENT)
+member_id (INT, FOREIGN KEY REFERENCES Members(member_id) NOT NULL)
+book_id (INT, FOREIGN KEY REFERENCES Books(book_id) NOT NULL)
+loan_date (DATE NOT NULL)
+return_date (DATE NULLABLE)
+
+Write a single SQL query to achieve the requirements described above.
+
+Solution :
+
+SELECT
+    M.first_name,
+    M.last_name,
+    M.email,
+    B.title AS current_loan_book_title,
+    B.genre AS current_loan_book_genre
+FROM
+    Members M
+LEFT JOIN
+    Loans L ON M.member_id = L.member_id AND L.return_date IS NULL
+INNER JOIN
+    Books B ON L.book_id = B.book_id;
