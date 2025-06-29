@@ -8,8 +8,7 @@ public class fibonacci{
 
     public int fibonaccipart(int n) {
         if(n<0) return -1;
-        if(n==0) return 0;
-        if(n==1) return 1;
+        if(n<=1) return n;
         return fibonaccipart(n-1)+fibonaccipart(n-2);
     }
 }

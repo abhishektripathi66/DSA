@@ -15,4 +15,10 @@ public class factorial{
         if(n==0||n==1) return 1;
         return n*factorialpart(n-1);
     }
+
+    public int factorialTailRecursive(int n,int k){
+        if(n<0) return -1;
+        if(n==0||n==1) return k;
+        return factorialTailRecursive(n-1,n*k);
+    }
 }
