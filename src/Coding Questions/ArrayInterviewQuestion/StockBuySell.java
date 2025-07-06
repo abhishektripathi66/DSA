@@ -1,4 +1,4 @@
-package ArrayInterviewQuestion;
+
 
 /*
  * Given prices of stock.

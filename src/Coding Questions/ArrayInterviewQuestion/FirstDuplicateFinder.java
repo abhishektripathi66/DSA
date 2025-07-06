@@ -19,7 +19,6 @@
  */
 
 import java.util.*;
-import java.util.stream.*;
 
 public class FirstDuplicateFinder {
     public static OptionalInt findFirstDuplicate(int[] nums) {

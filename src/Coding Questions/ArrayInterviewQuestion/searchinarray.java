@@ -1,4 +1,4 @@
-package ArrayInterviewQuestion;
+
 
 // /Write a program to to check if an array contains a number in Java.
 

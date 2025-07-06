@@ -1,4 +1,4 @@
-package ArrayInterviewQuestion;
+
 
 /*
  * Kadane's Algorithm to find the maximum sum of a subarray.

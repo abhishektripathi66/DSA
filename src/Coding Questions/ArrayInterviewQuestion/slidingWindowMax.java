@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-public class slidingwindowmax {
+public class slidingWindowMax {
 
     public static int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || k <= 0) return new int[0];

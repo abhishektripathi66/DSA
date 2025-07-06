@@ -1,4 +1,4 @@
-package ArrayInterviewQuestion;
+
 
 public class pairs {
     

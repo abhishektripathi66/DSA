@@ -1,4 +1,4 @@
-package ArrayInterviewQuestion;
+
 
 /*
  * Solution to calculate max water which can be gathered in given array of blocks.
