@@ -51,7 +51,7 @@ Constraints:
 1 <= tot <= 109
 At most 1000 calls are made to add and count each.
  */
-public class FindingPairsWithaCertainSum {
+public class FindingPairsWithACertainSum {
     int[] nums1;
     int[] nums2;
     Map<Integer,Integer> m = new HashMap<>();
@@ -60,7 +60,7 @@ public class FindingPairsWithaCertainSum {
         
     }
 
-    public FindingPairsWithaCertainSum(int[] nums1, int[] nums2) {
+    public FindingPairsWithACertainSum(int[] nums1, int[] nums2) {
         this.nums1=nums1;
         this.nums2=nums2;
         for(int j=0;j<nums2.length;j++){
