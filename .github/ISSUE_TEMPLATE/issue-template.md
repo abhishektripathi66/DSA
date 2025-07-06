@@ -1,9 +1,9 @@
 ---
-name: Custom issue template
+name: Issue template
 about: Describe this issue template's purpose here.
 title: Issue
 labels: bug
-assignees: abhishektripathi66
+assignees: ''
 
 ---
 
