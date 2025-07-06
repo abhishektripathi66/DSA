@@ -26,3 +26,12 @@ Operations on Array
     Searchin an element in Array
         if unsorted  O(n)
         if sorted o(logn)
+    insert an element in Array
+            time complexity o(n) for fixed size array
+            time complexity o(1)  for the Dyanamic size array
+    Delete operation in Array
+            time complexity o(n) for fixed size array
+    get ith element: O(1)
+    update the ith element: o(1)
+    Insertion and deletion at end o(1);
+    

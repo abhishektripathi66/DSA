@@ -1,4 +1,4 @@
-package GeneralQuestions;
+
 
 import java.util.Scanner;
 
