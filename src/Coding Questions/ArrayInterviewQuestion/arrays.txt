@@ -1,0 +1,28 @@
+Arrays
+    Advantage 
+        1. Random Access
+        2. Cache Friendliness
+Two types of arrays:
+    1. Fixed Size Arrays
+        1. int arr[] = new int[10];
+        2. int arr[] = new int[n];
+        3. int arr[] = {10,20,30};
+    2. Dyanamic Sized Arrays
+        1. ArraysList 
+            Advantages
+                1. Dyanamic Size: Increases the size Dyanamically when the size is full
+                2. Rich Library Functions
+            ArrayList<Integer> al = new ArrayList<Integer>();
+            al.add(10);
+            al.add(20);
+            al.add(30);
+            SYSO(al);
+            if we want to fix the size then 
+                new ArrayList<Integer>(10);
+            create using another array
+                new ArraysList<Integer>(old array);
+
+Operations on Array
+    Searchin an element in Array
+        if unsorted  O(n)
+        if sorted o(logn)
