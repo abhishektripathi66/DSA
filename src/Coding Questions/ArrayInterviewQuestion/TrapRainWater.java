@@ -17,6 +17,7 @@ public class TrapRainWater {
         int[] blocks =  {10, 3, 15, 7, 9, 8};
 
         System.out.println("maxWater : "+maxWater(blocks));
+        System.out.println("maxWater : "+findwater(blocks));
     }
 
     private static int maxWater(int[] arr){
@@ -49,5 +50,41 @@ public class TrapRainWater {
         }
 
         return maxWater;
+    }
+
+
+    public static int findwater(int[] arr){
+        int res=0;
+        for(int i=1;i<arr.length-1;i++){
+            int lmax=arr[i];
+            for(int j=0;j<i;j++){
+                lmax=Math.max(lmax,arr[j]);
+            }
+            int rmax=arr[i];
+            for(int j=i+1;j<arr.length;j++){
+                rmax=Math.max(rmax,arr[j]);
+            }
+            res+= Math.min(rmax,lmax)-arr[i];
+        }
+        return res;
+    }
+
+    public static int findwatereff(int[] arr){
+        int lmax[] = new int[arr.length];
+        int rmax[] = new int[arr.length];
+        int res=0;
+        lmax[0]=arr[0];
+        for(int i=1;i<arr.length;i++){
+            lmax[i]=Math.max(lmax[i-1],arr[i]);
+        }
+        rmax[rmax.length-1]=arr[arr.length-1];
+        for(int i=arr.length-2;i>=0;i--){
+            rmax[i]=Math.max(arr[i],rmax[i+1]);
+        }
+        for(int i=1;i<arr.length-1;i++){
+            res+=Math.min(rmax[i],lmax[i])+arr[i];
+        }
+
+       return res;
     }
 }
