@@ -52,7 +52,7 @@ Constraints:
 queries[i].length == 2
 0 <= li <= ri < nums.length
 */
-class Solution {
+public class ZeroArrayTransformationI {
     public boolean isZeroArray(int[] nums, int[][] queries) {
         int[] dp = new int[nums.length + 3];
         for(int i = 0; i < queries.length; i++){

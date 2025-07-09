@@ -33,7 +33,7 @@ Constraints:
 1 <= nums1.length, nums2.length <= 105
 0 <= nums1[i], nums2[i] <= 106
 */
-class Solution {
+public class MinimumEqualSumOfTwoArraysAfterReplacingZeros {
     public long minSum(int[] nums1, int[] nums2) {
         long sum1 = 0, sum2 = 0;
         int cnt1 = 0, cnt2 = 0;

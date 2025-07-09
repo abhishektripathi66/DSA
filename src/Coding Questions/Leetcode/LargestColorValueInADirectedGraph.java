@@ -40,7 +40,10 @@ m == edges.length
 colors consists of lowercase English letters.
 0 <= aj, bj < n
 */
-class Solution {
+
+import java.util.ArrayList;
+
+public class LargestColorValueInADirectedGraph {
     private static final int INF = 2000000000;
     private int dfs(int u, String colors, ArrayList<ArrayList<Integer>> adj, int[][] count,  int[] vis){
         if(vis[u] == 1)

@@ -39,7 +39,7 @@ n == nums.length
 2 <= n <= 1000
 1 <= nums[i] <= 109
 */
-class Solution {
+public class MaximumDifferenceBetweenIncreasingElements {
     public int maximumDifference(int[] nums) {
         int res = -1;
         for(int i = 0; i < nums.length - 1; i++){

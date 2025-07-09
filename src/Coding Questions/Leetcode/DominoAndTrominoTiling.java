@@ -29,7 +29,7 @@ Constraints:
 
 1 <= n <= 1000
 */
-class Solution {
+public class DominoAndTrominoTiling {
     public int numTilings(int n) {
         int N = 1005;
         long[] dp1 = new long[N]; //full to i-th column

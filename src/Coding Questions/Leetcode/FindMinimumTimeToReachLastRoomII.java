@@ -55,7 +55,10 @@ Constraints:
 2 <= m == moveTime[i].length <= 750
 0 <= moveTime[i][j] <= 109
 */
-public class State implements Comparable<State>{
+
+import java.util.PriorityQueue;
+
+class State implements Comparable<State>{
     int x, y, dis;
 
     State(int x, int y, int dis){
@@ -69,7 +72,7 @@ public class State implements Comparable<State>{
     }
 }
 
-class Solution {
+public class FindMinimumTimeToReachLastRoomII {
 
     public int minTimeToReach(int[][] moveTime) {
         int m = moveTime.length, n = moveTime[0].length;

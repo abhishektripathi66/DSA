@@ -33,7 +33,10 @@ Constraints:
 0 <= nums[i] <= 109
 0 <= p <= (nums.length)/2
 */
-class Solution {
+
+import java.util.Arrays;
+
+public class MinimizeTheMaximumDifferenceOfPairs {
     private boolean isValid(int x, int[] nums, int p){
         int idx = 0, cnt = 0;
         while(idx + 1 < nums.length){

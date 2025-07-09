@@ -41,6 +41,7 @@ Constraints:
 -105 <= nums[i] <= 105
 1 <= k <= nums.length
 */
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Vector;
 
@@ -71,7 +72,7 @@ class SortByFirst implements Comparator <Pair>{
     }
 }
 
-class Solution {
+public class FindSubsequenceOfLengthKWithTheLargestSum {
     public int[] maxSubsequence(int[] nums, int k) {
         Vector<Pair> vector = new Vector<>();
         for(int i = 0; i < nums.length; i++){

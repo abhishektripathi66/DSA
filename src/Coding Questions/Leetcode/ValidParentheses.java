@@ -46,7 +46,10 @@ Constraints:
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'.
 */
-class Solution {
+
+import java.util.Stack;
+
+public class ValidParentheses {
     private int hashOf(char c){
         if(c == '(')
             return 0;

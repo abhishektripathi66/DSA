@@ -34,7 +34,7 @@ Constraints:
 1 <= arr.length <= 500
 1 <= arr[i] <= 500
 */
-class Solution {
+public class FindLuckyIntegerInAnArray {
     public int findLucky(int[] arr) {
         int[] frequency = new int[502];
         for(int i : arr)

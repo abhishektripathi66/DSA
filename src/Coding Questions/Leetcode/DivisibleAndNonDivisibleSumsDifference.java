@@ -45,7 +45,7 @@ Constraints:
 
 1 <= n, m <= 1000
 */
-class Solution {
+public class DivisibleAndNonDivisibleSumsDifference {
     public int differenceOfSums(int n, int m) {
         int res = 0;
         for(int i = 1; i <= n; i++){

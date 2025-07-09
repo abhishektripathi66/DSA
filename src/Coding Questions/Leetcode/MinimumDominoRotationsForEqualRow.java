@@ -36,7 +36,7 @@ Constraints:
 bottoms.length == tops.length
 1 <= tops[i], bottoms[i] <= 6
 */
-class Solution {
+public class MinimumDominoRotationsForEqualRow {
     public int minDominoRotations(int[] tops, int[] bottoms) {
         int n = tops.length;
         int[][] dp = new int[6][n + 4];
