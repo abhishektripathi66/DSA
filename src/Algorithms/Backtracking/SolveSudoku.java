@@ -14,7 +14,7 @@
  * - If valid, it places the digit and recursively solves the remaining puzzle.
  * - If placing a digit leads to a dead end, it backtracks and tries the next digit.
  * 
- * Time Complexity: O(9^(N×N)) (as each empty cell could potentially take one of 9 values.
+ * Time Complexity: O(N^3 + 9^(E)) (Initial check + E empty cell could potentially take one of 9 values.
  *                 However, due to constraint checking and backtracking, the actual runtime
  *                 is significantly reduced in practice.)
  * Space Complexity: O(1) additional space (modifies the board in-place)
