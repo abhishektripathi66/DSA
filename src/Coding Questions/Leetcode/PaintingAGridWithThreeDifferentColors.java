@@ -35,7 +35,13 @@ Constraints:
 1 <= n <= 1000
 */
 //sol by editorial
-class Solution {
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class PaintingAGridWithThreeDifferentColors {
 
     static final int mod = 1000000007;
 

@@ -36,7 +36,7 @@ Constraints:
 1 <= words[i].length, s.length <= 10
 words[i] and s consist of lowercase English letters only.
 */
-class Solution {
+class CountPrefixesOfAGivenString {
     public int countPrefixes(String[] words, String s) {
         int res = 0;
         for(String str : words){

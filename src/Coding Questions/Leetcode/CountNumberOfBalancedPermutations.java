@@ -53,7 +53,7 @@ Constraints:
 num consists of digits '0' to '9' only.
 */
 //editorial sol
-class Solution {
+public class CountNumberOfBalancedPermutations{
 
     private static final long MOD = 1_000_000_007;
 

@@ -35,7 +35,7 @@ Constraints:
 1 <= nums[i], minK, maxK <= 106
 */
 import java.util.Vector;
-class Solution {
+public class CountSubarraysWithFixedBounds {
     
     long countHelper(Vector<Integer> v, boolean isEqual){
         //|1| + |2| - (|1| OR |2|)

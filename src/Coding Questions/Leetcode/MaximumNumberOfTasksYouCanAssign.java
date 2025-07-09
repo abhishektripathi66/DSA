@@ -51,7 +51,12 @@ m == workers.length
 0 <= pills <= m
 0 <= tasks[i], workers[j], strength <= 109
 */
-class Solution {
+
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+
+public class MaximumNumberOfTasksYouCanAssign {
     private boolean isValid(int x, int[] tasks, int[] workers, int pills, int strength){
         //add x last workers who is going to finish x first tasks
         Deque<Integer> dq = new ArrayDeque<>();

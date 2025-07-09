@@ -52,7 +52,11 @@ Constraints:
 characters in words[i] are either lowercase English letters or characters from the string ".,|$#@" (excluding the quotes)
 separator is a character from the string ".,|$#@" (excluding the quotes)
 */
-class Solution {
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SplitStringsBySeparator {
     public List<String> splitWordsBySeparator(List<String> words, char separator) {
         List<String> res = new ArrayList<>();
         String cur = "";

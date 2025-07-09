@@ -47,7 +47,6 @@ public class RemovStars {
   public String removestarsBest(String s){
      int len = s.length();
         byte[] res = new byte[len];
-        s.getBytes(0,len,res,0);
         int countStars = 0;
         for(int i = 0; i<len; i++)
         {
