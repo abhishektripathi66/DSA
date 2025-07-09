@@ -48,7 +48,10 @@ Constraints:
 1 <= nums.length <= 2 * 104
 -109 <= nums[i] <= 109
 */
-class Solution {
+
+import java.util.Arrays;
+
+public class LongestHarmoniousSubsequence {
     public int findLHS(int[] nums) {
         Arrays.sort(nums);
         int r = 1;

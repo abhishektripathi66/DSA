@@ -32,7 +32,7 @@ nums[i] is either 0, 1, or 2.
 
 Follow up: Could you come up with a one-pass algorithm using only constant extra space?
 */
-class Solution {
+public class SortColors {
     public void sortColors(int[] nums) {
         int[] cnt = new int[3];
         for(int i : nums)

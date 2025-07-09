@@ -25,7 +25,11 @@ Constraints:
 
 1 <= n <= 5 * 104
 */
-class Solution {
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LexicographicalNumbers {
     private void recurse(int n, int cur, List<Integer> res){
         if(cur > n)
             return;

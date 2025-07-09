@@ -38,12 +38,12 @@ Constraints:
 s[i] is either '0' or '1'.
 1 <= k <= 109
 */
-class Solution {
+public class LongestBinarySubsequenceLessThanOrEqualToK {
     boolean isGreater(String s, int k){
         long cur = 0;
         for(int i = 0; i < s.length(); i++){
             cur = cur * 2 + (s.charAt(i) == '1' ? 1 : 0);
-            if(cur > k)g
+            if(cur > k)
                 return true;
         }
         return false;

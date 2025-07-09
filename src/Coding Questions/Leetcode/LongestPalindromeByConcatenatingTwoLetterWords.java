@@ -42,7 +42,7 @@ words[i].length == 2
 words[i] consists of lowercase English letters.
 */
 
-class Solution {
+public class LongestPalindromeByConcatenatingTwoLetterWords {
     int hash(String s){
         return (s.charAt(0) - 'a') * 26 + (s.charAt(1) - 'a');
     }

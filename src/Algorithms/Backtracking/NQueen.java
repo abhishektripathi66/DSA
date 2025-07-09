@@ -79,7 +79,7 @@ public class NQueen {
     
 
     private static boolean isSafe(int row, int col){
-        //Incorrect way
+        //Incorrect way, it will place each queen in first row
         //check in the all rows in given column
         //we just validate row, because column validation is done in recursive function
         // for(int i=0; i<row; i++){
@@ -104,7 +104,7 @@ public class NQueen {
         }
 
         //check for lower diagonal
-        for(int i=row, j=col; i<N && j>=0; i++,j--){ //j-- before checking for previous columns
+        for(int i=row, j=col; i<N && j>=0; i++,j--){ //j-- for checking for previous columns
             if(board[i][j] == 1)
                 return false;
         }

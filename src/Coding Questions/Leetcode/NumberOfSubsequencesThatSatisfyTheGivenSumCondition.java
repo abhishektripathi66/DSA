@@ -41,7 +41,10 @@ Constraints:
 1 <= nums[i] <= 106
 1 <= target <= 106
 */
-class Solution {
+
+import java.util.Arrays;
+
+public class NumberOfSubsequencesThatSatisfyTheGivenSumCondition {
     private final int MOD = 1000000007;
 
     int powerOf(int a, int b){

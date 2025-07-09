@@ -92,7 +92,7 @@ public class ComplementofBase10Integer {
 
         //approach 2
         if(n==0) return 1;
-        int i=0,j=0;
+        int i=0;
         i=1;
         while(i<n){
             // i+=Math.pow(2,j);j++;
@@ -104,7 +104,7 @@ public class ComplementofBase10Integer {
         return i-n;
 
         //approach 5
-        return Integer.parseInt(s.toString(),2);
+        // return Integer.parseInt(s.toString(),2);
 
         
 

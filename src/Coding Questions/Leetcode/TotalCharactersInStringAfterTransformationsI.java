@@ -61,7 +61,7 @@ Constraints:
 s consists only of lowercase English letters.
 1 <= t <= 105
 */
-class Solution {
+public class TotalCharactersInStringAfterTransformationsI {
     public int lengthAfterTransformations(String s, int t) {
         int[] cnt = new int[26];
         int MOD = 1000000007;

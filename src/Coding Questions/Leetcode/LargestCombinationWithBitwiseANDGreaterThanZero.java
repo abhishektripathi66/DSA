@@ -37,7 +37,7 @@ Constraints:
 1 <= candidates.length <= 105
 1 <= candidates[i] <= 107
 */
-class Solution {
+public class LargestCombinationWithBitwiseANDGreaterThanZero {
 
     public int largestCombination(int[] candidates) {
         

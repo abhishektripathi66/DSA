@@ -31,7 +31,7 @@ Constraints:
 1 <= k <= 105
 */
 import java.util.Vector;
-class Solution {
+class CountSubarraysWhereMaxElementAppearsAtLeastKTimes {
     public long countSubarrays(int[] nums, int k) {
         int n = nums.length;
         Vector<Integer> dp = new Vector<Integer> ();

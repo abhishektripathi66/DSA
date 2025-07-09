@@ -36,7 +36,7 @@ Constraints:
 3 <= nums.length <= 100
 -100 <= nums[i] <= 100
 */
-class Solution {
+class CountSubarraysOfLengthThreeWithACondition {
     public int countSubarrays(int[] nums) {
         int res = 0;
         for(int i = 1; i < nums.length - 1; i++)

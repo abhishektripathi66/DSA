@@ -34,6 +34,9 @@ The number of nodes in both lists is in the range [0, 50].
 -100 <= Node.val <= 100
 Both list1 and list2 are sorted in non-decreasing order.
 */
+
+import DS.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -44,7 +47,7 @@ Both list1 and list2 are sorted in non-decreasing order.
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode res = new ListNode();
         ListNode head = res;

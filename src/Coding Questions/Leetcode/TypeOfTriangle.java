@@ -36,7 +36,7 @@ Constraints:
 nums.length == 3
 1 <= nums[i] <= 100
 */
-class Solution {
+public class TypeOfTriangle {
     public String triangleType(int[] nums) {
         if(nums[0] + nums[1] <= nums[2] || nums[1] + nums[2] <= nums[0] || nums[0] + nums[2] <= nums[1])
             return "none";

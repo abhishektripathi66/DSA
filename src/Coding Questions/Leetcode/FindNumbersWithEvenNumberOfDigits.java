@@ -33,7 +33,7 @@ Constraints:
 1 <= nums.length <= 500
 1 <= nums[i] <= 105
 */
-class Solution {
+public class FindNumbersWithEvenNumberOfDigits {
     public int findNumbers(int[] nums) {
         int res = 0;
         
