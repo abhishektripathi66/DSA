@@ -49,4 +49,36 @@ class SegmentTree {
         return queryUtil(start, mid, l, r, 2 * node + 1) +
                queryUtil(mid + 1, end, l, r, 2 * node + 2);
     }
+    /**
+    * Updates the value at a specific index in the original array 
+    * and updates the segment tree accordingly.
+     * @param ind The index to update (0-based)
+     * @param val The new value to set at the given index
+     */
+    public void update(int ind , int val){
+        updateUtil(0,n-1,0,ind,val);
+    }
+    /**
+     * A utility to update segment tree recursively.
+     * @param start  Start index of current segment tree
+     * @param end  End index of current segment tree
+     * @param node  Index of current node in the segement tree
+     * @param ind  The index to update (0-based)
+     * @param val  The new value to set at the given index
+     */
+    private void updateUtil(int start, int end ,int node ,int ind , int val){
+        if(start==end){
+            tree[node] = val;
+        }
+        else{
+            int mid = start + (end - start) / 2; // To Avoid Overflow issues
+            if(ind<=mid){
+                updateUtil(start, mid, 2*node+1, ind, val);
+            }
+            else{
+                updateUtil(mid+1, end, 2*node+2, ind, val);
+            }
+            tree[node] = tree[2*node+1] + tree[2*node+2];
+        }
+    }
 }
