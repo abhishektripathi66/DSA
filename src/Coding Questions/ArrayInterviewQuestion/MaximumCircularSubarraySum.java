@@ -29,17 +29,23 @@ public class MaximumCircularSubarraySum {
     }
 
     public static int effmethod(int[] arr){
+        //normal sum
+        int res = MaximumSumSubarray.maxSumsubarrayeffsol1(arr);
 
-        int[] minsubarrysum=new int[arr.length];
-        int minsum = arr[0];
-        minsubarrysum[0]=arr[0];
-        int[] minsubarry = new int[arr.length];
-        for(int i=1;i<arr.length;i++){
-            minsum+=arr[i];
-            minsubarrysum[]
+        if(res<0) return res;
 
-
+        //circular sum
+        int arr_sum=0;
+        //getting the array sum and inverting the array elements
+        for(int i=0;i<arr.length;i++){
+            arr_sum+=arr[i];
+            arr[i]=-arr[i];
         }
+
+        int res1 = MaximumSumSubarray.maxSumsubarrayeffsol1(arr);
+        int max_circular = arr_sum+ res1;
+        return Math.max(max_circular,res);
+
 
 
 

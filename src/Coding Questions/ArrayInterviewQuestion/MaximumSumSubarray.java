@@ -29,5 +29,16 @@ public class MaximumSumSubarray {
         }
         return res;
     }
+
+    public static int maxSumsubarrayeffsol1(int[] arr){
+        
+        int maxarray =arr[0];
+        int res = arr[0];
+        for(int i=1;i<arr.length;i++){
+            maxarray=Math.max(maxarray+arr[i],arr[i]);
+            res = Math.max(res,maxarray);
+        }
+        return res;
+    }
     
 }
