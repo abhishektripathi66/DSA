@@ -7,9 +7,9 @@ import java.util.Queue;
 
 
 /*
- * BFS and DFS Traversal of a Graph
+ * BFS and DFS Traversal of a unweighted undirected/directed Graph
  * 
- * Given an unweighted undirected graph represented as an adjacency matrix,
+ * Given an unweighted directed or undirected graph represented as an adjacency matrix,
  * and we have to do both Breadth-First Search (BFS) and Depth-First Search (DFS) traversals.
  * The graph may be disconnected, so we should cover all vertices using loops.
  * 
@@ -31,6 +31,7 @@ import java.util.Queue;
  *     BFS traversal : 0 1 2 3 
  *     DFS traversal : 0 1 2 3 
  */
+
 public class BFSAndDFSTraversal {
     public static void main(String[] args) {
         //for undirected it is a symmetric matrix
@@ -38,12 +39,46 @@ public class BFSAndDFSTraversal {
                         {1, 0, 1, 0},
                         {1, 1, 0, 1},
                         {0, 0, 1, 0}};
+
+        
+        // int[][] grid = {
+        //     {0, 1, 1, 0, 0},
+        //     {1, 0, 0, 1, 0},
+        //     {1, 0, 0, 0, 1},
+        //     {0, 1, 0, 0, 0},
+        //     {0, 0, 1, 0, 0}
+        // };
+        /* Undirected graph from above grid
+                      0
+                     / \
+                    1   2
+                   /     \
+                  3       4
+            BFS traversal : 0 1 2 3 4
+            DFS traversal : 0 1 3 2 4
+        */
+       
+
+        // int[][] grid = {
+        //     {0, 1, 1, 0, 0},  // 0 → 1, 2
+        //     {0, 0, 0, 1, 0},  // 1 → 3
+        //     {0, 0, 0, 0, 1},  // 2 → 4
+        //     {0, 0, 0, 0, 0},  // 3 → none
+        //     {0, 0, 0, 0, 0}   // 4 → none
+        // };
+        /* Directed graph from above grid
+            0 → 1 → 3
+            ↓
+            2 → 4
+            BFS traversal : 0 1 2 3 4
+            DFS traversal : 0 1 3 2 4
+        */
     
         ArrayList<ArrayList<Integer>> adj = convertGridIntoAdjList(grid);
         boolean[] visited = new boolean[grid.length];
 
         System.out.print("BFS traversal : ");
-        for(int i=0; i<grid.length; i++)
+        for(int i=0; i<grid.length; i++) //running loop because given graph might be disconnected
             if(!visited[i])
                 bfsTraversal(adj, i, visited);
         
@@ -53,7 +88,9 @@ public class BFSAndDFSTraversal {
         for(int i=0; i<grid.length; i++)
             if(!visited[i])
                 dfsTraversal(adj, i, visited);
-        System.out.println();       
+        System.out.println();
+        //System.out.println("\nGraph View");
+        //printGraph(adj);     
     }
 
     //using Queue for level by level traversal
@@ -67,7 +104,7 @@ public class BFSAndDFSTraversal {
             System.out.print(u+" ");
             for(int v : adj.get(u)){
                 if(!visited[v]){
-                    visited[v] = true; //to prevet adding same node multiple times
+                    visited[v] = true; //to prevent adding same node multiple times
                     q.add(v);
                 }
             }
