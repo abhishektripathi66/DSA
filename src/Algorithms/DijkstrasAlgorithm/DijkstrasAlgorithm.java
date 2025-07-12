@@ -1,6 +1,4 @@
-package Graphs;
-
-
+package DijkstrasAlgorithm;
 
 import java.util.*;
 
