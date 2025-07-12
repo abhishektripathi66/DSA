@@ -44,7 +44,7 @@ Constraints:
 s consists only of lowercase English letters.
 s contains at least one character with an odd frequency and one with an even frequency.
 */
-class Solution {
+public class MaximumDifferenceBetweenEvenAndOddFrequencyI {
     public int maxDifference(String s) {
         int[] freq = new int[26];
         for(int i = 0; i < s.length(); i++){
