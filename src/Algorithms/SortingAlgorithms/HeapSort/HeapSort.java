@@ -1,4 +1,4 @@
-package SortingAlgorithms;
+package SortingAlgorithms.HeapSort;
 /*Algorithm for HeapSort */
 
 public class HeapSort {
