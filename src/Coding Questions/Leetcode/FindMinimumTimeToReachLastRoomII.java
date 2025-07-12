@@ -58,16 +58,16 @@ Constraints:
 
 import java.util.PriorityQueue;
 
-class State implements Comparable<State>{
+class State1 implements Comparable<State1>{
     int x, y, dis;
 
-    State(int x, int y, int dis){
+    State1(int x, int y, int dis){
         this.x = x;
         this.y = y;
         this.dis = dis;
     }
 
-    public int compareTo(State other){
+    public int compareTo(State1 other){
         return Integer.compare(this.dis, other.dis);
     }
 }
@@ -85,14 +85,14 @@ public class FindMinimumTimeToReachLastRoomII {
         }
         dist[0][0] = 0;
 
-        PriorityQueue<State> q = new PriorityQueue<>();
+        PriorityQueue<State1> q = new PriorityQueue<>();
 
-        q.offer(new State(0, 0, 0));
+        q.offer(new State1(0, 0, 0));
         int[] hx = {1, 0, -1, 0};
         int[] hy = {0, 1, 0, -1};
 
         while (!q.isEmpty()){
-            State s = q.poll();
+            State1 s = q.poll();
             if (visited[s.x][s.y]){
                 continue;
             }
@@ -108,7 +108,7 @@ public class FindMinimumTimeToReachLastRoomII {
                 int newDist = Math.max(dist[s.x][s.y], moveTime[nx][ny]) + (s.x + s.y) % 2 + 1;
                 if (dist[nx][ny] > newDist){
                     dist[nx][ny] = newDist;
-                    q.offer(new State(nx, ny, newDist));
+                    q.offer(new State1(nx, ny, newDist));
                 }
             }
         }
