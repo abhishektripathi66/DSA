@@ -7,9 +7,9 @@
    <property name = "name" value = "DSA"/>
 
    <path id = "master-classpath">
-      <fileset dir = "${web.dir}/WEB-INF/lib">
+      <!-- <fileset dir = "${web.dir}/WEB-INF/lib">
          <include name = "*.jar"/>
-      </fileset>
+      </fileset> -->
       
       <pathelement path = "${build.dir}"/>
    </path>
