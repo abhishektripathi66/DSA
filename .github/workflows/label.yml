@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: Label PRs and Issues
-      uses: actions/labeler@v5
+      uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         sync-labels: true # optional: remove labels if no longer match
