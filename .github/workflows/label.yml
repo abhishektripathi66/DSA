@@ -24,4 +24,5 @@ jobs:
       uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labeler.yml
         sync-labels: true # optional: remove labels if no longer match
