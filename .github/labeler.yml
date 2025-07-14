@@ -1,2 +1,55 @@
 firstPull: 'The pull request from first timer'
 experienced: 'Already submitted pull request'
+
+arrays:
+  - "src/**/arrays/**"
+  - "src/**/Array*.java"
+
+strings:
+  - "src/**/strings/**"
+  - "src/**/String*.java"
+
+linked-list:
+  - "src/**/linkedlist/**"
+  - "src/**/LinkedList*.java"
+
+trees:
+  - "src/**/tree/**"
+  - "src/**/Tree*.java"
+
+graphs:
+  - "src/**/graph/**"
+  - "src/**/Graph*.java"
+
+sorting:
+  - "src/**/sort/**"
+  - "src/**/Sort*.java"
+
+searching:
+  - "src/**/search/**"
+  - "src/**/Search*.java"
+
+dp:
+  - "src/**/dp/**"
+  - "src/**/DP*.java"
+
+math:
+  - "src/**/math/**"
+  - "src/**/Math*.java"
+  - "src/**/Bit*.java"
+
+tests:
+  - "test/**"
+  - "**/*Test.java"
+
+documentation:
+  - "**/*.md"
+  - "docs/**"
+  - "README.md"
+
+config:
+  - "**/*.xml"
+  - "**/*.yml"
+  - "**/*.properties"
+  - "pom.xml"
+  - ".github/**"

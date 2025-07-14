@@ -27,7 +27,7 @@ public class DisjointSet {
     }
 
     public static void main(String[] args) {
-        disjointSet ds = new DisjointSet(5);
+        DisjointSet ds = new DisjointSet(5);
 
         // Test unions
         ds.union(0, 2);
@@ -36,7 +36,7 @@ public class DisjointSet {
         System.out.println("1 and 0 in same set: " + ds.areInTheSameSet(1, 0));
 
         // Test path compression
-        disjointSet ds2 = new DisjointSet(6);
+        DisjointSet ds2 = new DisjointSet(6);
         ds2.union(0, 1);
         ds2.union(1, 2);
         ds2.union(2, 3);

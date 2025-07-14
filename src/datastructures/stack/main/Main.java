@@ -1,7 +1,6 @@
 package datastructures.stack.main;
 
-
-import main.stack.Stack;
+import datastructures.stack.main.stack.Stack;
 
 public class Main {
     public static void main(String[] args) throws Exception {

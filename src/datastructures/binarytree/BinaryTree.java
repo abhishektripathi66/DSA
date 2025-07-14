@@ -27,7 +27,7 @@ public class BinaryTree {
 
     // Driver method for testing the binary tree implementation
     public static void main(String[] args) {
-        binarytree tree = new BinaryTree();
+        BinaryTree tree = new BinaryTree();
 
         // Inserting nodes into the tree
         tree.insert(50);

@@ -1,13 +1,11 @@
 package datastructures.stack.main.stack;
 
-package main.stack;
-
 import java.util.LinkedList;
 import java.util.List;
 
-import main.exceptions.EmptyStackException;
-import main.exceptions.StackOverflowException;
-import main.exceptions.StackUnderflowException;
+import datastructures.stack.main.exceptions.EmptyStackException;
+import datastructures.stack.main.exceptions.StackOverflowException;
+import datastructures.stack.main.exceptions.StackUnderflowException;
 
 public class Stack {
     private List<Integer> stackContent;

@@ -1,0 +1,60 @@
+- name: arrays
+  color: 'f9d0c4'
+  description: Array-based DSA problem
+
+- name: strings
+  color: 'ffdd57'
+  description: String manipulation problem
+
+- name: linked-list
+  color: 'c2e0c6'
+  description: Linked List problem
+
+- name: trees
+  color: 'c5def5'
+  description: Tree structure problem
+
+- name: graphs
+  color: 'bfe5bf'
+  description: Graph theory problem
+
+- name: sorting
+  color: 'fad8c7'
+  description: Sorting algorithms
+
+- name: searching
+  color: 'fef2c0'
+  description: Searching algorithms
+
+- name: dp
+  color: 'e6e6fa'
+  description: Dynamic Programming
+
+- name: math
+  color: 'f7c6c7'
+  description: Math or Bit manipulation
+
+- name: tests
+  color: 'd4c5f9'
+  description: Unit or integration tests
+
+- name: documentation
+  color: '0366d6'
+  description: Markdown and docs
+
+- name: config
+  color: 'fbca04'
+  description: Configuration files
+
+# Difficulty levels
+- name: easy
+  color: '0e8a16'
+  description: Easy difficulty level
+
+- name: medium
+  color: 'c2e0c6'
+  description: Medium difficulty level
+
+- name: hard
+  color: 'd93f0b'
+  description: Hard difficulty level
