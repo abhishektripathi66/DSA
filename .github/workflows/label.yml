@@ -22,7 +22,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
+    - run: ls -R .github
     - name: Label PRs and Issues
       uses: actions/labeler@v4
       with:
