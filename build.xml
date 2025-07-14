@@ -1,6 +1,6 @@
 <?xml version = "1.0"?>
 <project name = "fax" basedir = "." default = "build">
-   <property name = "src.dir" value = "../src"/>
+   <property name = "src.dir" value = "src"/>
    <property name = "web.dir" value = "../builds"/>
    <property name = "build.dir" value = "${web.dir}/WEB-INF/classes"/>
    <property name = "jar.dir" value = "../build"/>
