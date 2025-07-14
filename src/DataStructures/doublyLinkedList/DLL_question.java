@@ -14,7 +14,7 @@ class DLLNode {
     }
 }
 
-class Solution {
+class DLL_question {
     // Function to reverse a doubly linked list
     public DLLNode reverseDLL(DLLNode head) {
         if (head == null) {

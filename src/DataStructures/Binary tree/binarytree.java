@@ -1,14 +1,14 @@
-// Node class representing each element of the binary tree
+// Node1 class representing each element of the binary tree
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Node {
+class Node1 {
     int nodedata;
-    Node left, right;
+    Node1 left, right;
 
     // Constructor to create a new node with a given nodedata
-    public Node(int item) {
+    public Node1(int item) {
         nodedata = item;
         left = right = null;
     }
@@ -16,7 +16,7 @@ class Node {
 
 // BinaryTree class for basic operations
 public class binarytree {
-    Node root;
+    Node1 root;
 
     // Constructor to initialize an empty binary tree
     public binarytree() {
@@ -29,10 +29,10 @@ public class binarytree {
     }
 
     // Recursive method to insert a new nodedata into the binary tree
-    private Node insertRec(Node root, int nodedata) {
+    private Node1 insertRec(Node1 root, int nodedata) {
         // If the tree is empty, return a new node
         if (root == null) {
-            root = new Node(nodedata);
+            root = new Node1(nodedata);
             return root;
         }
 
@@ -52,7 +52,7 @@ public class binarytree {
         inOrderRec(root);
     }
 
-    private void inOrderRec(Node root) {
+    private void inOrderRec(Node1 root) {
         if (root != null) {
             inOrderRec(root.left);
             System.out.print(root.nodedata + " ");
@@ -65,7 +65,7 @@ public class binarytree {
         preOrderRec(root);
     }
 
-    private void preOrderRec(Node root) {
+    private void preOrderRec(Node1 root) {
         if (root != null) {
             System.out.print(root.nodedata + " ");
             preOrderRec(root.left);
@@ -81,11 +81,11 @@ public class binarytree {
     // Level-order traversal: Root -> Level by Level
     public void levelOrder() {
         if (root == null) return;
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node1> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            Node currentNode = queue.poll();
+            Node1 currentNode = queue.poll();
             System.out.print(currentNode.nodedata + " ");
             if (currentNode.left != null) queue.add(currentNode.left);
             if (currentNode.right != null) queue.add(currentNode.right);
@@ -93,7 +93,7 @@ public class binarytree {
     }
 
 
-    private void postOrderRec(Node root) {
+    private void postOrderRec(Node1 root) {
         if (root != null) {
             postOrderRec(root.left);
             postOrderRec(root.right);
@@ -106,7 +106,7 @@ public void delete(int nodedata) {
     root = deleteRec(root, nodedata);
 }
 
-private Node deleteRec(Node root, int nodedata) {
+private Node1 deleteRec(Node1 root, int nodedata) {
     if (root == null) return root;
 
     // Traverse the tree to find the node
@@ -115,11 +115,11 @@ private Node deleteRec(Node root, int nodedata) {
     } else if (nodedata > root.nodedata) {
         root.right = deleteRec(root.right, nodedata);
     } else {
-        // Node with only one child or no child
+        // Node1 with only one child or no child
         if (root.left == null) return root.right;
         else if (root.right == null) return root.left;
 
-        // Node with two children: get the inorder successor
+        // Node1 with two children: get the inorder successor
         root.nodedata = minValue(root.right);
         root.right = deleteRec(root.right, root.nodedata);
     }
@@ -127,7 +127,7 @@ private Node deleteRec(Node root, int nodedata) {
 }
 
     // Helper method to find the minimum value in the subtree
-    private int minValue(Node root) {
+    private int minValue(Node1 root) {
         int minValue = root.nodedata;
         while (root.left != null) {
             minValue = root.left.nodedata;
@@ -142,7 +142,7 @@ public int height() {
 }
     
 
-private int height(Node node) {
+private int height(Node1 node) {
     if (node == null) return 0;
     int leftHeight = height(node.left);
     int rightHeight = height(node.right);
@@ -157,7 +157,7 @@ private int height(Node node) {
     }
 
     // Recursive method to search for a given nodedata
-    private Node searchRec(Node root, int nodedata) {
+    private Node1 searchRec(Node1 root, int nodedata) {
         // Base case: root is null or nodedata is present at root
         if (root == null || root.nodedata == nodedata) {
             return root;

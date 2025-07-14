@@ -49,7 +49,7 @@ Constraints:
 1 <= word.length <= 100
 word consists only of lowercase English letters.
 */
-public class FindTheOriginalTypedStringI {
+public class FindtheOriginalTypedStringI {
     public int possibleStringCount(String word) {
         int res = 1;
         for(int i = 1; i < word.length(); i++){

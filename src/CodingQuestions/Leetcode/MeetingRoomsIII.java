@@ -56,7 +56,12 @@ meetings[i].length == 2
 0 <= starti < endi <= 5 * 105
 All the values of starti are unique.
 */
-class Solution {
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+class MeetingRoomsIII {
     public int mostBooked(int n, int[][] meetings) {
         Arrays.sort(meetings, new Comparator<int[]>() {
             public int compare(int[] row1, int[] row2) {
