@@ -12,8 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - run: ls -R .github
       - name: Create required labels
         uses: crazy-max/ghaction-github-labeler@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          yaml_file: .github/labels-definitions.yml
+          yaml-file: .github/labels-definitions.yml
+          skip_delete: false
+          dry_run: false
