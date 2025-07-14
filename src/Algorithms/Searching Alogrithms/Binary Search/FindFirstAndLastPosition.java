@@ -137,6 +137,23 @@ public class FindFirstAndLastPosition {
         
         return firstPosition;
     }
+
+    public static int findFirstPositionRecursive(int[] arr, int target, int low, int high){
+        if(low>high) return -1;
+        int mid=low+(high-low)/2;
+        if(arr[mid]==target){
+            // Check if it's the first occurrence
+            if(mid==0 || arr[mid-1]<target){
+                return mid;
+            } else {
+                return findFirstPositionRecursive(arr, target, low, mid-1);
+            }
+        } else if(arr[mid]<target){
+            return findFirstPositionRecursive(arr, target, mid+1, high);
+        } else {
+            return findFirstPositionRecursive(arr, target, low, mid-1);
+        }
+    }
     
     /**
      * Finds the rightmost (last) occurrence of target using binary search
@@ -172,6 +189,25 @@ public class FindFirstAndLastPosition {
         }
         
         return lastPosition;
+    }
+
+    public static int findLastPositionRecustive(int[] arr, int target, int low, int high){
+        if(low>high) return -1;
+        int mid = low+(high-low)/2;
+        if(arr[mid]>target){
+            return findLastPositionRecustive(arr, target,low, mid-1);
+        }
+        else if(arr[mid]<target){
+            return findLastPositionRecustive(arr, target, mid+1, high);
+        }
+        else{
+            if(mid==arr.length-1 || arr[mid+1]!=target){
+                return mid;
+            }
+            else{
+                return findLastPositionRecustive(arr, target, mid+1, high);
+            }
+        }
     }
     
     /**

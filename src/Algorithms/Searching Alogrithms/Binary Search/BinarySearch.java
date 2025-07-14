@@ -54,5 +54,11 @@ public class BinarySearch {
         } else {
             System.out.println("Element " + target + " found at index " + result);
         }
+        result = binarysearchrec(arr, 1, arr.length-1, 0);
+        if (result == -1) {
+            System.out.println("Element " + 1 + " is not present in the array");
+        } else {
+            System.out.println("Element " + 1 + " found at index " + result);
+        }
     }
 }
