@@ -28,7 +28,7 @@ permissions:
 jobs:
   scan-pr:
     if: ${{ github.event_name == 'pull_request' || github.event_name == 'merge_group' ||  github.event_name == 'push'}}
-    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@v2" # v1.7.1
+    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@v2.0.3" # v1.7.1
     with:
       # Example of specifying custom arguments
       scan-args: |-
