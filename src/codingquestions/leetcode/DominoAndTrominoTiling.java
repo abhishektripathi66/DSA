@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 790. Domino and Tromino Tiling
 Solved

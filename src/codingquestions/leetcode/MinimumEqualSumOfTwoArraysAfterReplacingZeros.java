@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2918. Minimum Equal Sum of Two Arrays After Replacing Zeros
 Solved

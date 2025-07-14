@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 public class ReflectionMirror {
 
     public static void main(String[] args) {

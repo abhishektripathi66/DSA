@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 328. Odd Even Linked List
  * Solved

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 649. Dota2 Senate
  * Solved

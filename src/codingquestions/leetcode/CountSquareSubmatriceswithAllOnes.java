@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 1277. Count Square Submatrices with All Ones
  * Solved

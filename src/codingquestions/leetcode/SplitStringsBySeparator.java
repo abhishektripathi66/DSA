@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /*
 2788. Split Strings by Separator
 Solved

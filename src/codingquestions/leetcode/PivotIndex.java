@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 public class PivotIndex {
 
 

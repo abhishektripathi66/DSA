@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2616. Minimize the Maximum Difference of Pairs
 Solved

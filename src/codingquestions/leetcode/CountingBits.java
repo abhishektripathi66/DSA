@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 338. Counting Bits
  * Solved

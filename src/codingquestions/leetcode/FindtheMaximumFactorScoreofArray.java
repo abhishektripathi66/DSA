@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 3334. Find the Maximum Factor Score of Array
  * Solved

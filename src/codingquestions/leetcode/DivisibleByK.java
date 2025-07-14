@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 1497. Check If Array Pairs Are Divisible by k
  * Solved

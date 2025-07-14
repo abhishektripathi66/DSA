@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /*
 3024. Type of Triangle
 Solved

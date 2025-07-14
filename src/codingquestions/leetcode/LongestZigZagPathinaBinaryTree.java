@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 1372. Longest ZigZag Path in a Binary Tree
  * Solved

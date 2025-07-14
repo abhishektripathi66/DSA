@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /**
  * 700. Search in a Binary Search Tree
  * Solved

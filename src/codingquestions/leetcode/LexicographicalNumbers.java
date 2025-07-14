@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 386. Lexicographical Numbers
 Solved

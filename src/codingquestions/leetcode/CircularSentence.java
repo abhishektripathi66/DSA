@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 2490. Circular Sentence
  * Solved

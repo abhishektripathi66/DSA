@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 public class ReverseAlphabets {
 
     public static void main(String[] args) {

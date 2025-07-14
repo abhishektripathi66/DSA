@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 import java.util.Arrays;
 
 public class MedianOfTwoArrays {

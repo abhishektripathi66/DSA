@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2402. Meeting Rooms III
 Solved

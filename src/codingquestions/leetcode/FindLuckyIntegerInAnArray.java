@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1394. Find Lucky Integer in an Array
 Solved

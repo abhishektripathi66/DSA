@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 import java.util.HashSet;
 
 public class SetMatrixZeros {

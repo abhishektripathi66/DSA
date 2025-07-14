@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1007. Minimum Domino Rotations For Equal Row
 Solved

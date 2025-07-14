@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 public class RemoveDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0) {

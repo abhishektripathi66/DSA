@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1920. Build Array from Permutation
 Solved

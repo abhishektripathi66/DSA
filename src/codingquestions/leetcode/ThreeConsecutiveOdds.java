@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /*
 1550. Three Consecutive Odds
 Solved

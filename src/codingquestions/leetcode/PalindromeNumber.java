@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 9. Palindrome Number
 Solved

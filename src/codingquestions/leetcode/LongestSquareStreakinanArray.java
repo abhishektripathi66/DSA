@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 2501. Longest Square Streak in an Array
  * Solved

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1931. Painting a Grid With Three Different Colors
 Solved

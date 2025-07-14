@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2255. Count Prefixes of a Given String
 Solved

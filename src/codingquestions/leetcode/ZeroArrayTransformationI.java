@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /*
 3355. Zero Array Transformation I
 Solved

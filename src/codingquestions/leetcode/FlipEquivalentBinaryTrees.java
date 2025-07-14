@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 951. Flip Equivalent Binary Trees
  * Solved

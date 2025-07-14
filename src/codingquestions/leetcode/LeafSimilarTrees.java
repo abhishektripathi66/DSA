@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 872. Leaf-Similar Trees
  * Solved

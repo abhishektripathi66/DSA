@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 2601. Prime Subtraction Operation
  * Solved

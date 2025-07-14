@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 public class StringtoInt {
 
     public static void main(String[] args) {

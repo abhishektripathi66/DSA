@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2016. Maximum Difference Between Increasing Elements
 Solved

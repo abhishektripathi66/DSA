@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 547. Number of Provinces
  * Solved

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 1405. Longest Happy String
  * Solved

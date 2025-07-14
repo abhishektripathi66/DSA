@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 2044. Count Number of Maximum Bitwise-OR Subsets
  * Solved

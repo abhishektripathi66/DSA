@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /*
 3335. Total Characters in String After Transformations I
 Solved

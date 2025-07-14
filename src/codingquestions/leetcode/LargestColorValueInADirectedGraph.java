@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1857. Largest Color Value in a Directed Graph
 Solved

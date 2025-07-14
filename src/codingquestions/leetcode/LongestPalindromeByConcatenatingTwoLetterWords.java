@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2131. Longest Palindrome by Concatenating Two Letter Words
 Solved

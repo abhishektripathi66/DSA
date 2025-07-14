@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 594. Longest Harmonious Subsequence
 Solved

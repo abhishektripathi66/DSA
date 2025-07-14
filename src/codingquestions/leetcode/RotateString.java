@@ -1,3 +1,5 @@
+package codingquestions.leetcode.ds;
+
 /**
  * 796. Rotate String
  * Solved

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
  * 1161. Maximum Level Sum of a Binary Tree
  * Solved
