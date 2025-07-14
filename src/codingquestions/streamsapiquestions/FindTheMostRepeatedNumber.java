@@ -1,8 +1,9 @@
-package streamsapiquestions;
+package codingquestions.streamsapiquestions;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -16,7 +17,7 @@ public class FindTheMostRepeatedNumber {
 
         Map<String,Long> m = listOfStrings.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
-        Entry<Strin,Long> e = m.entrySet().stream().max(Map.Entry.comparingByValue()).get();
+        Entry<String,Long> e = m.entrySet().stream().max(Map.Entry.comparingByValue()).get();
 
         System.out.print("Most frequent Element : "+e.getKey());
 

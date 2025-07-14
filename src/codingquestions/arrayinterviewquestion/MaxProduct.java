@@ -11,7 +11,7 @@ maxProduct(intArray) // (40,50)
 public class MaxProduct {
 
     public static void main(String[] args) {
-        maxproduct mp = new maxproduct();
+        MaxProduct mp = new MaxProduct();
         System.out.println(mp.maxProduct(new int[]{10, 20, 30, 40, 50}));
     }
 

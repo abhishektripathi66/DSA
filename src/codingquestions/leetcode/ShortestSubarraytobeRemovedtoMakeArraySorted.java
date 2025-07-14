@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /**
  * 1574. Shortest Subarray to be Removed to Make Array Sorted

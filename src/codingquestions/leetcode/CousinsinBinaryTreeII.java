@@ -16,7 +16,7 @@ package codingquestions.leetcode;
  * Note that the depth of a node is the number of edges in the path from the root node to it.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

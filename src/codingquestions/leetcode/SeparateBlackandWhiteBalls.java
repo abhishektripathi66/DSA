@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /**
  * 2938. Separate Black and White Balls

@@ -15,7 +15,7 @@ package codingquestions.leetcode;
  * You must solve the problem in O(1) extra space complexity and O(n) time complexity.
  **/
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 /**
  * Definition for singly-linked list.

@@ -1,11 +1,11 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /**
  * 206. Reverse Linked List
  * Given the head of a singly linked list, reverse the list, and return the reversed list.
  **/
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 /**
  * Definition for singly-linked list.

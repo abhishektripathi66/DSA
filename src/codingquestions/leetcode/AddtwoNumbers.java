@@ -10,7 +10,7 @@ Memory Usage: 48.3 MB, less than 21.62% of Java online submissions for Add Two N
  * 
  */
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 public class AddtwoNumbers {
 

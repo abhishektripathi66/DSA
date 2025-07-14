@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /*
  * 
@@ -54,7 +54,7 @@ Constraints:
 public class RemoveElement {
 
     public static void main(String[] args) {
-        RemoveElement(new int[]{1, 2, 3, 4, 5, 2, 2, 4, 2, 5, 8, 2}, 2);
+        removeElement(new int[]{1, 2, 3, 4, 5, 2, 2, 4, 2, 5, 8, 2}, 2);
     }
 
     public static int removeElement(int[] nums, int val) {

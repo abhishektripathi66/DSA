@@ -1,6 +1,6 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 /**
  * Runtime: 1 ms, faster than 72.47% of Java online submissions for Remove Nth Node From End of List.

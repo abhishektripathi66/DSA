@@ -1,7 +1,5 @@
 package codingquestions.arrayinterviewquestion;
 
-package ArrayInterviewQuestion;
-
 public class MajorityElement {
 
     public static void main(String[] args) {

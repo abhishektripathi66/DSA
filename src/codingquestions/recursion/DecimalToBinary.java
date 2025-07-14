@@ -4,7 +4,7 @@ public class DecimalToBinary {
 
     public static void main(String[] args) {
         var d = new DecimalToBinary();
-        d.dec2binary(8);
+        d.decToBinary(8);
     }
 
     public int decToBinary(int a) {

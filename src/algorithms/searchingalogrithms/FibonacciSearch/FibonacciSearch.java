@@ -1,4 +1,4 @@
-package algorithms.searchingalogrithms.fibonaccisearch;
+package algorithms.searchingalogrithms.FibonacciSearch;
 
 public class FibonacciSearch {
     public static int fibonacciSearch(int[] arr, int x) {

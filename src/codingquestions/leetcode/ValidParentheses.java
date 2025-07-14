@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /*
 20. Valid Parentheses

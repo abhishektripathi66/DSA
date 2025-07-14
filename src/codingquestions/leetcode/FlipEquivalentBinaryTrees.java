@@ -13,7 +13,7 @@ package codingquestions.leetcode;
  * Given the roots of two binary trees root1 and root2, return true if the two trees are flip equivalent or false otherwise.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

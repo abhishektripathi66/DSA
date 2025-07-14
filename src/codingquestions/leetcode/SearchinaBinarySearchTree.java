@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 /**
  * 700. Search in a Binary Search Tree
@@ -11,7 +11,7 @@ package codingquestions.leetcode.ds;
  * Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

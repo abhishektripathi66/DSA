@@ -6,8 +6,8 @@ public class Factorial {
      *
      */
     public static void main(String[] args) {
-        var f = new factorial();
-        var x = f.factorialpart(10);
+        var f = new Factorial();
+        var x = f.factorialPart(10);
         System.out.println(x);
     }
 

@@ -2,6 +2,11 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "src/*",
-        
+        ".",
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "/workspaces/DSA/lib/hamcrest-core-1.3.jar",
+        "/workspaces/DSA/lib/junit-4.13.2.jar"
     ]
 }
