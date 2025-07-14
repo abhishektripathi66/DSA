@@ -1,6 +1,3 @@
-firstPull: ['The pull request from first timer']
-experienced: ['Already submitted pull request']
-
 arrays:
   - "src/**/arrays/**"
   - "src/**/Array*.java"
