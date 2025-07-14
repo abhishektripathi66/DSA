@@ -9,7 +9,7 @@ public class SumOfAllDigits {
 
         int i = 15623;
         Integer sumInteger = Stream.of(String.valueOf(i).split("")).collect(Collectors.summingInt(Integer::parseInt));
-        System.out.println(i);
+        System.out.println(sumInteger);
     }
 
 }

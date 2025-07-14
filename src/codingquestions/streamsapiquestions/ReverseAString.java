@@ -9,7 +9,6 @@ public class ReverseAString {
         String str = "Java Concept Of The Day";
 
         String reverseString = Arrays.stream(str.split(" ")).map(word->new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
-        String reverseString1 = Arrays.stream(str.split(" ")).map(word->new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
         System.out.println(reverseString);
     }
     
