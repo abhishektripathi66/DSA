@@ -20,7 +20,7 @@ package codingquestions.leetcode;
  * The height of a tree is the number of edges in the longest simple path from the root to some node in the tree.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

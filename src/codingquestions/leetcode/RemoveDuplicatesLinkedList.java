@@ -1,6 +1,6 @@
 package codingquestions.leetcode;
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 public class RemoveDuplicatesLinkedList {
 

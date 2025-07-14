@@ -1,4 +1,4 @@
-package algorithms.searchingalogrithms.exponentialsearchalgorithm;
+package algorithms.searchingalogrithms.ExponentialSearchAlgorithm;
 
 public class ExponentialSearchAlgorithm {
 

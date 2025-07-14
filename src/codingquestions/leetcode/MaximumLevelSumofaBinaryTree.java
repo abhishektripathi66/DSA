@@ -17,7 +17,7 @@ package codingquestions.leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

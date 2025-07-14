@@ -12,7 +12,7 @@ package codingquestions.leetcode;
  * Return the number of good nodes in the binary tree.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

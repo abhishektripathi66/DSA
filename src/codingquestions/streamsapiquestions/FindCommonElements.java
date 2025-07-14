@@ -1,4 +1,4 @@
-package streamspiquestions;
+package codingquestions.streamsapiquestions;
 
 import java.util.Arrays;
 import java.util.List;

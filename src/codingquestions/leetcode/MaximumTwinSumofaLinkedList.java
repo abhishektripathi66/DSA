@@ -28,7 +28,7 @@ package codingquestions.leetcode;
 
 import java.util.*;
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 /** My Solution **/
 public class MaximumTwinSumofaLinkedList {

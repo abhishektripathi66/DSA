@@ -14,7 +14,7 @@ package codingquestions.leetcode;
  * If the node is found, delete the node.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

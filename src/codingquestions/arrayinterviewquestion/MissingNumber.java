@@ -4,7 +4,7 @@ package codingquestions.arrayinterviewquestion;
 public class MissingNumber {
 
     public static void main(String[] args) {
-        MissingNumber mn = new MissingNumber() umber();
+        MissingNumber mn = new MissingNumber();
         int intArray[] = {1, 2, 3, 4, 5, 6, 8, 9, 10};
         mn.missingNumber(intArray);
     }

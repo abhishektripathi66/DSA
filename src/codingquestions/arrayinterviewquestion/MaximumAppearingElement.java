@@ -1,7 +1,5 @@
 package codingquestions.arrayinterviewquestion;
 
-package ArrayInterviewQuestion;
-
 public class MaximumAppearingElement {
     // the left and right length is less than 100 and the size of index i is less than 10^5
     public static void main(String[] args) {

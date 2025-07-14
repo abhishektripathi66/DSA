@@ -11,7 +11,7 @@ package codingquestions.leetcode;
 
 import java.util.*;
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

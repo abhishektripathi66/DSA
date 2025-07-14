@@ -37,7 +37,7 @@ The number of nodes in both lists is in the range [0, 50].
 Both list1 and list2 are sorted in non-decreasing order.
 */
 
-import DS.ListNode;
+import codingquestions.leetcode.ds.ListNode;
 
 /**
  * Definition for singly-linked list.

@@ -16,7 +16,7 @@ true
  */
 public class Permutation {
     public static void main(String[] args) {
-        permutation permutations = new permutation();
+        Permutation permutations = new Permutation();
         System.out.println(permutations.test(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}));
     }
 

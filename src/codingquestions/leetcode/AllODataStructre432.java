@@ -2,7 +2,7 @@ package codingquestions.leetcode;
 
 import java.util.HashMap;
 
-import DS.Node;
+import codingquestions.leetcode.ds.Node;
 
 /**
  * 432. All O`one Data Structure

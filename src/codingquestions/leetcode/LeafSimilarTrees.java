@@ -12,7 +12,7 @@ package codingquestions.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.

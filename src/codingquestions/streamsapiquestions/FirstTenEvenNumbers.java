@@ -1,4 +1,4 @@
-package streamsapiquestions;
+package codingquestions.streamsapiquestions;
 
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package codingquestions.leetcode.ds;
+package codingquestions.leetcode;
 
 import java.util.HashMap;
 import java.util.HashSet;

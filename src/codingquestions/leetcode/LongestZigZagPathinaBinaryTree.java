@@ -20,7 +20,7 @@ package codingquestions.leetcode;
  * Return the longest ZigZag path contained in that tree.
  **/
 
-import DS.TreeNode;
+import codingquestions.leetcode.ds.TreeNode;
 
 /**
  * Definition for a binary tree node.
