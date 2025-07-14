@@ -1,5 +1,5 @@
-firstPull: 'The pull request from first timer'
-experienced: 'Already submitted pull request'
+firstPull: ['The pull request from first timer']
+experienced: ['Already submitted pull request']
 
 arrays:
   - "src/**/arrays/**"
