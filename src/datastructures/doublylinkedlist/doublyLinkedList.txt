@@ -1,0 +1,47 @@
+
+Doubly Linked List Documentation
+A Doubly Linked List (DLL) is a linear data structure where each node contains three fields: data, 
+a reference to the next node, and a reference to the previous node. Unlike a singly linked list,
+ a DLL allows traversal in both directions—forward and backward.
+
+Two Components:
+
+Node:
+1. Contains data.
+2. Contains a reference to the next node (next) and the previous node (prev).
+
+Head Node:
+1. The first node in the list.
+2. If the list is empty, the head is null.
+
+Operations:
+1. Insertion:
+New nodes can be inserted at the end of the list.
+Traversal happens from the head node to the end, where the new node is appended.
+
+2. Deletion:
+Deletes a node with a specific value.
+Traverses the list to find the node, and updates the next and prev pointers to remove the node.
+
+3. Traversal:
+Forward Traversal: Starts from the head and moves toward the end using the next pointer.
+Backward Traversal: Starts from the last node and moves backward using the prev pointer.
+
+4. Search:
+Searches for a node with a given data value.
+Traverses the list to find the node and returns true if found, otherwise false.
+
+
+Time Complexity:
+
+Insertion:
+O(n) in the worst case, as you may need to traverse the entire list to insert at the end.
+
+Deletion:
+O(n) to locate the node to delete (as traversal is required).
+
+Traversal:
+O(n), where n is the number of nodes in the list.
+
+Search:
+O(n), since you may need to traverse the entire list to find a specific node.

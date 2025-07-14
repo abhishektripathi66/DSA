@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3330. Find the Original Typed String I
 Solved
@@ -14,7 +16,7 @@ You are given a string word, which represents the final output displayed on Alic
 
 Return the total number of possible original strings that Alice might have intended to type.
 
- 
+
 
 Example 1:
 
@@ -42,7 +44,7 @@ Input: word = "aaaa"
 
 Output: 4
 
- 
+
 
 Constraints:
 
@@ -52,8 +54,8 @@ word consists only of lowercase English letters.
 public class FindtheOriginalTypedStringI {
     public int possibleStringCount(String word) {
         int res = 1;
-        for(int i = 1; i < word.length(); i++){
-            if(word.charAt(i - 1) == word.charAt(i))
+        for (int i = 1; i < word.length(); i++) {
+            if (word.charAt(i - 1) == word.charAt(i))
                 res++;
         }
         return res;
