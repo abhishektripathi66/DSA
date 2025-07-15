@@ -33,7 +33,7 @@ recursion:
   - "src/**/recursion/**"
 
 JavaStreams:
-  - "src/**/streamsapiquestion/**"
+  - "src/**/streamsapiquestions/**"
 
 codingninjas:
   - "src/**/leetcode/**"
