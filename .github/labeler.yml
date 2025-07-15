@@ -1,30 +1,57 @@
 arrays:
-  - "src/**/arrays/**"
-  - "src/**/Array*.java"
+  - "src/**/array**"
+
+datastructures:
+  - "src/datastructures/**"
+
+algorithms:
+  - "src/algorithms/**"
+
+codingquestions:
+  - "src/codingquestions/**"
 
 strings:
   - "src/**/strings/**"
   - "src/**/String*.java"
 
 linked-list:
-  - "src/**/linkedlist/**"
-  - "src/**/LinkedList*.java"
+  - "src/**/*linkedlist*"
+
+hashmap:
+  - "src/**/hashmap/**"
+
+hashset:
+  - "src/**/hashset/**"
+
+stack:
+  - "src/**/stack/**"
+
+leetcode:
+  - "src/**/leetcode/**"
+
+recursion:
+  - "src/**/recursion/**"
+
+JavaStreams:
+  - "src/**/streamsapiquestion/**"
+
+codingninjas:
+  - "src/**/leetcode/**"
 
 trees:
-  - "src/**/tree/**"
-  - "src/**/Tree*.java"
-
-graphs:
-  - "src/**/graph/**"
-  - "src/**/Graph*.java"
+  - "src/**/tree**"
+  - "src/**/binarytree/**"
 
 sorting:
-  - "src/**/sort/**"
-  - "src/**/Sort*.java"
+  - "src/**/sortingalgorithms/**"
+  - "src/**/*Sort*.java"
 
 searching:
-  - "src/**/search/**"
-  - "src/**/Search*.java"
+  - "src/**/searchingalgorithms/**"
+  - "src/**/*Search*.java"
+
+graph:
+  - "src/**/graph/**"
 
 dp:
   - "src/**/dp/**"
@@ -49,4 +76,7 @@ config:
   - "**/*.yml"
   - "**/*.properties"
   - "pom.xml"
+  - ".github/**"
+
+workflow:
   - ".github/**"
