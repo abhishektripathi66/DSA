@@ -39,7 +39,7 @@ codingninjas:
   - "src/**/leetcode/**"
 
 trees:
-  - "src/**/tree**"
+  - "src/**/*tree*"
   - "src/**/binarytree/**"
 
 sorting:
