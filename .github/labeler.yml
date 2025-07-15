@@ -1,2 +1,82 @@
-firstPull: 'The pull request from first timer'
-experienced: 'Already submitted pull request'
+arrays:
+  - "src/**/array**"
+
+datastructures:
+  - "src/datastructures/**"
+
+algorithms:
+  - "src/algorithms/**"
+
+codingquestions:
+  - "src/codingquestions/**"
+
+strings:
+  - "src/**/strings/**"
+  - "src/**/String*.java"
+
+linked-list:
+  - "src/**/*linkedlist*"
+
+hashmap:
+  - "src/**/hashmap/**"
+
+hashset:
+  - "src/**/hashset/**"
+
+stack:
+  - "src/**/stack/**"
+
+leetcode:
+  - "src/**/leetcode/**"
+
+recursion:
+  - "src/**/recursion/**"
+
+JavaStreams:
+  - "src/**/streamsapiquestions/**"
+
+codingninjas:
+  - "src/**/leetcode/**"
+
+trees:
+  - "src/**/*tree*"
+  - "src/**/binarytree/**"
+
+sorting:
+  - "src/**/sortingalgorithms/**"
+  - "src/**/*Sort*.java"
+
+searching:
+  - "src/**/searchingalgorithms/**"
+  - "src/**/*Search*.java"
+
+graph:
+  - "src/**/graph/**"
+
+dp:
+  - "src/**/dp/**"
+  - "src/**/DP*.java"
+
+math:
+  - "src/**/math/**"
+  - "src/**/Math*.java"
+  - "src/**/Bit*.java"
+
+tests:
+  - "test/**"
+  - "**/*Test.java"
+
+documentation:
+  - "**/*.md"
+  - "docs/**"
+  - "README.md"
+
+config:
+  - "**/*.xml"
+  - "**/*.yml"
+  - "**/*.properties"
+  - "pom.xml"
+  - ".github/**"
+
+workflow:
+  - ".github/**"

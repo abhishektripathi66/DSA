@@ -1,0 +1,20 @@
+name: Ensure Required Labels Exist
+
+on:
+  push:
+    paths:
+      - .github/labeler.yml
+  workflow_dispatch:
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - run: ls -R .github
+      - name: Create required labels
+        uses: crazy-max/ghaction-github-labeler@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: .github/labels-definitions.yml

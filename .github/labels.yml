@@ -1,0 +1,160 @@
+- name: arrays
+  color: 'f9d0c4'
+  description: Array-based DSA problem
+
+- name: datastructures
+  color: 'ffdd22'
+  description: datastructures problem
+
+- name: algorithms
+  color: 'ffdd32'
+  description: algorithms problem
+
+- name: codingquestions
+  color: 'ffdd57'
+  description: codingquestions problem
+
+- name: hashmap
+  color: 'ffdd57'
+  description: hashmap problem
+
+- name: hashset
+  color: 'ffdd57'
+  description: hashset problem
+
+- name: stack
+  color: 'ffdd57'
+  description: stack problem
+
+- name: leetcode
+  color: 'ffdd57'
+  description: leetcode problem
+
+- name: recursion
+  color: 'ffdd57'
+  description: recursion problem
+
+- name: JavaStreams
+  color: 'ffdd57'
+  description: JavaStreams problem
+
+- name: codingninjas
+  color: 'ffdd57'
+  description: codingninjas problem
+
+- name: graph
+  color: 'ffdd57'
+  description: String manipulation problem
+
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+
+- name: documentation
+  color: 0075ca
+  description: Improvements or additions to documentation
+
+- name: duplicate
+  color: cfd3d7
+  description: This issue or pull request already exists
+
+- name: enhancement
+  color: a2eeef
+  description: New feature or request
+
+- name: first timer only
+  color: 2C8CE3
+  description: To be picked up who is a first time contributor
+
+- name: good first issue
+  color: 7057ff
+  description: Good for new contributors
+
+- name: hacktoberfest
+  color: B60205
+  description: hacktoberfest releated issues
+
+- name: hacktoberfest-accepted
+  color: 6D1A7E
+  description: hacktoberfest-accepted issues
+
+- name: hactoberfest-accepted
+  color: 466F9A
+  description: hactoberfest-accepted issues
+
+- name: help wanted
+  color: '008672'
+  description: Extra attention is needed
+
+- name: invalid
+  color: e4e669
+  description: This doesn't seem right
+
+- name: no-issue-activity
+  color: ededed
+  description: ''
+
+- name: question
+  color: d876e3
+  description: Further information is requested
+  
+- name: wontfix
+  color: ffffff
+  description: This will not be worked on
+
+- name: strings
+  color: 'ffdd57'
+  description: String manipulation problem
+
+- name: linked-list
+  color: 'c2e0c6'
+  description: Linked List problem
+
+- name: trees
+  color: 'c5def5'
+  description: Tree structure problem
+
+- name: graphs
+  color: 'bfe5bf'
+  description: Graph theory problem
+
+- name: sorting
+  color: 'fad8c7'
+  description: Sorting algorithms
+
+- name: searching
+  color: 'fef2c0'
+  description: Searching algorithms
+
+- name: dp
+  color: 'e6e6fa'
+  description: Dynamic Programming
+
+- name: math
+  color: 'f7c6c7'
+  description: Math or Bit manipulation
+
+- name: tests
+  color: 'd4c5f9'
+  description: Unit or integration tests
+
+- name: documentation
+  color: '0366d6'
+  description: Markdown and docs
+
+- name: config
+  color: 'fbca04'
+  description: Configuration files
+
+# Difficulty levels
+- name: easy
+  color: '0e8a16'
+  description: Easy difficulty level
+
+- name: medium
+  color: 'c2e0c6'
+  description: Medium difficulty level
+
+- name: hard
+  color: 'd93f0b'
+  description: Hard difficulty level
