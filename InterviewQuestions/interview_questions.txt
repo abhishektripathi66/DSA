@@ -1,0 +1,324 @@
+Interview Questions:
+
+First and Important thing: Able to explain your project properly -- and how it is solving user queries/problems.
+
+Core Java & Java8:
+=================
+
+1)HashMap internal implementation.if you are working with Java8 what is the newly added feature in that?
+2)All Oops concepts
+3)what is dynamic polyporphism.how to achieve it explain with an example?
+4)Can a try block can be followed a finally block?if so who will handle the exception that occured inside try block?
+5)ArrayList vs LikedList?which is more efficient in memory usage?how?
+6)Comparable vs Comparator differences? Explain with real time example?
+7)Why wait(),notify(),notifyAll() methods are in Object class?
+8)what is metaspace in java8?
+Ans In Java 8 and later versions, Metaspace is a new memory space introduced to replace the traditional Permanent Generation (PermGen) space used in earlier versions of Java (up to Java 7). 
+    Metaspace is responsible for storing metadata about the classes and methods in a Java application
+    Metaspace provides more flexibility and better management of class metadata compared to the PermGen space in earlier versions of Java. 
+    It allows Java applications to handle dynamic class loading and unloading more efficiently while avoiding some of the limitations and issues associated with PermGen space, such as memory leaks and fixed size constraints.
+9)can we override static method in java? if so what is method hiding in java?
+10)synchronization: which levels we can apply this?
+11)differences between ConcurrentHashMap and synchronizedmap
+12)How can you avoid ConcurrentModificationException? what are fail-fast and fail-safe Collections available in java?
+Ans:ConcurrentHashMap and CopyOnWriteArrayList are the two fail-safe collections.rest all are fail-fast.
+    How ConcurrentHashMap and CopyOnWriteArrayList avoid ConcurrentModificationException?
+13)Garbage Collection process
+14)How many class loaders are available in java.what are those.
+Ans:- 1.Bootstrap Class Loader: This is the first class loader that loads core Java classes from the bootstrap classpath, typically found in the jre/lib
+      2.Extension Class Loader:it loads classes from the extension directories
+      3.System Class Loader: Also known as the Application Class Loader, it loads classes from the classpath specified by the java.class.path system property.
+.
+15)A general java program execution. what exactly compiler will do in a program execution?
+16)What is Externalization in java?which methods you will use to achieve it?
+Ans:-Externalization in Java is a mechanism that allows objects to control their own serialization and deserialization process
+     To achieve externalization in Java, you need to implement the java.io.Externalizable interface. This interface extends the java.io.Serializable interface but adds two methods:
+       1.writeExternal(ObjectOutput out): This method is called during the serialization process
+       2.readExternal(ObjectInput in): This method is called during the deserialization process
+
+17)what is Serialization
+18)Java 8 features.what is lambda expression?what is Functional interface in java8?
+19)What are Optional class usages? 
+20)Differences between map() and flatmap() in java8
+21)what are parallel stream and sequential streams in java8?
+ANS:-   
+sequential streams:-
+ 1.A sequential stream processes elements one by one, in the order they appear in the source.
+ 2.Sequential streams are suitable for scenarios where the order of processing is important, or when the stream operations are not computationally intensive.
+
+parallel stream:-
+1.A parallel stream splits the elements into multiple chunks and processes them concurrently using multiple threads, which can improve performance for computationally intensive tasks.
+2.Parallel streams are suitable for scenarios where the order of processing is not important, and the stream operations can be executed in parallel without affecting the result.
+
+22)what are intermediate operations and terminal operations in java8?
+Ans:- intermediate operations
+     1.Intermediate operations are operations that are applied to a stream to transform, filter, or manipulate the elements of the stream.
+     2.Intermediate operations do not produce a final result immediately; instead, they return a new stream that can be further processed.
+     3.Common intermediate operations include map, filter, sorted, distinct, flatMap, peek, etc.
+   terminal operations:-
+     1.Terminal operations are operations that produce a final result from a stream. Once a terminal operation is invoked, it triggers the execution of intermediate operations and processes the stream to produce the final result.
+      2.Terminal operations consume the stream, meaning that they cannot be further processed or reused after invocation.
+      3.Common terminal operations include forEach, collect, reduce, count, min, max, anyMatch, allMatch, noneMatch, findFirst, findAny, etc.
+23)what are the differences between future() and completableFuture in java8?
+Ans;-In Java 8, both Future and CompletableFuture are used for asynchronous programming 
+     CompletableFuture provides a more powerful and flexible API for asynchronous programming compared to Future.
+     It supports chaining, completion manually, callbacks, and a wide range of operations for composing and handling asynchronous tasks more effectively.
+24)Is @FunctionalInterface annotation mandatory for a functional interface?
+25)why default and static methods are introduced in functional interface?what is the use of them?
+26)what is the use of Wrapper classes in java
+27)what is the difference between StringBuilder and StringBuffer?
+29)explain about String constantpool? Heap vs Stack memory differences
+30)String with new keyword and without new keyword when you assign some value?
+31)method overloading vs method overriding
+32)How can you manage Garbage Collection in java?
+33)How HashSet works internally?
+34)what is the order of elements when add them into each Collection type and Map interface subclasses?
+35)How can you implement Custom checked exceptions and unchecked exception?
+36)differnce between throw and throws keyword?
+37)try with resouce concepts 
+38)ClassNotFoundException and NoClassDefinitionFound Error?
+39)Have you worked on threads?what are thread life cycle status?
+40)difference between sleep() and wait() methods?
+41)what are deadlocks.what is a deamonthread?thread priority in Threads in java
+42)What are some in-built Functional Interfaces in java8?
+Ans: Predicate(which implements test() method internally when you call filter() method on stream()),
+     Function(apply()-- method),Consumer(accept()),Supplier(get()).
+43)How can you create a custom Hashmap in java? Is it mandatory to override hashcode() and equals() methods in Custom class?
+Yes mandatory.but please read about equals and hashcode contract.
+https://www.baeldung.com/java-equals-hashcode-contracts
+44)Explain Stream API utilities methods?
+-----like stream(),map(), flatmap(),filter(),distinct(),sorted(),limit(),reduce(),mapToInt(),mapToDouble(),peek(),skip(),forEach()
+     collect(),count(),anyMatch(),allMatch(),findFirst(),findAny() etc.
+45)What is inter-thread communication in java?
+46)What is compile time polymorphism and runtime polymorphism(runtime polymorphism)?explain with an example?
+47)All OOps concepts
+48)A try block can be followed by finally block?is catch block mandatory to follow try always?
+Ans: Yes. Not mandatory if it is followed by a finally and if try is with try-with-resouce.
+     without these two catch is needed to handle exceptions
+49)Differences between ClassNotFoundException NoClassDefinitionFound Error?
+
+Ans: ClassNotFoundException and NoClassDefFoundError occur when a particular class is not found at runtime. However, they occur at different scenarios.
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() methods and mentioned classes are not found in the classpath.
+NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time.
+
+50)Exception Handling Scenario when try block with multiple catch blocks:
+
+When we handling try with multiple catch blocks, if try block is throwing an ArithmaticException, if first catch block is handling that ArithmaticException and second catch is Exception – then first one only will be executed. If it is reversed order compile time error will be occurred.
+
+Proper Order:
+============
+try {
+
+       int I = 1/0;    
+    // Some code that may throw an ArithmeticException
+} catch (ArithmeticException ex) {
+    // Code to handle ArithmeticException
+} catch (Exception ex) {
+    // Code to handle any other exception
+}
+Compile time error order:
+========================
+try {
+    int x = 1/0;
+       or 
+    int x = null;
+ int result = x;
+    // Some code that may throw an ArithmeticException
+} catch (Exception ex) {
+    // Code to handle any other exception
+} catch (ArithmeticException ex) {
+    // Code to handle ArithmeticException
+}
+51)Can we add StringBuilder object to TreeSet like below?
+
+     TreeSet<StringBuilder> myset = new TreeSet<>();
+     myset.add(new StringBuilder("vensee"));
+Ans: Yes we can ---- bakwas recruiters may ask you to confuse.
+52)How can you create Threads?what happens if you call start() method two times in a single call?
+Ans: extending Tread and implementating Runnable interface by ovverriding run() method. IllegalThreadStateException occured.
+53)What is volatile keyword?what is transient keyword in java? what are atomic variables?
+54)What is dynamic dispatch in java?when can we expect ClassCastException?
+Ans:-Dynamic dispatch enables polymorphism in Java, allowing different objects to respond differently to the same method call based on their actual types.
+55)what is copyConstructor in java?
+56)How is composition is better than inheritance?aggregation vs composition
+57)What is marker interface?name few in java?can we create custom marker interface?
+58)When you will get InvalidClassException in java?What is the importance of SerialVersionUID?
+59)what are some  important features added into Java11?
+60)What is the difference between string literal and string object.how their memroy mechanism will be?which is useful why?
+   when you assign some values to a string without new keyword - its a literal-it will be stored in string constant pool and no need to allocate memory in heap
+   if you create an instance for string with a new keyword its a string object- it will be directly created in heap memory with seprate address location.
+
+
+SpringMVC /Springboot:
+======================
+
+1)what are the features/uses of springboot over Spring MVC?
+2)what exactly is Enabling AutoConfiguration in spring boot?what is the difference between @Controller vs @ResrController?
+3)Explain @SpringbootApplication?what it will have internally
+4)what is devtools plugin in springboot?
+5)How can you maintain different profiles in spring boot?
+6)How springboot is light weight framework?
+7)Is there any difference between @Component and @Service annotations? Can we use @Component instead of @Service?
+8)What will you do if some external server need to be integrated with Springboot?
+9)Suppose if ten users called/accessed a Controller class method at a time, how many instances spring will create? Explain in-detail
+Ans: Should read about thread pool mechanism which is created by container and assigns each request to separate thread.
+10)How to integrate Springdata JPA with springboot?what are main interfaces available in Springdata JPA
+11)How can you provide security to your API's that you have implemented?
+12)How can expose and consume REST APIs in springboot?
+13)How many modules are available in spring?why we use Spring AOP?(not that important for you)
+14)How can you read properties file values in springboot classes?
+15)What is DI and IOC in spring?
+16)What is bean life cycle states in spring mvc?how many types of containers are available for us?
+17)what will happen when you are accessing a properties file values and if property key or value not present or entire variable is not presented in the file?
+18)How can you handle custom exceptions in your spring boot applications?
+19)How are you handling logs in your springboot application after deploying into different environments?
+20)How you create spring boot application? Please explain some primary dependencies in pom.xml
+21)What are idempotent HTTP methods in REST?
+22)what exactly it means @RestController?
+23)differences between getForEntity() vs getForObject() vs exchange() on resttemplate?
+24)differences between RestTemplate and FeignClient and Webclient?
+25)what is the difference between Mono vs Flux?
+26)what is Asynchronous/reactive way of programming?
+27)what is the difference between http Post vs Put vs patch?
+28)differences between HTTP method status code 401 vs 403 and 200 vs 202?
+29)when to use @PathVariable vs @RequestBody vs @RequestParam vs @QueryParam?
+30)@Priority annotation use in Springboot?@Qualifier annotation usage in Springboot
+31)what is Facade design pattern
+32)Read about Factory, Builder and Session Design patterns
+33)practice code to write Singleton design pattern with synchronization
+34)Spring Security module in Spring boot
+35)what is convention over configuration in springboot?
+36)How are you handling exceptions in your spring boot project?what is the difference between @ControllerAdvice vs @ExceptionHandler?
+37)Differnce between @Qualifier vs @@Primary annotations in spring boot?
+38)what is the use of @RefreshScope annotation in spring boot?
+39)Whar is default scope of a bean in spring? And what are other scopes available in Springboot?
+40)Under which tag or dependency you will add <Exclude> tag in pom.xml if you don't want to use in-built tomcat server?
+Ans:Under stater-web only
+<artifactId>spring-boot-starter-web</artifactId>
+        <exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+        </exclusions>
+
+41)what is the difference between @RequestMapping and @PostMapping?
+42)For unit testing which framework you are using?
+43)difference between @Mock and @InjectMocks
+44)what are some methods and annotations you have used from JUnit?
+45)what is @Spy annotation in JUnit?
+46)how can you test private and void method using Junit?
+   using spy() method for private method and doNothing() for void methods
+47)How to debug code in production environment when you find a bug or some issue? 
+   there are ways please read about them
+48)For example if you want to update your existing project springboot (parent) version what steps you will follow?
+
+Micro Services:
+==============
+
+1)What is micriservices?why we need it?what are the advantages and disadvantages of them?
+2)what is API Gateway?which API gateway you are using in your application
+3)what is load balancing>how you have implemented in you application/project?
+4)How can you register your Service in Service Registry?
+5)how can you handle fault-tolerence situation in your application?which circuit breaker you have used in your application.
+6)what is Configserver in Microservices?what is the use of it?
+7)how can you deploy a service into a server/instance/node?
+8)how can you access one service's API's from other service using FeignClient or Webclient?
+9)Is maintanance really good with Microservices?if so how?
+10)any design pattern you are followed/implemented in Microservices?
+11)How can you handle messaging/events in microservices?
+12)how to integrate kafka/RabbitMQ with springboot in microservices?
+13)What is the use of API Gateway in Microservices
+14)which logging mechanism you have followed in your project?And is which Monitoring tool you have used?
+15)Which circuit breaker you have used to track the fault-tolerence in your micriservices project?
+16)How can you deploy micriservice in any platform?
+17)How to call a microservice's API's from another service?
+18)Explain microservices components?
+   like - Eureka server, Eureka client,API Gateway, Ribbon,Hystrix and Hystrix dashboard(it is now deprecated - Resilience4J,Sentinel,Istio, EnvoyProxy)
+19)What is Cloud ConfigServer in microservices?
+Ans: which is externalizing all the repository code base by connecting github.for this we will write bootstrap.yml file on every service.
+20)how can you provide security your microservice?
+21)what are some annotations you have used in microservices?
+   like @EnableEurekaServer,@EnableDiscoveryClient or @EnableEurekaClient,@Loadbalanced,@EnableHystrix and @EnableHystrixDashboard
+22)Where you can implement security in microservices environment? (like, at API gateway level or for each and every service level)
+
+REST API:
+========
+1)What are the HTTP methods you have used in your project?
+2)difference between 400vs404 and 401vs403 and 200vs201?
+3)diference between put and patch methods?
+4)How can you test your REST API's?
+5)what is nullipotent HTTP method in rest?
+Ans:GET is nullipotent
+
+
+
+Hibernate or Springboot JPA:
+===========================
+1)differences between get() and load() methods in Hibernate
+2)differences between save() vs persist() & SessionFactory vs Session
+3)Hibernate/JPA Mappings?
+4)what are the important interfaces you have used in Hibernate/JPA
+5)What are the some important Annotations you have used in Hibernate/Spring data JPA?
+6)how can you make connections for Mysql8 and Oracle11g databases?
+7)Differnces between @JPARepository vs @CRUDRepository?
+8)How many tables will be created in @ManytoMany relationship?
+Ans: For sure 3 tables
+Suggestion: Please read about @JoinTable and @JoinColumn--- like what happens if we use @JoinTable(creates extra table) and @JoinColumn(create extra column in same table)?
+9)What if in-built JPA methods are not enough to create tables or map your entities or fetch data from database?
+Ans: read about @Query annotation usage.
+10)What is the use of @Transactional annotaion?how can you manage transactions in your application?what are isolation and propagation levels you use?
+11)what are Hibernate isolation levels ? How can achieve them?
+Ans: read about ACID properties and READ_COMMITTED, READ_UNCOMMITTED, REPEATABLE_READ and SERIALIZABLE
+
+12)Find second highest salary from the Employee table?
+Ans: select salary from employee order by Desc salary limit(1,1); ///for third limit(2,1)
+13)what is the difference between Inner join and Left join? can you write a join query to fetch the data from 3 tables?
+14)what is indexing in table
+15)what is the difference between drop vs truncate vs delete in sql queries?
+16)What are some important interfaces you have used in your project?
+
+
+
+
+Devops & Cloud:
+==============
+
+1)which version control system tool you are using?
+Ans:Git/Gitlab/bitbucket
+2)What is Jenkins?so you know how to configure pipelines by integrating/connecting git? How build mechanism is happening in your project?
+like periodically(every one hour or two hours) or every commit
+3)do you have an idea on Docker or Mocker?
+4)which cloud you are using to deploy your micriservices/application.
+5)what is the difference between git fetch vs git pull
+   git pull origin bakwas
+   git pull = git fetch + git merge
+   
+   Git Fetch : The git fetch command fetches the latest changes from a remote repository but does not automatically merge or apply those changes to your current working branch. It updates your local repository's remote-tracking branches, allowing you to see what changes have been made in the remote repository without affecting your working directory.
+   
+   Git Pull: The git pull command fetches the latest changes from a remote repository and then automatically merges them into your current working branch. It combines the actions of git fetch and git merge into a single command. If you have uncommitted changes, Git will attempt to merge your changes with the remote changes.
+6)How can you publish your artifacts/packages once build completes?
+
+7) remaining are based on your experience---
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

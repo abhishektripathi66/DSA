@@ -1,0 +1,201 @@
+﻿
+Java
+
+
+Class Level vs Instance level variables
+Hashcode and equals contract
+Why final classes are required
+Core Java concepts
+Data Structures
+Hashmap, Internal working of Hashmap
+Singleton class
+Exception handling
+
+
+1. Read employee information(empid, name, city) from file separated by comma.  Store these in sorted order based on emp ID and remove duplicates.
+2. If i want to store Employee object as key to hashmap and override the values if emp id is same / already present in HashMap, what will be the hashcode
+   and equals implementation for the same ?
+3. Given an array of integers find all the pairs that make up a given sum
+4. Give a list of apple objects - the list needs to be sorted as per its size, the list needs to be grouped by as per its color and then sorted as per price
+5. Sort a stack using another stack
+6. Create a Resource class and make it such that only one instance could b used
+7. 
+
+1. Lambda functions with examples between java versions
+2. What is dependency injections in spring ?
+3. Concept on explanation of overloading on equals() and hashcode()
+4. Brute force logic
+	Given a matrix with only 0's and 1's, where in each row, all 0's are before all 1's.  Find the row with max 0's.
+
+
+1.Difference between abstract class and interface
+2.java 8 features ? What is a Functional Interface? What is the advantage of functional interface ?
+3.What are Automatic  and transient  variable in Java?
+4.How many ways we can create thread in java and what are those ?
+5.Print Even and Odd Numbers Using 2 Threads ? (  odd thread should print: 1,3 …, Even thread should print : 2,4,.. ,    O/P: 1,2 ,3 ,4,5)
+6.What is synchronization ?
+7.Difference between HashSet and HashTable ? 
+8.HashMap internal implementation ?
+9.When to use comparable and comparator ?
+10.Write program to check if number is power of 10 or not ?
+11.Hibernate advantages over JDBC ?
+12.What is dialect in hibernate ?
+13.Design patters used in your project ? Explain ?
+14.Account (Saving,Current(with limit))  cash withdrawal database and Java  layer design approach(flow diagram).
+15.When to use Abstract class and Interface.
+16.Internal Implementation of Hash Set
+17 problem : Find the 2 number that sum up to value 'k' in an array without any new variable declaration.
+18.Time complexities of get and put methods of map.
+19.Given a 2 dimension array like [{"name1",35},{"name2",40},{"name1",36}] find the student who has the highest average score.
+20.Questions on java 8 Streams
+21.Comparator and comparable
+
+1) how to change the behaviour of the external jar class without affecting the existing behaviour for legacy classess?
+2) How JVM recognises the exact database driver to make database connection?
+3) write a standard  java code for jdbc connection polling?
+4)  Given 2 integer array. first integer array gives the entry time to the conference metting, and the second integer array gives the exit time from the conference meeting. write a program to output the maximum number of people attended the conference.
+5) given 2 array list, PersonalDetails (accountNumber : String , quantity : integer), and ConfidentialsDetails (accountNumber : String , accountName: String), write a program to find the total quantity from the PersonalDetails for the account present in the ConfidentialsDetails ?
+6) Coding Test :  program to add 2 fractional numbers and return the results to check whether the test case has been passed or failed for given result.
+7) How collection works internally
+8) Hash code object ocpy
+
+
+1.Difference between HashTable and HashMap.
+2.Implement Arraylist using array.
+3.Code for mirror of tree
+4.Differnt ways of create thread.
+5.what is Thread pool.
+6.Program to print 1,2,3...20 using two thread one should print even number and another one odd.
+7.How servlet works.
+8.Algorithm to find panagram or not.
+9.code for override hashcode() and equals() for given scenario.
+10.fuctional interface sample implemetation and advantage.
+11.Fill color to matrix by using x and y co-ordinate with some contraints.
+12.Remove repeated element in the given string and return in sorted order.
+13.Singleton design pattern implementaion.
+15.connection node in two linkedlist with sapce complexity and timecomplexity.
+16.How return object from thread.
+
+
+1. Find out first non repeating char from a string
+2. Find average marks of given students details 
+3. Singleton design pattern
+4. Internal working of concurrent hashmap
+5. Find out how many time a given sub string is available in given string.
+6. Comparable and comparator use with example
+7. Write a sql to find out Max salary in particular department
+8. Sql joins
+9. Draw Tree using given data.
+10. You have a 2*2 matrix with color and border of a circle you need to fill the circle with color 
+    What is your approach for this.
+
+
+1.
+  String s1="Hello";
+ String s2=new String("Hello");
+String s3 = "Hello";
+String s4 = new ("Hello-world");
+How many object will creates in memory?
+2. Diff Between abstract class & interface?
+3. try{
+	int a=10,b=0;
+	Sop("Inside try");
+	int x = a/b;
+	}catch(Exception e){}
+	catch(RunTimeException e){}
+	finally{}
+What will be the output?
+4. Internal Working of HashMap? see LinkedHashMap also.
+5. Waht are marker interfaces & its usecase?
+6. Sort List of Students By name, after answering when to use Comparator & Comparable?
+7. what is Serialization? & when to use volitle & transient keywords?
+8. what are the ways of creating threads & threads life cycle?
+9. Ecxeption & types of exception with Example?
+10.  int arr[] = {1,1,2,3,3,4,5,2,1,1,4,4,3,2}  print only non consicuteve elements
+   output array is : {1,2,3,4,5,2,1,4,3,2}
+
+1. print fibonecci series & how to optimize it. if it recursive
+2. how  Classloader loads class in JVM?
+3. Featurs of JAVA 8? default methods, static methods, Functional interface, streams, lambda expretions ...etc
+4.What design patterns u used in your project? explain Singalton
+5. Diff between Spring & springboot? waht is IoC & DI (dependancy injection)
+6.@Qualifier annotaion in spring?
+7. Can we have multiple Configuration property files in springboot? yes but how?
+8. How to connect  datasource in spring boot?
+9. postgress is case sencitive or not? give with example?
+10. Select name of employ & there managers name togethos
+
+1. Do we need a separate thread for each servlet ?
+2. Implement a stack using a array
+3. Internal implementation of Hashmap & ConcurrentHashMap 
+4. Diff between Set & List
+5. Which one you would prefer Inheritence or Composition and why ?
+6. Array sort with less time complexity
+7. JDBC or Hibernet connection steps
+8. Lazy or Eager loading in Hibernet
+
+1. when to use abstract and interface class
+2. what are the uses static block and static methods
+
+3. What will be the output
+
+String s1="Hello"
+ String s2=new String("Hello");
+if (s1 ==s2){
+print(true);
+} else{
+print(false);
+}
+if (s2.equals(s1)){
+print(true);
+} else{
+print(false);
+}
+
+4. What will be the output
+
+Public static void main (){
+if(true){
+break;
+}
+}
+5. Difference between arrays, arrayslist, linkedlist
+6. Write code to get count of given number In an integer array
+int[] a = [1,1,2,3,4,4,4]
+7. Write code to get reverse of 123
+8. Recursive method
+
+
+1. Features of Java 8
+2. Swap consecutive numbers in Linked List (Program)
+3. Remove an element in the list when the no. is 5
+
+1. What things do we need to keep in mind before using Employee (custom class) object as key to Hashmap ?
+2. What is the significance of toString method ?
+3. Datastructure using Arraylist
+4. What happens if we have multiple catch blocks ?
+
+
+1.	How is hashcode calculated for a key in HashMap ? 
+2.	Which method gets called first when we put a new value to Hashmp – hashcode or equals ? 
+3.	Which approach is better and why ? 
+	Approach 1 : String str = “abc” ;
+	Approach 2 : String str =  new String (“abc” );
+4.	What are the OOPS principles you are familiar with 
+5.	What are the access modifiers available in Java ? Please give me the order starting with the most restrictive 
+
+
+SQL
+
+15.	types of indexes ? why do we use indexes in sql
+16.	What is trigger ? trigger creation syntax and advantage ?  
+17.	Writing SQL Query with Joins. 
+18.	How do you optimize complex SQL queries?
+19. What are the point to consider if the query is delaying in fetching data from a table/s ?
+20. Query to find the details of employee with Maximum total salary
+21. What are constraints in sql
+
+
+
+
+

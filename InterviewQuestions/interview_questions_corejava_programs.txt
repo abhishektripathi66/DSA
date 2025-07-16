@@ -1,0 +1,319 @@
+Core Java intervire Programs:
+===========================
+For all Java8 programs, should follow the below site.
+
+https://javaconceptoftheday.com/solving-real-time-queries-using-java-8-features-employee-management-system/
+
+1)How to sort an array ascending and descending order?
+        int[] numbers = { 5, 2, 9, 1, 5, 6 };
+        Arrays.sort(numbers); // Sort in ascending order
+        System.out.println("Sorted in ascending order: " + Arrays.toString(numbers));
+		Collections.reverse(Arrays.asList(numbers)); // Sort in descending order
+		//practice bubble sort way also
+2)write a program to count characters in a given string?
+        int count = 0;
+		if (string == null || string.length() == 0 || string.isEmpty()) {
+			return 0;
+		}
+		for (int i = 0; i < string.length(); i++) {
+			if (string.charAt(i) != ' ')	
+			count++;
+		}
+		return count;
+		
+3)Count the number of occurances of each character in a given string? ex:Programming---output like - p-1,r-2,o-1,m-2,g-2
+ 
+        Map<Character, Integer> charsMap = new HashMap<>();// at this stage charsMap having no key or no value
+		char[] chars = inputString.toCharArray();
+		System.out.println("the a's count is: " + StringUtils.countOccurrencesOf(inputString, "a"));//shortest way to do
+		for (char c : chars) {
+			if (charsMap.containsKey(c)) {
+
+				charsMap.put(c, charsMap.get(c) + 1); // if we need repeated characters count from a given string, this
+														// will be used.
+				// charsMap.remove(c);//is for only non-repeated characters.
+			} else if (charsMap.containsKey(' ')) {
+				charsMap.remove(' ');
+			}
+
+			else {
+				charsMap.put(c, 1);
+			}
+		}
+4)find what is the max occured character in a given string?
+
+        HashMap<Character, Integer> mp = new HashMap<>();
+		char maxOccured = 0;
+		int count = 0;
+		
+		for (int i = 0; i < str.length(); i++) {
+			// push element into map and increase its frequency
+			char c = str.charAt(i);
+			mp.put(c, mp.getOrDefault(c, 0) + 1);
+
+			// update answer and count
+			if (count < mp.get(c)) {
+				maxOccured = c;
+				count = mp.get(c);
+			}
+		}
+          System.out.println("the max occured character is: "+maxOccured+","+ " and the count: "+count);
+		//return 0 or maxOccured;
+	
+5)write a program for remove duplicates from a given string
+
+        StringBuilder strBuilder = new StringBuilder();
+		Set<Character> onlyUniqueString = new HashSet<>();
+		char[] ch = str.toCharArray();
+
+		for (char c : ch) {
+			//if (Character.isLetterOrDigit(c) || Character.isWhitespace(c)) {
+				
+					if (onlyUniqueString.add(c)) {
+						strBuilder.append(c);
+			//	}
+			}
+		}
+		return strBuilder.toString();
+	}
+	
+6)String reverse program
+
+        String str = "vensee";
+		String result = "";
+		char[] chars = str.toCharArray();
+		for (int i = chars.length - 1; i >= 0; i--) {
+
+			result = result + str.charAt(i);
+		}
+		System.out.println("the reversed string is: " + result);
+	}
+7) code to find the no of words in a given senetence;
+  
+          String senetence = "we are not only bakwas but also...."
+        if (s == null || s.length() == 0 || s.isEmpty()) {
+			return 0;
+		}
+		String[] words = s.split("\\s+");
+		return words.length;
+	}	
+8)code to find the given number is Armstrong number or not?
+
+         //Aramstron number means: 371=3^3+7^3+1^3
+         int originalNumber = inputnumber, remainder, result = 0;
+
+		while (originalNumber != 0) {
+
+			remainder = originalNumber % 10;
+			result += Math.pow(remainder, 3);
+			originalNumber /= 10;
+		}
+		if (result == inputnumber) {
+			// return true;
+			System.out.println("yes its armstrong numebr");
+		} else
+			// return false;
+			System.out.println("no its not armstrong numebr");
+	}
+9)code or program to create fibonacci series:
+
+          Fibonacci Series till 14 terms:
+         // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377
+        int n = 14, firstNumebr = 0, secondNumber = 1;
+		System.out.println("Fibonacci Series till " + n + " terms:");
+		// Fibonacci series means: n= (n-1)+(n-2)
+		for (int i = 1; i <= n; ++i) {
+			int nextNumber = firstNumebr + secondNumber;
+			firstNumebr = secondNumber;
+			secondNumber = nextNumber;
+			System.out.print(firstNumebr + ", ");	
+		}
+ 
+ 10)How to add sum of a given numbers?
+    
+	Ex: 12345 = 15
+	int sum = 0;
+		while (givenNumber != 0) {
+			sum = sum+givenNumber%10;
+			givenNumber = givenNumber / 10;
+		}
+		System.out.println("the sum of given number is: " + sum);
+		return sum;
+	}
+11) same as 10 but in java8
+
+        public static int calculateSumOfDigits(int number) {
+        return String.valueOf(number)
+            .chars()
+            .map(Character::getNumericValue)
+            .reduce(0, (a, b) -> a + b);
+         }
+
+12)How to get common elements from three lists in java8?
+
+        List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5, 6);
+		List<Integer> list2 = Arrays.asList(1, 3);               //[1,3] should be the result
+		List<Integer> list3 = Arrays.asList(1, 3, 7, 8, 9, 0);
+		List<Integer> commonElements = list1.stream()
+				.filter(list2::contains)
+				.filter(list3::contains)       //retainAll(list2) will work in java7
+				.collect(Collectors.toList());
+
+		System.out.println("Common Elements: " + commonElements);
+	
+13)Java program for getting the sum as single digit for the given number:
+
+         Ex: given number is 2023 -  Sum is 7
+		     given number is 20235 - Sum is 12 here again we need to do sum for 12 - so the result is - 3
+			 
+			 int actualResult = addDigitsTillTheSumInSingleDigit(2023214);
+		System.out.println("the actual result is: " + actualResult);
+	}
+
+	public static int addDigitsTillTheSumInSingleDigit(int number) {
+		if (number >= 0 && number <= 9) {
+			return number;
+		}
+		int originalNumber = number, remainder, result = 0;
+		while (originalNumber != 0) {
+
+			remainder = originalNumber % 10;
+			result += remainder;
+			originalNumber = originalNumber / 10;
+		}
+		return addDigitsTillTheSumInSingleDigit(result);
+	}
+	
+14)Getting Key and Value list from th map object in java8
+
+        List<String> keysList = new ArrayList<>();
+		List<Integer> valuesList = new ArrayList<>();
+		
+		mapItems.keySet().forEach(key -> keysList.add(key)); //add elements to mapItems using HashMap
+		mapItems.forEach((key,value)->valuesList.add(value));
+		return keysList;
+		//return valuesList
+		
+15)Java program to find only duplicate elements from a list:
+
+        Collections.sort(namesList); //namesList is the List with duplicates
+		System.out.println("the sorted list is: " + namesList);
+
+		Set<String> uniqueNamesSet = new HashSet<String>();
+		List<String> duplicatesList = new ArrayList<>();
+		for (String name : namesList) {
+			if (!uniqueNamesSet.add(name)) {
+				duplicatesList.add(name);
+			}
+		}
+		return duplicatesList;
+		
+    Same in Java8
+	
+	     List<String> duplicateNames = namesList.stream()
+		 //List<Integer> duplicateNumbers = namesList.stream() //for numbers
+            .collect(Collectors.groupingBy(n -> n, Collectors.counting()))
+            .entrySet()
+            .stream()
+            .filter(entry -> entry.getValue() > 1)
+            .map(Map.Entry::getKey)
+            .collect(Collectors.toList());
+
+         System.out.println("Duplicate namesList: " + duplicateNumbers);
+
+16)How to print 1 to 10 numbers using java8 stream?
+
+        IntStream.range(1, 10).forEach(System.out::println); //to print 1 to 10
+
+17)How to print or get first 5 (or n) elements from a given array in java8?
+
+        List<Integer> firstNElementsList = intList.stream().limit(5).collect(Collectors.toList()); // to print first n // elements
+		List<Integer> findFirst3Elements = intList.stream().limit(3).collect(Collectors.toList());																						
+		System.out.println("the first five elements in a given array are: " + firstNElementsList);
+
+     For Even numbers:
+	 
+	  List<Integer> evenNumbersList = numbersList.stream().filter(n -> n % 2 != 0).collect(Collectors.toList());
+		System.out.println("The even numbers: " + evenNumbersList);
+     
+	 For squaring the numbers:
+	 
+	 List<Integer> squaredList = numbersList.stream().map(n -> n * n).collect(Collectors.toList());
+		System.out.println("the squared list: " + squaredList);
+		
+	 To sort the strings in ascending order:
+		
+     Collections.sort(stringsList, Comparator.naturalOrder());
+		System.out.println("Strings after sorting ascending order : " + stringsList);
+     To sort the strings in ascending order:
+	 
+	 Collections.sort(stringsList, Comparator.reverseOrder());
+		System.out.println("Strings after sorting descending order : " + stringsList);
+		
+18) Guess the output for the below code:
+        public class Test{
+		public static void main(String[] args) {
+		Test test = new Test();
+	    test.operation("Hello");
+		test.operation(new String("World..!"));
+		String s = new String("Mango");
+		test.operation((Object) s);
+		test.operation(null);
+	public void operation(String str) {
+		System.out.println("from string method:" + str);
+	}
+
+	public void operation(Object obj) {
+		System.out.println("from the Object method: " + obj);
+	}}}
+    
+	from string method:Hello
+    from string method:World..!
+    from the Object method: Mango
+    from string method:null
+	
+19)Group the Anagrams: The problem statement here is, we need to group the anagrams into a list from the given array of strings
+   
+       input: String[] arr = {"bat","eat","ate","tea","tan","nat"};
+       output: String[] arr = [["bat"],["eat","ate","tea"],["tan","nat"]]; 
+	   
+	   public static List<List<String>> groupAnagrams(String[] wordArr) {
+		// String[] words = {"tab","bat","ate","eat"};//anagrams
+		Map<String, List<String>> anagramGroups = new HashMap<>();
+		for (String word : wordArr) {
+			char[] chars = word.toCharArray();
+			Arrays.sort(chars);
+			String sortedWord = new String(chars);
+			// abt ,abt,aet,aet
+			System.out.println("printing the chars here: " + sortedWord);
+			anagramGroups.putIfAbsent(sortedWord, new ArrayList<>());
+			// abt - abt , []
+			// {abt:["tab","bat"]}
+			anagramGroups.get(sortedWord).add(word);
+		}
+		return new ArrayList<>(anagramGroups.values());
+	}
+	   
+20)	 Problem: An Employee having three fields with Name,salary and id
+      i).seperate the employees based on the salary using java8
+      ii).sort the employee based on the salary using java8
+
+
+        List<Employeee> empList = new ArrayList<>();
+		empList.add(new Employeee("vensee", 1234L, 10000.0));
+		empList.add(new Employeee("venkat", 2345L, 20000.0));
+		empList.add(new Employeee("sudheepa", 4567L, 20000.0));
+		empList.add(new Employeee("raju", 5678L, 12000.0));
+		// seperate the Employee based on salary range we can use groupingBy method here on list after stream()
+		Map<Double, List<Employeee>> employeeMap = empList.stream()
+				.collect(Collectors.groupingBy(Employeee::getEmpSalary));
+		System.out.println("after separating the employees based on their salaries: " + employeeMap);
+		// sort the employees based on their salary
+		empList.sort(Comparator.comparing(Employeee::getEmpSalary));
+		System.out.println(empList);
+		empList.forEach(System.out::println);	  
+	   
+	   
+	   
+	   
+  
