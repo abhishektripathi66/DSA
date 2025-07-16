@@ -1,0 +1,152 @@
+Finalized
+Hashtable
+Parallel programming
+Parallel streams
+Find maximum in a list using Java 8
+Streams
+Find the count of a letter in stream
+Stack memory and heap memory
+Different objects adding in sets
+How to commit two entities changes in springboot jpa
+
+Design patterns 
+Design Patterns with Examples in Java! 🚀
+
+https://www.linkedin.com/pulse/design-patterns-example-java-md-mohosin-miah-detpc?utm_source=share&utm_medium=member_android&utm_campaign=share_via
+
+How to have custom log template in springboot
+https://bootcamptoprod.com/customizing-logging-format-spring-boot-application-properties-mdc/
+
+Is array synchronous or non synchronous(its asynchronous)
+What is volatile and transient,
+How to make method threadsafe
+
+Microservices architecture https://www.designgurus.io/blog/monolithic-service-oriented-microservice-architecture?gad_source=1&gclid=CjwKCAjwupGyBhBBEiwA0UcqaBGRVqf6XxTqLmpkIawanvx0X_2pG4XrEVxriayrrYSjVSlJba97ehoCaJoQAvD_BwE
+
+What is terminal and intermediate operation
+Is intermediate and terminal operation lazy or eager loading( terminal are eager and intermediate are lazy operations)
+What are junit annotations
+What is syntax for calling parent from child component 
+What is thread poool and how it is created
+What is spring security 
+What is default server in springboot(Tomcat)
+How to change default server (in the spring web starter package exclude the tomcat and in later dependency add the requreid server)
+Maven commands 
+Docker commands
+Design pattern used in spring (Singleton)
+What is spring mvc explain end to end 
+How microservices communicate with each other
+Different types of garbage collectors
+Difference between JVM and JRE
+What is concurrent hashmap
+When to use list and when to use set
+Arraylist and linkedlist when they can be used 
+Life cycle of thread
+What is functional interface and interface 
+Why was default method added
+What are actuators
+What are the types of dependency injection 
+Difference between controller and restcontroller
+Why is qualifier used
+What is the lifecycle of bean
+What is restTemplate
+High level Microservices architecture 
+Perform join using crud operations
+Procedures and functions in sql
+Jdbc prepare and execute statement 
+Class object and instance 
+Classloader
+Hashcode and equals contract 
+Query to fetch the latest job time of each job
+Flatmap and code for flat
+when synchronous hashmap should be used and when concurrent hashmap should be used
+
+write a code to sort the list in descending order using java 8
+Find common names between two lists using streams
+How to debug streams
+How to autowire the interface that opens default implementation
+Why is volatile used and difference between static and volatile and class variable
+How are configuring the db using springboot
+Can we catch multiple exception in a single catch block
+Try with resources
+Design patterns used(abstract pattern)
+Solid design principles
+Can we have multiple functions in functional interface( only one abstract and multiple default functions can be present even static methods can be present but static method cannot be overridden by the implementing class and default method can be overridden)
+
+Can we have default and static method in functional interface
+How to create primary key using the entity annotations in spring
+
+Types of functional interface in java 8
+Where lambda expressions are used?
+How many threads will be given to parallel stream
+What are Executors and what are thread executors
+What is Rest API
+Where transactions happen and how roll back and commit happen
+Annotation used tp create the object multiple times
+What service discovery have used
+What authentication process have you used
+Github related stuffs
+Using streams find maximum salary from an employees object
+Using streams remove the duplicate of list
+What is hooks in angular
+How is custom exceptional handling done
+
+https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/
+
+
+Accenture questions:
+
+Java 8 features
+why pacakges are required in the java
+package access,
+differnece between springboot and spring framework
+benefits of using springboot
+how is stringpool created.
+why are constrcutors used, what is contructor object?
+what does the constrcutor return?
+what are different type of constructors?
+what is static variable?
+can we override static method?
+can we execute without using the main class?
+what is this keyword?
+what is pointers?
+what is super keyword?
+what is object cloning?
+what is difference between equals and ==?
+what is metadata of the springframework?
+what is controller?
+what is requestmapping?
+
+
+Opentext questions:
+what is garbage collection? in java how we can do garbage collection? what are the methods used for garbage collection?
+at what point garbage collection is done?
+what is JVM?
+what is heap and stack memory?
+internal working of HashMap?
+if we have a mthod and we pass null to it what happens? will it take it as string or null?
+in hashmap can we do modifcation while iterating?
+when we are overide what exceptions can we throw?
+what is restful services?
+what is default scope of spring bean?
+explain different type of design patterns?
+what is factory design pattern?
+in java script what is the valuse of 0==false?
+what is promise in javascript?
+
+
+
+Managerial questions
+Why we should hire you?
+What is your ambition?
+Why your changing so frequently 
+
+
+To get better at
+
+Springdatajpa
+Hibernate
+Multithreading or threading or runnable
+Microservices
+Concurrent design
+
