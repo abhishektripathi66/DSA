@@ -11,6 +11,8 @@ on:
     types: [opened, synchronize, reopened]
   issues:
     types: [opened, edited, reopened]
+permissions:
+  pull-requests: write
 
 jobs:
   label:
