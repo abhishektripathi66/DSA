@@ -38,13 +38,14 @@ Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 100
 **/
-class NextPermutation {
+public class NextPermutation {
     public void nextPermutation(int[] nums) {
+     // first find the index from right end where the value starts decreasing
         int i=nums.length-2;
         while(i>=0 && nums[i]>=nums[i+1]){
             i--;
         }
-
+       // from that index move towards right to find the swapping element which is just greater than element at index
         if(i>=0){
             int j= nums.length-1;
             while(j>=0 && nums[j]<=nums[i]) j--;
@@ -52,7 +53,8 @@ class NextPermutation {
             nums[i]=nums[j];
             nums[j]=temp;
         } 
-        
+
+     // after swapping just the revese the element from i+1 to the end of the array;
         int end = nums.length-1;
         int start = i+1;
         while(start<end){
