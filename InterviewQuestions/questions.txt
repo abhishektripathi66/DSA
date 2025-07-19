@@ -134,6 +134,12 @@ what is factory design pattern?
 in java script what is the valuse of 0==false?
 what is promise in javascript?
 
+STG labs:
+
+what is spring security?
+what is Springdatajpa?
+how to make singleton thread safe?
+Solid principles?
 
 
 
