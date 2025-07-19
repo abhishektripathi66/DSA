@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3202. Find the Maximum Length of Valid Subsequence II
 Solved
@@ -41,7 +43,7 @@ Constraints:
 1 <= nums[i] <= 107
 1 <= k <= 103
 */
-class Solution {
+public class FindTheMaximumLengthOfValidSubsequenceII {
     public int maximumLength(int[] nums, int k) {
         for(int i = 0; i < nums.length; i++)
             nums[i] %= k;

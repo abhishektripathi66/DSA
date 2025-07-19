@@ -19,7 +19,7 @@ import java.util.List;
  * <p>
  * For example, "/leetcode" and "/leetcode/problems" are valid paths while an empty string and "/" are not.
  **/
-public class RemoveSubFoldersfromtheFilesystem {
+public class RemoveSubFoldersFromTheFilesystem {
     public List<String> removeSubfolders(String[] folder) {
         // Sort the folders lexicographically so parent folders come before their subfolders
         Arrays.sort(folder);
