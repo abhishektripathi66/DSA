@@ -39,7 +39,7 @@ folder[i] contains only lowercase letters and '/'.
 folder[i] always starts with the character '/'.
 Each folder name is unique.
 */
-class Solution {
+public class RemoveSubFoldersFromTheFilesystem {
     public List<String> removeSubfolders(String[] folder) {
         Arrays.sort(folder);
 
@@ -56,5 +56,21 @@ class Solution {
         }
 
         return res;
+    }
+
+ //solution 2 Abhishek Tripathi
+ public List<String> removeSubfolders1(String[] folder) {
+        List<String> a = new ArrayList<>();
+        Arrays.sort(folder);
+        a.add(folder[0]);
+        int j=0;
+        for(int i=1;i<folder.length;i++){
+            if(!folder[i].startsWith(a.get(j)+"/")){
+                    a.add(folder[i]);
+                    j++;
+            }
+            
+        }
+        return a;
     }
 }
