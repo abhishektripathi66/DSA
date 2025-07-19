@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
 31. Next Permutation
 Solved
