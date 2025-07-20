@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1233. Remove Sub-Folders from the Filesystem
 Solved
@@ -39,6 +41,11 @@ folder[i] contains only lowercase letters and '/'.
 folder[i] always starts with the character '/'.
 Each folder name is unique.
 */
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class RemoveSubFoldersFromTheFilesystem {
     public List<String> removeSubfolders(String[] folder) {
         Arrays.sort(folder);
