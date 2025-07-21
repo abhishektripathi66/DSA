@@ -36,3 +36,8 @@ This is the structure of the Project where we would be able to find the required
 [![pages-build-deployment](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment)
 [![Java CI](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml)
 [![Dependency review](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml)
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=abhishektripathi66/DSA&type=Date)](https://www.star-history.com/#abhishektripathi66/DSA&Date)
