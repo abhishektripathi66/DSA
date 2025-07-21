@@ -76,8 +76,8 @@ public class DeleteDuplicateFoldersInSystem {
 
     // creating a Node for The trie data structure
     static class Node{
-        String val;
-        String subFolder;
+        String val; //name of the folder
+        String subFolder; //subfolder structure
         Map<String, Node> children;
 
         Node(String val){
@@ -92,7 +92,7 @@ public class DeleteDuplicateFoldersInSystem {
         return new Node(val);
     }
 
-  
+    //if a particular path is not present then create is else proceed to next folder
     private void insert(Node root, List<String> path){
         for(String folder:path){
             root.children.putIfAbsent(folder,getNode(folder));
@@ -100,6 +100,7 @@ public class DeleteDuplicateFoldersInSystem {
         }
     }
 
+    // to store the count from the root in the subFolderPaths with the subfolder.
     private String populateNodes(Node root, Map<String,Integer> subFolderMap){
 
         List<Map.Entry<String,String>> subFolderPaths = new ArrayList<>();
@@ -109,7 +110,8 @@ public class DeleteDuplicateFoldersInSystem {
             subFolderPaths.add(new AbstractMap.SimpleEntry<>(entry.getKey(),subFolderResult));
         }
         subFolderPaths.sort(Comparator.comparing(Map.Entry::getKey));
-        StringBuilder completePath = new StringBuilder();
+        StringBuilder completePath = new StringBuilder(); // this is the subfolder of current root which we will form from children path
+        // we will go through each sub folder and we add it to the root.subFolder and the count is increased in the map as well
         for(Map.Entry<String,String> entry:subFolderPaths){
             completePath.append("(").append(entry.getKey()).append(entry.getValue()).append(")");
 
@@ -123,6 +125,8 @@ public class DeleteDuplicateFoldersInSystem {
 
     }
 
+
+    // to remove the folders based on subFolderMap that has the count, if any subfolder has count more than 1 then we delete it
     private void removeDuplicates(Node root, Map<String,Integer> subFolderMap){
         Iterator<Map.Entry<String, Node>> it = root.children.entrySet().iterator();
         while(it.hasNext()){
@@ -137,16 +141,18 @@ public class DeleteDuplicateFoldersInSystem {
         }
     }
 
+    // to add back the thing to the list to return it.
     private void constructResult(Node root, List<String> path, List<List<String>> result){
         for(Map.Entry<String, Node> entry: root.children.entrySet()){
-            path.add(entry.getKey());
-            result.add(new ArrayList<>(path));
-            constructResult(entry.getValue(),path,result);
-            path.remove(path.size()-1);
+            path.add(entry.getKey()); // adding the key to the path
+            result.add(new ArrayList<>(path)); // adding it to the result 
+            constructResult(entry.getValue(),path,result); //continue
+            path.remove(path.size()-1); // before returning back we would remove the last key.
         }
     }
 
     public List<List<String>> deleteDuplicateFolder(List<List<String>> paths) {
+        //creating the root node
         Node root = getNode("/");
 
         //construct trie
@@ -154,9 +160,13 @@ public class DeleteDuplicateFoldersInSystem {
             insert(root,path);
         }
 
+        //map to store the count of the subfolder
         Map<String, Integer> subFolderMap = new HashMap<>();
+        // to store the subfolders in the tree and even keep the count
         populateNodes(root,subFolderMap);
+        // remove duplicates from the root.
         removeDuplicates(root,subFolderMap);
+        // to get th final result using the subFolderMap 
         List<List<String>> result = new ArrayList<>();
         List<String> path = new ArrayList<>();
         constructResult(root,path,result);
