@@ -1,6 +1,36 @@
 package algorithms.graph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+/*
+ * Detect Cycle in an Undirected Graph (Using DFS or BFS)
+ *
+ * Given an unweighted undirected graph represented as an adjacency matrix,
+ * detect whether the graph contains a cycle. Since the graph may be disconnected, 
+ * ensure that each component is checked.
+ * A cycle in an undirected graph exists if during traversal, we encounter a 
+ * visited node that is not the parent of the current node.
+ *
+ * Time Complexity:
+ *   - O(V + E), where V is the number of vertices and E is the number of edges.
+ *
+ * Space Complexity:
+ *   - O(V + E) for the adjacency list.
+ *   - O(V) for the visited array and recursion/queue space.
+ *
+ * Example:
+ *   Input adjacency matrix of cyclic graph:
+ *     0 1 1 0
+ *     1 0 1 0
+ *     1 1 0 1
+ *     0 0 1 0
+ *
+ *   Output:
+ *     Graph contains cycle
+ */
 
 public class DetectCycleUndirectGraph {
     public static void main(String[] args){
@@ -35,7 +65,7 @@ public class DetectCycleUndirectGraph {
             System.out.println("Graph does not contain cycle");
     }
 
-
+    //using DFS travesal
     private static boolean DFSRec(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited, int parent){
 
         visited[s] = true;
@@ -53,7 +83,32 @@ public class DetectCycleUndirectGraph {
         return false;
     }
 
+    //using BFS traversal
+    private static boolean BFS(ArrayList<ArrayList<Integer>> adj, int start, boolean[] visited) {
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{start, -1});
+        visited[start] = true;
 
+        while (!queue.isEmpty()) {
+            int[] pair = queue.poll();
+            int node = pair[0];
+            int parent = pair[1];
+
+            for (int neighbor : adj.get(node)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.add(new int[]{neighbor, node});
+                } else if (neighbor != parent) {
+                    // If visited and not parent, cycle detected
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    //to convert adjacency matrix into an adjacency list for efficient traversal
     private static ArrayList<ArrayList<Integer>> convertGridIntoAdjList(int[][] grid) {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < grid.length; i++) {
