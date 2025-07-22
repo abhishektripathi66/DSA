@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
 
 1695. Maximum Erasure Value

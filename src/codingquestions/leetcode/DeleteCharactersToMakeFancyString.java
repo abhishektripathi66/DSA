@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1957. Delete Characters to Make Fancy String
 Solved
