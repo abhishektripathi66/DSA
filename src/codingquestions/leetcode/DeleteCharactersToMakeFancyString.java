@@ -41,7 +41,7 @@ Constraints:
 1 <= s.length <= 105
 s consists only of lowercase English letters.
 */
-class Solution {
+public class DeleteCharactersToMakeFancyString {
     public String makeFancyString(String s) {
         StringBuilder res = new StringBuilder();
         char cur = s.charAt(0);
@@ -60,5 +60,24 @@ class Solution {
         }
 
         return res.toString();
+    }
+
+ public String makeFancyStringeff(String s) {
+        char[] c = s.toCharArray();
+        int k=1;
+        int count=1;
+        for(int i=1;i<s.length();i++){
+            if(c[i]==c[i-1]){
+                if(count<2){
+                    c[k++]=c[i];
+                }
+                count++;
+            }
+            else{
+                count=1;
+                c[k++]=c[i];
+            }
+        }
+        return new String(c,0,k);
     }
 }
