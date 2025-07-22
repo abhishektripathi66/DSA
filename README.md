@@ -36,8 +36,15 @@ This is the structure of the Project where we would be able to find the required
 [![pages-build-deployment](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/pages/pages-build-deployment)
 [![Java CI](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/ant.yml)
 [![Dependency review](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/abhishektripathi66/DSA/actions/workflows/dependency-review.yml)
-
+<img src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=abhishektripathi66&repo=DSA&countColorcountColor&countColor=%237B1E7B"/>
+## contributors
+<a href = "https://github.com/abhishektripathi66/DSA/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=abhishektripathi66/DSA"/>
+</a>
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=abhishektripathi66/DSA&type=Date)](https://www.star-history.com/#abhishektripathi66/DSA&Date)
+
+## Joke of the time
+<a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
