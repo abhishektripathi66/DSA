@@ -2,8 +2,8 @@
 
 This repo is used for adding the DSA related stuffs
 
-all the data structure related items are present in the data structure folder
-all the algorithm related items are present in the Algorithm folder
+All the data structure related items are present in the data structure folder
+All the algorithm related items are present in the Algorithm folder
 The interview related questions and its solution from different coding websites are in the Coding Questions.
 
 - 👋 Hi, I’m Abhishek Tripathi(@abhishektripathi66)
