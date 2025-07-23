@@ -1,6 +1,5 @@
-package codingquestions.leetcode;
-/**
- * 1717. Maximum Score From Removing Substrings
+/*
+1717. Maximum Score From Removing Substrings
 Solved
 Medium
 Topics
@@ -38,45 +37,36 @@ Constraints:
 1 <= s.length <= 105
 1 <= x, y <= 104
 s consists of lowercase English letters.
- */
-public class MaximumScoreFromRemovingSubstrings {
-    
-    public static void main(String[] args) {
-        
-    }
-    
+*/
+class Solution {
     public int maximumGain(String s, int x, int y) {
-        if(x>y){
-            return removePairs(s,"ab",x,y);
+        //swap for: ab have more point than ba
+        if(x < y){
+            int temp = x;
+            x = y;
+            y = temp;
+            s = new StringBuilder(s).reverse().toString(); //still take "ab" for higher priority
         }
-        return removePairs(s,"ba",y,x);
-    }
 
-    private int removePairs(String s, String pattern,int high,int low){
-            int score=0;
-            
-            StringBuilder sb = new StringBuilder();
-            for(char ch:s.toCharArray()){
-                sb.append(ch);
-
-                int length = sb.length();
-                if(length>=2 && sb.charAt(length-1)==pattern.charAt(1) && sb.charAt(length-2)==pattern.charAt(0)){
-                    score+=high;
-                    sb.setLength(length-2);
+        int cnt_a = 0, cnt_b = 0, res = 0;
+        for(int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            if(c == 'a'){
+                cnt_a++;
+            } else if(c == 'b'){
+                if(cnt_a > 0){
+                    cnt_a--;
+                    res += x;
+                } else{
+                    cnt_b++;
                 }
+            } else{
+                res += Math.min(cnt_a, cnt_b) * y;
+                cnt_a = 0;
+                cnt_b = 0;
             }
-            StringBuilder sb1 = new StringBuilder();
-            for(char ch:sb.toString().toCharArray()){
-                sb1.append(ch);
-
-                int length = sb1.length();
-                if(length>=2 && sb1.charAt(length-1)==pattern.charAt(0) && sb1.charAt(length-2)==pattern.charAt(1)){
-                    score+=low;
-                    sb1.setLength(length-2);
-                }
-            }
-
-
-            return score;
+        }
+        res += Math.min(cnt_a, cnt_b) * y;
+        return res;
     }
 }
