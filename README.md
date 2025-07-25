@@ -29,6 +29,8 @@ This is the structure of the Project where we would be able to find the required
     - codingninjas
     - generalquestions
     - leetcode
+    	- ds
+    	- sql
     - recursion
     - streamsapiquestions
   - datastructures
