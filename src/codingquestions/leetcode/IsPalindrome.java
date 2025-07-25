@@ -25,16 +25,33 @@ Explanation: s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
  
  */
-public class IsPallindrome {
+public class IsPalindrome {
     public static void main(String[] args) {
-        IsPallindrome.isPalindrome("A man, a plan, a canal: Panama");
+        IsPalindrome.isPalindrome("A man, a plan, a canal: Panama");
     }
 
     public static boolean isPalindrome(String s) {
-        s = s.replaceAll("[^A-Za-z0-9]", "");
-        StringBuffer sb = new StringBuffer(s);
-        sb.reverse();
-        return s.equalsIgnoreCase(sb.toString());
+        int left = 0, right = s.length() - 1;
+        
+        while (left < right) {
+            // Move left forward if current character is not alphanumeric
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+            // Move right backward if current character is not alphanumeric
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
 
+            // Compare characters ignoring case
+            if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+            
+            left++;
+            right--;
+        }
+        
+        return true;
     }
 }
