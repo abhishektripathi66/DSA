@@ -1,0 +1,52 @@
+Overview of the sorting Algorithm
+
+1. Parition of quick sort like Lomato, Hoare, Naive are used for Binary Array or array with two values.
+2. partition using the quick sort to solve  Array with three values/ sorting an array over a range/ array where elements occur multiple times 
+3. Counting Sort is used for array of size n and it has small ranged value using O(n+k) time, used mainly if the range is small.
+4. if array size is small but range of items is in n^2 or n^3 then we have to use Radix Sort which basically sorts in O(n) time and space 
+5. if the data is uniformally distributed over a range like 100 elements from 0.0 to 0.99, for this we use bucketsort for uniformly sorted array.
+6. when memory writes are costly we use selectionSort or cycle sort but it take more time but its best over here.
+7. when adjacent swaps are allowed we use bubble sort or cocktail sort which is improved version of buble sort.
+8. when we want to sort small size array then we use selection sort and insertion sort, insertion sort is best algorithm.
+9. when availble extra memory is less for sorting, we use shell sortm its better with nlogn^2 time complexity and less space that is O(1);
+
+General Purpose Sorting Algorithms:
+1. Merge Sort O(nlogn) its stable algorithm and its good in some conditions like linkedlist, space complexity is O(n), for external sorting, linear and divide and conquer approach, used for parallel sorting
+2. Heap Sort O(nlogn) it needs random access
+3. Quick Sort O(n*n) fastest of other two
+
+Hybrid Algorithms
+1. TimSort
+2. IntroSort
+
+
+Sorting in Java
+
+Arrays.sort()
+    i. Arrays of primitive (int,char ...) stability is not required as it comes automatically since its a single value, it uses Dual Pivot Quick Sort technique.
+    ii. Arrays of Objects (Integer, String ...) Stability is added to sorted even the order, based on the mergesort adaption of timesort.
+Collections.sort()
+    i. Applicable only for List of Objects
+    The Stable sorting is used, which is nothing but sorting by keeping the orginal order in mind, based on the mergesort adaption of timesort.
+
+Arrays.sort is used for normal sorting and not collection sorting.
+the sorting in arrays for primitive can be done in increasing or decreasing order and not custom order?
+in case for the non primitve types we can provide the custom order, we can use collection .sort
+we can even sort from one index to another in the array
+
+we can implement the comparable to the class where we would be applying the sort, to sort it in the custom order. here we compare the current object with another object.
+we can implement comparator as well, which compares the two object in antoher class.
+
+
+Collections.sort  it used to sort an arraylist and linkedList.
+Wrapper classes have compareto function inside them.
+
+Stability in Sorting Algorithm
+it means that when we are sorting any array of object or the collections of object we would be mainting the original order while sorting when the lexographic of two component is same.
+when objects of multiple field are availble and we are sorting over one or two fields.
+
+in the unstable sorting it doesnt care about the original order.
+
+example of stable sorts : Bubble sort, Insertion sort, Merge Sort....
+Examples of Unstable sorts : Selection Sort, Quick Sort, Heap Sort...
+ 

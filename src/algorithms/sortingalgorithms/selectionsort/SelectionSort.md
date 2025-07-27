@@ -22,11 +22,16 @@ O(1)
 
 Advantages:
 
-✅ Simple and easy to implement.✅ Makes minimum number of swaps.
+✅ Simple and easy to implement.
+✅ Makes minimum number of swaps.
+✅ Does less memory writes compared to QuickSort, Merge Sort, Insertion Sort, etc But cycle sort is optimal in terms of memory writes.
+✅ Basic idea for Heap Sort
 
 Limitations:
 
 ❌ Inefficient on large datasets.
+
+❌ Not stable
 
 Use Cases:
 
