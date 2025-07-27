@@ -1,3 +1,7 @@
+package codingquestions.leetcode;
+
+import java.util.Arrays;
+
 /*
 3480. Maximize Subarrays After Removing One Conflicting Pair
 Solved
@@ -46,7 +50,7 @@ conflictingPairs[i].length == 2
 1 <= conflictingPairs[i][j] <= n
 conflictingPairs[i][0] != conflictingPairs[i][1]
 */
-class Solution {
+public class MaximizeSubarraysAfterRemovingOneConflictingPair {
     public long maxSubarrays(int n, int[][] conflictingPairs) {
         int[] bMin1 = new int[n + 1];
         int[] bMin2 = new int[n + 1];

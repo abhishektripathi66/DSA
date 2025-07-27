@@ -136,6 +136,7 @@ public class BFSAndDFSTraversal {
         return adj;
     }
 
+    @SuppressWarnings("unused")
     private static void printGraph(ArrayList<ArrayList<Integer>> adj) {
         for (int i = 0; i < adj.size(); i++) {
             System.out.print(i + ": ");
