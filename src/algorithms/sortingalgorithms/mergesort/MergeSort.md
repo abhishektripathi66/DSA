@@ -27,12 +27,16 @@ O(n) due to temporary arrays used during merging.
 
 Advantages:
 
-✅ Stable sort (preserves the order of equal elements).✅ Consistent O(n log n) performance.✅ Excellent for sorting linked
+✅ Stable sort (preserves the order of equal elements).
+✅ Consistent O(n log n) performance.
+✅ Excellent for sorting linked
 lists.
 
 Limitations:
 
-❌ Requires additional space proportional to the array size.❌ Slower for small datasets due to overhead of recursive
+❌ Requires additional space proportional to the array size.
+❌ Slower for small datasets due to overhead of recursive
+❌ Outperformed by quickSort
 calls and merging.
 
 Use Cases:
@@ -42,3 +46,7 @@ Sorting linked lists.
 Datasets requiring stable sorting.
 
 Large datasets where guaranteed O(n log n) performance is needed.
+
+variant:
+
+Block Merge Sort that works in nlogn time and n space

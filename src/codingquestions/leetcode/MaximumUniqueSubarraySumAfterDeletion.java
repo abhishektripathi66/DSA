@@ -1,5 +1,11 @@
-/*
-3487. Maximum Unique Subarray Sum After Deletion
+package codingquestions.leetcode;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * 
+ * 3487. Maximum Unique Subarray Sum After Deletion
 Solved
 Easy
 Topics
@@ -53,8 +59,34 @@ Constraints:
 1 <= nums.length <= 100
 -100 <= nums[i] <= 100
 */
-class Solution {
-    public int maxSum(int[] nums) {
+ 
+public class MaximumUniqueSubarraySumAfterDeletion {
+
+    public static void main(String[] args) {
+        
+    }
+
+    public int maxSumUsingArray(int[] nums) {
+        int sum =0;
+        int[] visited = new int[101];
+        int maxnegative=Integer.MIN_VALUE;
+        int pos =0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]<0){
+                 maxnegative = Math.max(maxnegative,nums[i]);   
+            }
+            else{
+                visited[nums[i]]++;
+                if(visited[nums[i]]<=1) sum+=nums[i];
+                pos++;
+            }
+            
+        }
+        if(pos==0) return maxnegative;
+        return sum;
+    }
+
+    public int maxSumUsingHashSet(int[] nums) {
         Set<Integer> st = new HashSet<>();
         for(int num : nums){
             if(num > 0)
@@ -74,4 +106,5 @@ class Solution {
         
         return res;
     }
+    
 }
