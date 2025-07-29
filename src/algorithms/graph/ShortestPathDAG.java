@@ -5,6 +5,57 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+/*
+ * Shortest Path in a Directed Acyclic Graph (DAG) using Topological Sorting
+ *
+ * This class demonstrates how to find the shortest path from a given source vertex
+ * in a weighted Directed Acyclic Graph (DAG) using a topological order-based approach.
+ *
+ * Key Concepts:
+ *   - The graph is first checked for cycles using Kahn’s algorithm (BFS-based Topological Sort).
+ *   - If the graph is acyclic, shortest paths are computed using edge relaxation
+ *     in topological order.
+ *
+ * Input:
+ *   - A weighted DAG represented as an adjacency matrix.
+ *   - Each non-zero entry grid[i][j] indicates a directed edge from i to j with a weight.
+ *
+ * Output:
+ *   - Shortest distances from the given source vertex to all other vertices.
+ *
+ * Time Complexity:
+ *   - O(V + E), where V is the number of vertices and E is the number of edges.
+ *
+ * Space Complexity:
+ *   - O(V + E) for the adjacency list
+ *   - O(V) for distance, indegree, and visited structures
+ *
+ * Example:
+ *   Input Adjacency Matrix (weighted):
+ *     0 2 3 6 0 0 0 0
+ *     0 0 0 0 1 4 0 0
+ *     0 0 0 0 0 0 0 0
+ *     0 0 0 0 0 0 2 0
+ *     0 0 0 0 0 0 0 0
+ *     0 0 0 0 0 0 0 1
+ *     0 0 0 0 0 0 0 1
+ *     0 0 0 0 0 0 0 0
+ *
+ *   Output:
+ *     Shortest Path from source 0:
+ *     Vertex 0 : 0
+ *     Vertex 1 : 2
+ *     Vertex 2 : 3
+ *     Vertex 3 : 6
+ *     Vertex 4 : 3
+ *     Vertex 5 : 6
+ *     Vertex 6 : 8
+ *     Vertex 7 : 7
+ */
+
+
+
 public class ShortestPathDAG {
     public static void main(String[] args) {
 
@@ -47,12 +98,17 @@ public class ShortestPathDAG {
 
 
         ArrayList<Integer> topologicalOrder = new ArrayList<>();
-        if(hasCycleBFS(adj, topologicalOrder)){
+        if(hasCycleBFS(adj, topologicalOrder)){ //check that does graph has any cycle or not?
             System.out.println("Graph contains cycle so shortest path is not possible");
         }
         else{
-            int source = 0;
-            int[] dist = findShortedPath(source, topologicalOrder, adj);
+            //for acyclic graph
+            //using topological sort because first we have to complete all predecessors before completing current one
+            //it ensures that current verices get a minimum distance from all other predecessors who's shortest distance is computed
+
+            //here condsider is just single component and vertices are numbered from 0 to n-1
+            int source = 0; //source 0 from where we have to find shorted distance for other vertices
+            int[] dist = findShortestPath(source, topologicalOrder, adj);
 
             System.out.println("Shortest Path from given source "+source+" : ");
             for(int i=0; i<dist.length; i++){
@@ -62,7 +118,7 @@ public class ShortestPathDAG {
 
     }
 
-    private static int[] findShortedPath(int source, ArrayList<Integer> topologicalOrder, ArrayList<ArrayList<Pair>> adj){
+    private static int[] findShortestPath(int source, ArrayList<Integer> topologicalOrder, ArrayList<ArrayList<Pair>> adj){
         int n = adj.size();
 
         int[] dist = new int[n];
@@ -72,7 +128,7 @@ public class ShortestPathDAG {
         for(int u : topologicalOrder){
             //iterating through each pair from ArrayList<Pair> pairs from adj.get(u)
             for(Pair p: adj.get(u)){
-                if(dist[p.vertex] > dist[u] + p.weight){
+                if(dist[u] != Integer.MAX_VALUE && dist[p.vertex] > dist[u] + p.weight){
                     dist[p.vertex] = dist[u] + p.weight;
                 }
             }
@@ -81,7 +137,7 @@ public class ShortestPathDAG {
         return dist;
     }
 
-    // Kahn's Algorithm for Topological sort
+    // Kahn's Algorithm to check cycle and find topological sort
     private static boolean hasCycleBFS(ArrayList<ArrayList<Pair>>  adj, ArrayList<Integer> topologicalOrderList){
         int n = adj.size();
 
