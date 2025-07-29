@@ -6,14 +6,15 @@ public class OnlyOneDigit {
     
     public static void main(String[] args) {
         
-        Scanner myObj = new Scanner(System.in);
-        int a = myObj.nextInt();
-        int[] b = new int[a];
-        for (int i = 0; i < a; i++) {
-            b[i] = myObj.nextInt();
-        }
-        for (int i = 0; i < a; i++) {
-            System.out.println(onlyonedigit(b[i]));
+        try (Scanner myObj = new Scanner(System.in)) {
+            int a = myObj.nextInt();
+            int[] b = new int[a];
+            for (int i = 0; i < a; i++) {
+                b[i] = myObj.nextInt();
+            }
+            for (int i = 0; i < a; i++) {
+                System.out.println(onlyonedigit(b[i]));
+            }
         }
 
     }

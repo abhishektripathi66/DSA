@@ -84,7 +84,8 @@ public class DetectCycleUndirectGraph {
     }
 
     //using BFS traversal
-    private static boolean BFSUtil(ArrayList<ArrayList<Integer>> adj, int start, boolean[] visited) {
+    @SuppressWarnings("unused")
+    private static boolean BFS(ArrayList<ArrayList<Integer>> adj, int start, boolean[] visited) {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{start, -1});
         visited[start] = true;
