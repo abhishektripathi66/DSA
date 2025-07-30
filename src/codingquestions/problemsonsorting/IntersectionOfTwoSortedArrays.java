@@ -8,7 +8,7 @@ public class IntersectionOfTwoSortedArrays {
         findUnion(arr1, arr2);
 
     }
-
+    // we are using the merge sort to find the commong elements between the two arrays but print only once
     public static void findIntersection(int[] arr1, int[] arr2){
         int i=0,j=0;
         while(i<arr1.length && j<arr2.length){
@@ -24,6 +24,7 @@ public class IntersectionOfTwoSortedArrays {
         }
     }
 
+    // using the merge sort we are finding the elements that are the union of both the array but print only once
     public static void findUnion(int[] arr1, int[] arr2){
         int i=0,j=0;
         while(i<arr1.length && j<arr2.length){
