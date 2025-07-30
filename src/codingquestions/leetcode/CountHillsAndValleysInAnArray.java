@@ -45,7 +45,7 @@ Constraints:
 3 <= nums.length <= 100
 1 <= nums[i] <= 100
 */
-class Solution {
+public class CountHillsAndValleysInAnArray {
     public int countHillValley(int[] nums) {
         int res = 0;
         for(int i = 1; i < nums.length - 1; i++){

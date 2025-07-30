@@ -1,4 +1,4 @@
-package codingquestions.TwoPointerTechnique;
+package codingquestions.twopointertechnique;
 // this is best used only when the array is sorted.
 public class FindPairSum {
 
