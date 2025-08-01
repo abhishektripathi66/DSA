@@ -47,7 +47,7 @@ n == nums.length
 1 <= n <= 105
 0 <= nums[i] <= 109
 */
-class Solution {
+public class SmalletsSubarraysWithMaximumBitwiseOR {
     public int[] smallestSubarrays(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];
