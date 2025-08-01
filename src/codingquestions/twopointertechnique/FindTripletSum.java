@@ -1,4 +1,4 @@
-package codingquestions.TwoPointerTechnique;
+package codingquestions.twopointertechnique;
 
 public class FindTripletSum {
 
