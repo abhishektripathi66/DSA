@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2210. Count Hills and Valleys in an Array
 Solved

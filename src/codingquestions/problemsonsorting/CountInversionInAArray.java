@@ -23,7 +23,7 @@ public class CountInversionInAArray {
         int n1=m-l+1,n2=r-m;
         int[] left = new int[n1], right = new int[n2];
         for(int i=0;i<n1;i++) left[i]=arr[l+i];
-        for(int j=0;j<n2;j++) right[j]=arr[m+i+1];
+        for(int j=0;j<n2;j++) right[j]=arr[m+j+1];
         int i=0,j=0,k=l;
         while(i<n1 && j<n2){
             if(left[i]<=right[j]){ arr[k++]=left[i++];}

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2411. Smallest Subarrays With Maximum Bitwise OR
 Solved
