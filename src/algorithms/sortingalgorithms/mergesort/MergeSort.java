@@ -1,5 +1,7 @@
 package algorithms.sortingalgorithms.mergesort;
 
+import java.util.Arrays;
+
 /**
  * Merge Sort Algorithm
  * ----------------------
@@ -20,8 +22,8 @@ public class MergeSort {
         int[] left = new int[mid];
         int[] right = new int[array.length - mid];
 
-        System.arraycopy(array, 0, left, 0, mid);
-        System.arraycopy(array, mid, right, 0, array.length - mid);
+        System.arraycopy(array, 0, left, 0, left.length);
+        System.arraycopy(array, mid, right, 0, right.length);
 
         mergeSort(left);
         mergeSort(right);
@@ -58,6 +60,9 @@ public class MergeSort {
 
         System.out.println("After Merge Sort:");
         printArray(arr);
+        int[] arr1 = {5, 8, 9, 1, 2, 6, 4};
+        mergeSort(arr1, 0, arr1.length-1);
+        System.out.println(Arrays.toString(arr1));
     }
 
     private static void printArray(int[] arr) {
@@ -65,5 +70,15 @@ public class MergeSort {
             System.out.print(num + " ");
         }
         System.out.println();
+    }
+
+    public static void mergeSort(int arr[], int l,int r){
+        if(r>l){
+            int m= l+(r-l)/2;
+            mergeSort(arr, l, m);
+            mergeSort(arr,m+1,r);
+            MergeTwoSortedArrays.SortTheArray(arr, l, m, r);
+        }
+
     }
 }
