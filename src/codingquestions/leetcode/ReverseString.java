@@ -29,7 +29,7 @@ package codingquestions.leetcode;
 
 
 public class ReverseString {
-    public String reverseWords(String s) {
+    public static String reverseWords(String s) {
         s = s.trim();
         String[] arr = s.split(" ");
         StringBuffer sb = new StringBuffer();
@@ -38,6 +38,18 @@ public class ReverseString {
                 sb.append(arr[i] + " ");
         }
         return sb.toString().trim();
-
+    }
+    public String twoPointerReverseWords(String s){
+        char c[] = s.toCharArray();
+        int n=c.length;
+        int start=0, end=n-1;
+        while(start<end){
+            char temp = c[start];
+            c[start] = c[end];
+            c[end] = temp;
+            start++;
+            end--;
+        }
+        return new String(c);
     }
 }
