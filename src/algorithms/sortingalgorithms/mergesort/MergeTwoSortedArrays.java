@@ -1,7 +1,5 @@
 package algorithms.sortingalgorithms.mergesort;
 
-import java.util.Arrays;
-
 public class MergeTwoSortedArrays {
 
     public static void main(String[] args) {
