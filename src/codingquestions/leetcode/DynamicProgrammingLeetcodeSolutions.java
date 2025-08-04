@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 import java.util.*;
 
 /**
@@ -8,7 +10,7 @@ import java.util.*;
  * 1D DP: Climbing Stairs, House Robber, Word Break, Coin Change, Longest Increasing Subsequence
  * Multidimensional DP: Triangle, Minimum Path Sum, Unique Paths II, Longest Palindromic Substring, Interleaving String
  */
-public class LeetcodeSolutions {
+public class DynamicProgrammingLeetcodeSolutions {
     
     public static void main(String[] args) {
         // Test all solutions

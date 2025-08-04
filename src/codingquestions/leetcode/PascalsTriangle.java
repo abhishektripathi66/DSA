@@ -1,3 +1,7 @@
+package codingquestions.leetcode;
+
+import java.util.*;
+
 /*
 118. Pascal's Triangle
 Solved
@@ -26,7 +30,7 @@ Constraints:
 
 1 <= numRows <= 30
 */
-class Solution {
+public class PascalsTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> curRow = new ArrayList<>();
