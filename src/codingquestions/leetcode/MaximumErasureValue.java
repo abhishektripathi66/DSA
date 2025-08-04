@@ -1,7 +1,4 @@
-package codingquestions.leetcode;
-
 /**
-
 1695. Maximum Erasure Value
 Solved
 Medium
@@ -55,5 +52,33 @@ public class MaximumErasureValue {
 
         return sum;
         
+    }
+}
+
+// NEW SOLUTION
+class Solution {
+    public int maximumUniqueSubarray(int[] nums) {
+        int[] cnt = new int[10007];
+        int r = 0;
+        int cur_sum = 0;
+        while(r < nums.length && cnt[nums[r]] < 1){
+            cnt[nums[r]]++;
+            cur_sum += nums[r];
+            r++;
+        }
+
+        int res = cur_sum, l = 0;
+
+        for(; r < nums.length; r++){
+            cnt[nums[r]]++;
+            cur_sum += nums[r];
+            while(cnt[nums[r]] > 1){
+                cur_sum -= nums[l];
+                cnt[nums[l]]--;
+                l++;
+            }
+            res = Math.max(res, cur_sum);
+        }
+        return res;
     }
 }
