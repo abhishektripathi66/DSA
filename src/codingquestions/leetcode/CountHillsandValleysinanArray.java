@@ -1,6 +1,7 @@
+package codingquestions.leetcode;
 
-/**
- * 2210. Count Hills and Valleys in an Array
+/*
+2210. Count Hills and Valleys in an Array
 Solved
 Easy
 Topics
@@ -45,30 +46,26 @@ Constraints:
 
 3 <= nums.length <= 100
 1 <= nums[i] <= 100
- */
-
-package codingquestions.leetcode;
- 
- public class CountHillsandValleysinanArray {
- 
-    public static void main(String[] args) {
-        
-    }
-
+*/
+public class CountHillsAndValleysInAnArray {
     public int countHillValley(int[] nums) {
-        int count =0;
-        int k=1;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]!=nums[i-1]){
-                nums[k++]=nums[i];
+        int res = 0;
+        for(int i = 1; i < nums.length - 1; i++){
+            if(nums[i] == nums[i - 1])
+                continue;
+            
+            int l = i - 1, r = i + 1;
+            while(l >= 0 && nums[l + 1] == nums[l])
+                l--;
+            
+            while(r < nums.length && nums[r - 1] == nums[r])
+                r++;
+            
+            if(l >= 0 && r < nums.length){
+                if((nums[l] < nums[i] && nums[r] < nums[i]) || (nums[l] > nums[i] && nums[r] > nums[i]))
+                    res++;
             }
         }
-        for(int i=0;i<k;i++){
-            if(i==0 || i==k-1) continue;
-            if((nums[i]>nums[i+1] && nums[i]>nums[i-1]) || (nums[i]<nums[i+1] && nums[i]<nums[i-1])){
-                count++;
-            }
-        }
-        return count;
+        return res;
     }
- }
+}
