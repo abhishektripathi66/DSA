@@ -32,6 +32,59 @@ public class KruskalsAlgorithm {
 
     }
 
+    private static int kruskalsAlgorithm(Edge[] edges, int V){
+        int[] parent = new int[V];
+        int[] rank = new int[V];
+
+        Arrays.sort(edges);
+
+        for(int i=0; i<V; i++){
+            parent[i] = i;
+            rank[i] = 0;
+        }
+
+        int res = 0;
+
+
+        return res;
+    }
+
+    private static int find(int x, int[] parent){
+        if(x != parent[x])
+            return parent[x] = find(parent[x], parent);
+        
+        //same
+        return parent[x]; //x 
+    }
+
+    private static void union(int x, int y, int[] parent, int[] rank){
+        int px = find(x, parent);
+        int py = find(y, parent);
+
+        // if(px == py)
+        //     return true;
+        // else{
+        //     parent[py] = px;
+        //     return false;
+        // }
+
+        if(px != py){
+            if(rank[px] < rank[py]){
+                parent[px] = py;
+            }
+            else if(rank[px] > rank[py]){
+                parent[py] = px;
+            }
+            else{
+                parent[px] = py;
+                rank[py]++;
+
+                //parent[py] = px;
+                //rank[px]++;
+            }
+        }
+    }
+
     private static Edge[] gridToEdges(int[][] grid){
 
         ArrayList<Edge> edges = new ArrayList<>();
@@ -45,6 +98,7 @@ public class KruskalsAlgorithm {
 
         return edges.toArray(new Edge[0]); 
     }
+
     private static class Edge implements Comparable<Edge>{
         int src;
         int dest;
