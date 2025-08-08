@@ -199,7 +199,8 @@ public class AVLTree {
         }
     }
     
-    // Get nodes in order: left -> root -> right
+    // Get nodes in order: 
+    // left -> root -> right
     public List<Integer> inOrderTraversal() {
         List<Integer> result = new ArrayList<>();
         inOrderRec(root, result);
@@ -215,7 +216,8 @@ public class AVLTree {
         }
     }
     
-    // Get nodes in order: root -> left -> right
+    // Get nodes in order:
+    // root -> left -> right
     public List<Integer> preOrderTraversal() {
         List<Integer> result = new ArrayList<>();
         preOrderRec(root, result);
@@ -247,7 +249,7 @@ public class AVLTree {
         }
     }
     
-    // Get nodes level by level from top to bottom
+    // Get nodes level by level
     public List<Integer> levelOrderTraversal() {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -395,10 +397,6 @@ public class AVLTree {
     }
     
     // Show tree structure level by level
-    /**
-     * Displays the tree in a simple level-by-level format.
-     * Shows each level of the tree on a separate line.
-     */
     public void displayTree() {
         if (root == null) {
             System.out.println("Tree is empty");
@@ -439,11 +437,10 @@ public class AVLTree {
         }
     }
     
-    // Test all AVL tree functions
+    // Main Class to test all AVL tree functions
     public static void main(String[] args) {
         AVLTree tree = new AVLTree();
         
-        // Test insertions
         System.out.println("1. Test Insertions:");
         int[] values = {50, 30, 70, 20, 40, 60, 80, 10, 25, 35, 45};
         
@@ -455,7 +452,7 @@ public class AVLTree {
         System.out.println("\nTree after insertions:");
         tree.displayTree();
         
-        // Test traversals
+        // Traversals
         System.out.println("\n2. TestTraversals:");
         System.out.println("In-order traversal: " + tree.inOrderTraversal());
         System.out.println("Pre-order traversal: " + tree.preOrderTraversal());
