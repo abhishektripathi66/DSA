@@ -21,6 +21,22 @@ public class QuickSort {
         }
     }
 
+    public static void quickSortUsingLomuto(int[] arr, int start, int end){
+        if(start<end){
+            int p = ParitionFunction.LumutoPartition(arr, start, end);
+            quickSortUsingLomuto(arr, start, p-1);
+            quickSortUsingLomuto(arr, p+1, end);
+        }
+    }
+
+    public static void quickSortUsingHoare(int[] arr,int start, int end){
+        if(start<end){
+            int p = ParitionFunction.HoarePartition(arr, start, end);
+            quickSortUsingHoare(arr, start, p);
+            quickSortUsingHoare(arr, p+1, end);
+        }
+    }
+
     private static int partition(int[] array, int start, int end) {
         int pivot = array[end];
         int i = start - 1;

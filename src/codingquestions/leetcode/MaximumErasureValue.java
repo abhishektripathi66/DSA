@@ -55,11 +55,8 @@ public class MaximumErasureValue {
         return sum;
         
     }
-}
 
-// NEW SOLUTION
-class Solution {
-    public int maximumUniqueSubarray(int[] nums) {
+     public int maximumUniqueSubarrayNewSOl(int[] nums) {
         int[] cnt = new int[10007];
         int r = 0;
         int cur_sum = 0;
@@ -84,3 +81,4 @@ class Solution {
         return res;
     }
 }
+

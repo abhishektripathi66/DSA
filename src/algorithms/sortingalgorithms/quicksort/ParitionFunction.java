@@ -37,7 +37,8 @@ public class ParitionFunction {
 
     // in this we partitioning method we would be assuming that the pivot is always at the last index i.e, h.
     // time complexoty O(n) O(1) space complexity
-    public static void LumutoPartition(int[] arr, int low, int high){
+    // in this if the pivot is any other element then we would be swaping the h element with that particular element and then go ahead with the same process
+    public static int LumutoPartition(int[] arr, int low, int high){
             int pivot = arr[high];
             int i=low-1;
             for(int j=low;j<=high-1;j++){
@@ -51,11 +52,28 @@ public class ParitionFunction {
             int temp = arr[i+1];
             arr[i+1]=arr[high];
             arr[high]=temp;
-            // return i+1
+            return i+1;
     }
 
-    public static void HoarePartition(int arr[], int l,int h){
-            
+    // in this partiitoning technique we would be considering the first element as the pivot element
+    // in this if the pivot is any other element then we would be swaping the h element with that particular element and then go ahead with the same process
+    // in this partition the pivot is not at the exact  position, because all the elements that are less than are in the left part and all the elements greater then or equal to the pivot elemnt are in the right part
+    // this is not stable
+    public static int HoarePartition(int arr[], int l,int h){
+            int pivot = arr[l];
+            int i=l-1,j=h+1;
+            while(true){
+                do{
+                    i++;
+                }while(arr[i]<pivot);
+                do{
+                    j--;
+                }while(arr[j]>pivot);
+                if(i>=j) return j;
+                int temp = arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
     }
     
 }

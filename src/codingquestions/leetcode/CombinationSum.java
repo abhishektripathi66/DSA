@@ -9,19 +9,15 @@ public class CombinationSum {
         
     }
 
-    @SuppressWarnings("rawtypes")
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> comb = new ArrayList<>();
-        generateCombinations(0,candidates,new ArrayList(),comb,target);
+        generateCombinations(0, candidates, new ArrayList<Integer>(), comb, target);
         return comb;
     }
 
-    @SuppressWarnings("rawtypes")
-    public static void generateCombinations(int start,int[] nums,List<Integer> current,List<List<Integer>> comb,int target){
+    public static void generateCombinations(int start, int[] nums, List<Integer> current, List<List<Integer>> comb, int target){
         if(target==0){
-            
-        comb.add(new ArrayList(current));
-        }
+        comb.add(new ArrayList<Integer>(current));
         if(target<0){
             return;
         }
@@ -32,4 +28,5 @@ public class CombinationSum {
             current.remove(current.size()-1);
         }
     }
+}
 }
