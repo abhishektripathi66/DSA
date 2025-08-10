@@ -1,4 +1,4 @@
-package codingquestions.problemsonsorting;
+package codingquestions.problemsonsorting.mergesort;
 
 public class CountInversionInAArray {
 

@@ -57,7 +57,8 @@ positioni-1 < positioni for any i > 0 (0-indexed)
 1 <= amounti <= 104
 0 <= k <= 2 * 105
 */
-class Solution {
+public class MaximumFruitsHarvestedAfterAtMostKSteps {
+
     private int calSum(int l, int r, int[] dp){
         if(l == 0)
             return dp[r];
