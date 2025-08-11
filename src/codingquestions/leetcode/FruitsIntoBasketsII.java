@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3477. Fruits Into Baskets II
 Solved
@@ -51,7 +53,7 @@ n == fruits.length == baskets.length
 1 <= n <= 100
 1 <= fruits[i], baskets[i] <= 1000
 */
-class Solution {
+class FruitsIntoBasketsII {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int res = fruits.length;
         for(int i = 0; i < fruits.length; i++){

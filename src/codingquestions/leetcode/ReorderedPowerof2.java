@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /**
 869. Reordered Power of 2
 Solved
