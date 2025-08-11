@@ -43,7 +43,7 @@ Constraints:
 1 <= s.length <= 105
 s consists only of lowercase English letters.
 */
-public class DeleteCharactersToMakeFancyString {
+public class DeleteCharacterstoMakeFancyString {
     public String makeFancyString(String s) {
         StringBuilder res = new StringBuilder();
         char cur = s.charAt(0);

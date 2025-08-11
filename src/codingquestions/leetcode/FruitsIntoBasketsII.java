@@ -53,7 +53,7 @@ n == fruits.length == baskets.length
 1 <= n <= 100
 1 <= fruits[i], baskets[i] <= 1000
 */
-class FruitsIntoBasketsII {
+public class FruitsIntoBasketsII {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int res = fruits.length;
         for(int i = 0; i < fruits.length; i++){
