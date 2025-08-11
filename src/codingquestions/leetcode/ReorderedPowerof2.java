@@ -25,9 +25,40 @@ Constraints:
 
 1 <= n <= 109
 **/
+public class ReorderedPowerof2 {
+ 
+    public boolean reorderedPowerOf2(int n) {
+        //creating an array to hold the count of the digits in n
+        int[] count = countOf(n);
+        // with the constraints provided we can see that the max power can be of 31, so we calulate the digits for each power and compare with the 
+        for(int i=0;i<31;i++){
+            int power = 1<<i;
+            int[] count1 = countOf(power);
+            if(isequal(count1,count)) return true;
+        }
+        return false;
+    }
 
-class Solution {
-    private int[] countOf(int n){
+   // Solution 2
+    public boolean reorderedPowerOf22(int n) {
+        int[] cnt = countOf(n);
+        for(int i = 1; i <= 1000000000; i *= 2){
+            if(isequal(cnt, countOf(i)))
+                return true;
+        }
+        return false;
+     }
+  
+     // check if both the arrays have equal values or not
+     public static boolean isequal(int[] arr1, int[] arr2){
+        for(int i=0;i<10;i++){
+           if(arr1[i]!=arr2[i]) return false;
+        }
+        return true;
+     }
+ 
+     // counting the digits 
+     private int[] countOf(int n){
         int[] cnt = new int[10];
         while(n > 0){
             cnt[n % 10]++;
@@ -35,21 +66,5 @@ class Solution {
         }
         return cnt;
     }
-
-    private boolean isEqual(int[] a, int[] b){
-        for(int i = 0; i < 10; i++)
-            if(a[i] != b[i])
-                return false;
-        
-        return true;
-    }
-
-    public boolean reorderedPowerOf2(int n) {
-        int[] cnt = countOf(n);
-        for(int i = 1; i <= 1000000000; i *= 2){
-            if(isEqual(cnt, countOf(i)))
-                return true;
-        }
-        return false;
-    }
 }
+
