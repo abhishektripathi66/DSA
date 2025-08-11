@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 904. Fruit Into Baskets
 Solved
@@ -40,7 +42,7 @@ Constraints:
 1 <= fruits.length <= 105
 0 <= fruits[i] < fruits.length
 */
-class Solution {
+public class FruitIntoBaskets {
     public int totalFruit(int[] fruits) {
         int[] cnt = new int[fruits.length];
         int l = 0;

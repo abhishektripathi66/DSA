@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3479. Fruits Into Baskets III
 Solved
@@ -51,7 +53,7 @@ n == fruits.length == baskets.length
 1 <= n <= 105
 1 <= fruits[i], baskets[i] <= 109
 */
-class Solution {
+public class FruitsIntoBasketsIII {
     public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         //square root decomposition
         int groupSize = (int)Math.sqrt(baskets.length);
