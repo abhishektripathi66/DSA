@@ -95,7 +95,7 @@ public class PrimsAlgorithm {
     //Each vertex is added once to the MST → O(V log V) due to priority queue
     //Each edge can cause at most one pq.add() → O(E log V)
 
-    //Space Complexity: key[], mSet[], PriorityQueue -> O(V), Adjacency list -> O(V + E)
+    //Space Complexity: O(V + E) -> Adjacency list, O(V) -> key[], mSet[], PriorityQueue
     private static int primsAlgorithmAdjList(ArrayList<ArrayList<Pair>> adj){
         int n = adj.size();
 

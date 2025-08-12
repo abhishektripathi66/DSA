@@ -5,6 +5,14 @@ import java.util.Arrays;
 
 
 /*
+* Kruskal's Algorithm (Minimum Spanning Tree - MST)
+*
+* Overview:
+* Kruskal’s algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) 
+* of a connected, undirected, weighted graph. It works by sorting all edges in 
+* non-decreasing order of their weights and then adding them one by one to the MST, 
+* ensuring that no cycle is formed (using the Disjoint Set Union/Union-Find structure).
+* 
 * Algorithm:
 * 1. Sort all edges in increasing order.
 * 2. Initialize : MST = { }, res = 0
@@ -17,6 +25,11 @@ import java.util.Arrays;
 * Notes : 
 *  - Here, we do not use matrix or adjacency list because finding all egdes and sorting them become complicated.
 *  - So, we will represent graph as an array of edges.
+
+* Difference from Prim’s Algorithm:
+* - Prim’s builds the MST by starting from a vertex and adding the cheapest edge that expands the tree.
+* - Kruskal’s builds the MST by starting from the smallest edge and connecting components until all vertices are connected.
+* - Prim’s is more efficient for dense graphs; Kruskal’s is often better for sparse graphs.
 *
 * Time Complexity:
 *    - O(E log E + E * α(V)), where α is the inverse Ackermann function (very small).
