@@ -1,5 +1,6 @@
 package codingquestions.leetcode;
 
+
 public class PowerOfThree {
 
     public static void main(String[] args) {
@@ -7,6 +8,14 @@ public class PowerOfThree {
         System.out.println(x.isPowerOfThree(9));
     }
 
+    public boolean isPowerOfThreeNewWay(int n) {
+        if(n <= 0)
+            return false;
+        
+        double x = Math.log10(n) / Math.log10(3);
+        return x == (int)x;
+    }
+    
     public boolean isPowerOfThree(int n) {
         if (n == 1) {
             return true;
@@ -17,5 +26,23 @@ public class PowerOfThree {
         } else {
             return isPowerOfThree(n / 3);
         }
+    }
+
+    public boolean isPowerOfThree2(int n){
+        if(n <= 0){
+            return false;
+        }
+        while(n%3 == 0){
+            n /= 3;
+        }
+        if(n == 1){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isPowerOfThreeOneLiner(int n){
+        return n>0 &&1162261467%n==0;
+
     }
 }
