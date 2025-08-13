@@ -1,5 +1,16 @@
 package codingquestions.leetcode;
 
+// NEW SOLUTION
+class Solution {
+    public boolean isPowerOfThree(int n) {
+        if(n <= 0)
+            return false;
+        
+        double x = Math.log10(n) / Math.log10(3);
+        return x == (int)x;
+    }
+}
+
 public class PowerOfThree {
 
     public static void main(String[] args) {
