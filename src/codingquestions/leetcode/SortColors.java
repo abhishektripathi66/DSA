@@ -48,4 +48,26 @@ public class SortColors {
             }
         }
     }
+    public void onePassSortColors(int[] nums) {
+        int start=0, mid=0, end=nums.length-1;
+        while(mid<=end){
+            switch (nums[mid]) {
+                case 0 -> {
+                    swap(nums, start, mid);
+                    start++;
+                    mid++;
+                }
+                case 1 -> mid++;
+                default -> {
+                    swap(nums, mid, end);
+                    end--;
+                }
+            }
+        }
+    }
+    public void swap(int[] nums, int i, int j){
+        int swap = nums[i];
+        nums[i] = nums[j];
+        nums[j] = swap;
+    }
 }
