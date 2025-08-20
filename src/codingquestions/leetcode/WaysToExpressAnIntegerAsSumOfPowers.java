@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2787. Ways to Express an Integer as Sum of Powers
 Solved
@@ -36,7 +38,7 @@ Constraints:
 1 <= n <= 300
 1 <= x <= 5
 */
-class Solution {
+class WaysToExpressAnIntegerAsSumOfPowers {
     public int numberOfWays(int n, int x) {
         final int MOD = 1000000000 + 7;
         int[][] dp = new int[n + 2][n + 2];
