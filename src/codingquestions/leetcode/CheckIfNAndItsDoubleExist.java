@@ -31,7 +31,7 @@ Constraints:
 2 <= arr.length <= 500
 -103 <= arr[i] <= 103
 */
-class Solution {
+class CheckIfNAndItsDoubleExist {
     public boolean checkIfExist(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n; i++) {

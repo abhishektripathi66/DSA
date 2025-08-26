@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2264. Largest 3-Same-Digit Number in String
 Solved
@@ -41,7 +43,7 @@ Constraints:
 3 <= num.length <= 1000
 num only consists of digits.
 */
-class Solution {
+class Largest3SameDigitNumberInString {
     public String largestGoodInteger(String num) {
         String res = "";
         for(int i = 2; i < num.length(); i++){

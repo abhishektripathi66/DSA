@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2348. Number of Zero-Filled Subarrays
 Solved
@@ -41,7 +43,7 @@ Constraints:
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
 */
-class Solution {
+class NumberOfZeroFilledSubarrays {
     public long zeroFilledSubarray(int[] nums) {
         long res = 0;
         int cnt = 0;

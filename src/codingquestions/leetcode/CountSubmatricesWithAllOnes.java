@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1504. Count Submatrices With All Ones
 Solved
@@ -43,7 +45,7 @@ Constraints:
 1 <= m, n <= 150
 mat[i][j] is either 0 or 1.
 */
-class Solution {
+class CountSubmatricesWithAllOnes {
     private int prefixSum(int[][] dp, int i, int j, int ii, int jj){
         return dp[ii][jj] - dp[i - 1][jj] - dp[ii][j - 1] + dp[i - 1][j - 1];
     }
