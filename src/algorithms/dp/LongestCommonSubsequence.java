@@ -60,14 +60,14 @@ public class LongestCommonSubsequence {
     }
 
     private static int longestCommonSubsequenceMemo(String s1, String s2, int m, int n, int[][] memo){
-
-        //if result already computed, return it
-        if(memo[m][n] != -1)
-            return memo[m][n];
-        
+ 
         //for any of the empty string it will be zero
         if(m==0 || n==0)
             return  memo[m][n] = 0;
+        
+        //if result already computed, return it
+        if(memo[m][n] != -1)
+            return memo[m][n];
         
         //if matched, then consider that character in LCS
         if(s1.charAt(m-1) == s2.charAt(n-1))
