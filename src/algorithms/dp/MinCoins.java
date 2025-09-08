@@ -49,6 +49,12 @@ public class MinCoins {
 
         System.out.println("Min coins required: "+minCoinsMemo(0, sum, coins, memo));
         System.out.println("Min coins required: "+minCoinsTabulation(sum, coins, n));
+
+        memo = new int[n+1][sum+1];
+        for(int[] row : memo)
+            Arrays.fill(row, -1);
+        System.out.println("Min coins required: "+minCoinsMemo1(sum, coins, memo, n));
+        System.out.println("Min coins required: "+minCoinsTabulation1(sum, coins, n));
     }
 
     private static int minCoinsMemo(int i, int sum, int[] coins, int[][] memo) {
@@ -66,8 +72,10 @@ public class MinCoins {
         int take = Integer.MAX_VALUE;
         
         if (coins[i] <= sum) { //consider opiton if coin value is less than or equal to curr sum
-            take = minCoinsMemo(i, sum - coins[i], coins, memo);
-            if (take != Integer.MAX_VALUE) take++;
+            //take = minCoinsMemo(i+1, sum - coins[i], coins, memo); //0/1 coin version
+            take = minCoinsMemo(i, sum - coins[i], coins, memo); //unlimited coins
+            if (take != Integer.MAX_VALUE) 
+                take++; //because we have used current coin
         }
 
         //skip curr coin
@@ -87,23 +95,80 @@ public class MinCoins {
         }
 
         //with no coins, we can't form positive sums
-        for (int s = 1; s <= sum; s++) {
-            dp[n][s] = Integer.MAX_VALUE;
+        for (int j = 1; j <= sum; j++) {
+            dp[n][j] = Integer.MAX_VALUE;
         }
 
         //fill table bottom-up
         for (int i = n-1; i >= 0; i--) {
-            for (int s = 1; s <= sum; s++) {
+            for (int j = 1; j <= sum; j++) {
                 int take = Integer.MAX_VALUE;
-                if (coins[i] <= s && dp[i][s - coins[i]] != Integer.MAX_VALUE) {
-                    take = 1 + dp[i][s - coins[i]];
+                if (coins[i] <= j && dp[i][j - coins[i]] != Integer.MAX_VALUE) {
+                    //take = 1 + dp[i+1][j - coins[i]]; //0/1 coin version
+                    take = 1 + dp[i][j - coins[i]]; //unlimited coins
                 }
-                int noTake = dp[i+1][s];
-                dp[i][s] = Math.min(take, noTake);
+                int noTake = dp[i+1][j];
+                dp[i][j] = Math.min(take, noTake);
             }
         }
 
         return dp[0][sum] == Integer.MAX_VALUE ? -1 : dp[0][sum];
 
     }
+    
+    //Other way to implement memoization and tabulation methods, the way did in previous dp problems
+    //going from n to 0 in memoization
+    //and from 0 to n in tabulation
+    private static int minCoinsMemo1(int sum, int[] coins, int[][] memo, int n) {
+
+        if(sum == 0)
+            return 0;
+        
+        if(n==0 || sum < 0)
+            return Integer.MAX_VALUE;
+        
+        if(memo[n][sum] != -1)
+            return memo[n][sum];
+    
+        int take = Integer.MAX_VALUE;
+        if(coins[n-1] <= sum){
+            //take = minCoinsMemo1(sum - coins[n-1], coins, memo, n-1); //0/1 coin version
+            take = minCoinsMemo1(sum - coins[n-1], coins, memo, n);  //unlimited coins
+            if (take != Integer.MAX_VALUE) 
+                take++; 
+        }
+
+        int notTake =  minCoinsMemo1(sum, coins, memo, n-1);
+        
+        return memo[n][sum] = Math.min(take, notTake);
+    }
+
+    private static int minCoinsTabulation1(int sum, int[] coins, int n){
+        int[][] dp = new int[n+1][sum+1];
+
+        //when sum is 0
+        for(int i=0; i<=n; i++){
+            dp[i][0] = 0;
+        }
+
+        //when sum is > 0 and no coins left
+        for(int j=1; j<=sum; j++){
+            dp[0][j] = Integer.MAX_VALUE;
+        }
+
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=sum; j++){
+                int take = Integer.MAX_VALUE;
+                if(coins[i-1] <= j && dp[i][j - coins[i-1]] != Integer.MAX_VALUE){
+                    //take = 1 + dp[i-1][j - coins[i-1]];  //0/1 coin version
+                    take = 1 + dp[i][j - coins[i-1]];  //unlimited coins
+                }
+
+                int notTake = dp[i-1][j];
+                dp[i][j] = Math.min(take, notTake);
+            }
+        }
+        return dp[n][sum];
+    }
+
 }
