@@ -20,7 +20,8 @@ import java.util.Arrays;
  *       number of coins required to make sum 's' using coins[i..n-1].
  *
  * Time Complexity:
- *   - O(n * sum), where n is the number of coins.
+ *   - O(n * sum) for Take/NotTake, where n is the number of coins.
+ *   - O(n^2 * sum) for Loop-based approach
  *
  * Space Complexity:
  *   - O(n * sum) for the DP table or memoization matrix.
@@ -50,11 +51,19 @@ public class MinCoins {
         System.out.println("Min coins required: "+minCoinsMemo(0, sum, coins, memo));
         System.out.println("Min coins required: "+minCoinsTabulation(sum, coins, n));
 
+        System.out.println("\nAlternative way to implement both methods : ");
         memo = new int[n+1][sum+1];
         for(int[] row : memo)
             Arrays.fill(row, -1);
         System.out.println("Min coins required: "+minCoinsMemo1(sum, coins, memo, n));
         System.out.println("Min coins required: "+minCoinsTabulation1(sum, coins, n));
+
+        System.out.println("\nLoop based approach : ");
+        memo = new int[n+1][sum+1];
+        for(int[] row : memo)
+            Arrays.fill(row, -1);
+        System.out.println("Min coins required: "+minCoinsLoopMemo(0, sum, coins, memo));
+        System.out.println("Min coins required: "+minCoinsLoopTab(coins, sum));
     }
 
     private static int minCoinsMemo(int i, int sum, int[] coins, int[][] memo) {
@@ -170,5 +179,67 @@ public class MinCoins {
         }
         return dp[n][sum];
     }
+
+
+    //Loop-based approach (N-ary recursion tree)
+    //Time complexity = O(n * sum * n) in the worst case (because inside each state we loop over up to n coins).
+    private static int minCoinsLoopMemo(int idx, int sum, int[] coins, int[][] memo) {
+        if(sum == 0) 
+            return 0;
+        
+        if(idx == coins.length) 
+            return Integer.MAX_VALUE;
+
+        if(memo[idx][sum] != -1) 
+            return memo[idx][sum];
+
+        int res = Integer.MAX_VALUE;
+
+        //try all coins starting from current index
+        for(int i = idx; i < coins.length; i++) {
+            if(coins[i] <= sum) {
+                int sub = minCoinsLoopMemo(i, sum - coins[i], coins, memo); // reuse i
+                if(sub != Integer.MAX_VALUE) {
+                    res = Math.min(res, 1 + sub);
+                }
+            }
+        }
+        return memo[idx][sum] = res;
+    }
+
+    private static int minCoinsLoopTab(int[] coins, int sum) {
+        int n = coins.length;
+        int[][] dp = new int[n + 1][sum + 1];
+
+        //no coins left, but sum still > 0 → impossible
+        for(int j = 1; j <= sum; j++) {
+            dp[n][j] = Integer.MAX_VALUE;
+        }
+
+        //0 coins needed to make sum = 0
+        for (int i = 0; i <= n; i++) {
+            dp[i][0] = 0;
+        }
+
+        //fill DP table bottom-up
+        for (int i = n - 1; i >= 0; i--) {            // from last coin to first
+            for (int j = 1; j <= sum; j++) {          // for every sum
+                int res = Integer.MAX_VALUE;
+
+                // try all coins starting at index i
+                for (int k = i; k < n; k++) {
+                    if (coins[k] <= j && dp[k][j - coins[k]] != Integer.MAX_VALUE) {
+                        res = Math.min(res, 1 + dp[k][j - coins[k]]);
+                    }
+                }
+
+                dp[i][j] = res;
+            }
+        }
+
+        //answer is dp[0][sum]
+        return dp[0][sum] == Integer.MAX_VALUE ? -1 : dp[0][sum];
+    }
+
 
 }
