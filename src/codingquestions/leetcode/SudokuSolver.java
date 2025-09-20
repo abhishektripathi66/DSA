@@ -1,6 +1,4 @@
-package codingquestions.leetcode;
-
-/**
+/*
 37. Sudoku Solver
 Solved
 Hard
@@ -34,75 +32,59 @@ board.length == 9
 board[i].length == 9
 board[i][j] is a digit or '.'.
 It is guaranteed that the input board has only one solution.
+*/
+class Solution {
+public:
+    char c[9][9];
 
-**/
-
-
-public class SudokuSolver {
-    private char[][] board;
-    public void solveSudoku(char[][] board) {
-        this.board=board;
-        helper(0,0);
-    }
-    public boolean helper(int row,int col){
-        //if I'm at last column then move to next row
-        if(col==9){
-            row+=1;
-            col=0;
+    bool canBePlaced(char cc, int row, int col){
+        //check the same row(
+        for(int i = 0; i < 9; i++){
+            if(c[row][i] == cc) return false;
         }
-        // if my row is last then 
-        if(row==9) return true;
 
-        //if we have a value at the block then we move to the next block
-        if(board[row][col]!='.') return helper(row,col+1);
+        //same col
+        for(int i = 0; i < 9; i++){
+            if(c[i][col] == cc) return false;
+        }
 
-        // here we will check if the point where we are adding the value is it valid or not from 1 to 9, if its not valid we move to next number, if its valid we add that number and go to the next column; if the helper return false then we revert back to '.';
-        for(char i='1';i<='9';i++){
-            if(!isvalid(row,col,i)) continue;
-            board[row][col]=i;
-            if(helper(row,col+1)==true) return true;
-            board[row][col]='.';
+        //same square
+        int startRow = ((int)(row / 3)) * 3, startCol = ((int)(col / 3) * 3);
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                if(c[startRow + i][startCol + j] == cc) return false;
+            }
+        }
+        return true;
+    }
+
+    bool solveHelper(int row, int col){
+        if(col == 9){
+            row++;
+            col = 0;
+        }
+        if(row == 9) return true;
+
+        if(c[row][col] != '.') return solveHelper(row, col + 1);
+
+        for(char num = '1'; num <= '9'; num++){
+            if(canBePlaced(num, row, col)){
+                c[row][col] = num;
+                if(solveHelper(row, col + 1)) return true;
+
+                c[row][col] = '.';
+            }
         }
         return false;
     }
 
-    public boolean isvalid(int row, int col, char cur){
-        //check is element exists in the current row or the current column
-        for(int i=0;i<9;i++){
-            if(board[row][i]==cur) return false;
-            if(board[i][col]==cur) return false;
+    void solveSudoku(vector<vector<char>>& board) {
+        for(int i = 0; i < 9; i++)
+            for(int j = 0; j < 9; j++) c[i][j] = board[i][j];
+        
+        solveHelper(0, 0);
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++) board[i][j] = c[i][j];
         }
-
-        //create the row border and column border to find the start and end point of the column
-        int[] rowborder = findSE(row);
-        int[] colborder = findSE(col);
-
-        //check the values in the current box
-        for(int i=rowborder[0];i<=rowborder[1];i++)  {
-            for(int j=colborder[0];j<=colborder[1];j++){
-                if(board[i][j]==cur){
-                    return false;
-                }
-            }
-        }
-        return true;
-
     }
-
-    // to find the start and the end border
-    private int[] findSE(int coor){
-        int[] res = new int[2];
-        if(coor<3){
-            res[1]=2;
-        }
-        else if(coor<6){
-            res[0]=3;
-            res[1]=5;
-        }
-        else{
-            res[0]=6;
-            res[1]=8;
-        }
-        return res;
-    }
-}
+};
