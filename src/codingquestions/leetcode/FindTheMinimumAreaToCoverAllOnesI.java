@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3195. Find the Minimum Area to Cover All Ones I
 Solved
@@ -44,7 +46,7 @@ Constraints:
 grid[i][j] is either 0 or 1.
 The input is generated such that there is at least one 1 in grid.
 */
-class Solution {
+class FindTheMinimumAreaToCoverAllOnesI {
     public int minimumArea(int[][] grid) {
         int minX = 1000, minY = 1000, maxX = 0, maxY = 0;
 

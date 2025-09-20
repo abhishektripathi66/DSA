@@ -1,25 +1,9 @@
-// NEW SOLUTION
-class Solution {
-    public boolean isPowerOfFour(int n) {
-        if(n <= 0)
-            return false;
-
-        /**
-        4 ^ x = n
-        log4(n) = x
-        log(n) / log(4) = x
-        */
-        double x = Math.log10(n) / Math.log10(4);
-        return x == (int)x;
-    }
-}
-
 package codingquestions.leetcode;
 
-public class PowerOf4 {
+public class PowerOfFour {
 
     public static void main(String[] args) {
-        var po4 = new PowerOf4();
+        var po4 = new PowerOfFour();
         System.out.println(po4.isPowerOfFour2(16));
         System.out.println();
     }
@@ -44,5 +28,17 @@ public class PowerOf4 {
             }
         }
         return true;
+    }
+    public boolean isPowerOfFour(int n) {
+        if(n <= 0)
+            return false;
+
+        /**
+        4 ^ x = n
+        log4(n) = x
+        log(n) / log(4) = x
+        */
+        double x = Math.log10(n) / Math.log10(4);
+        return x == (int)x;
     }
 }

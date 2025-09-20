@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1323. Maximum 69 Number
 Solved
@@ -39,7 +41,7 @@ Constraints:
 1 <= num <= 104
 num consists of only 6 and 9 digits.
 */
-class Solution {
+class Maximum69Number {
     public int maximum69Number (int num) {
         String s_num = Integer.toString(num);
         for(int i = 0; i < s_num.length(); i++){
