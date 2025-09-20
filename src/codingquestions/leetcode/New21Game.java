@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 837. New 21 Game
 Solved
@@ -39,7 +41,7 @@ Constraints:
 0 <= k <= n <= 104
 1 <= maxPts <= 104
 */
-class Solution {
+class New21Game {
     public double new21Game(int n, int k, int maxPts) {
         double[] dp = new double[n + 7];
         dp[0] = 1;
