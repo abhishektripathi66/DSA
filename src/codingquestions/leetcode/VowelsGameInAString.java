@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3227. Vowels Game in a String
 Solved
@@ -49,7 +51,7 @@ Constraints:
 1 <= s.length <= 105
 s consists only of lowercase English letters.
 */
-class Solution {
+class VowelsGameInAString {
     private static String vowels = "aeiou";
     private boolean isVowel(char x){
         for(int i = 0; i < vowels.length(); i++){

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1249. Minimum Remove to Make Valid Parentheses
 Medium
@@ -37,7 +39,7 @@ Constraints:
 1 <= s.length <= 105
 s[i] is either '(' , ')', or lowercase English letter.
 */
-class Solution {
+class MinimumRemoveToMakeValidParentheses {
     public String minRemoveToMakeValid(String s) {
         int cnt = 0;
         String r1 = "";

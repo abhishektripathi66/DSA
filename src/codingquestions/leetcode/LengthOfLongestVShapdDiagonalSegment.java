@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3459. Length of Longest V-Shaped Diagonal Segment
 Solved
@@ -77,7 +79,7 @@ m == grid[i].length
 1 <= n, m <= 500
 grid[i][j] is either 0, 1 or 2.
 */
-class Solution {
+class LengthOfLongestVShapdDiagonalSegment {
     private static final int[] hx = {1, 1, -1, -1};
     private static final int[] hy = {1, -1, -1, 1};
     private int m, n;

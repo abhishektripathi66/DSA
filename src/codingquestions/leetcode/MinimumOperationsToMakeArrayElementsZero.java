@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3495. Minimum Operations to Make Array Elements Zero
 Solved
@@ -64,7 +66,7 @@ queries[i].length == 2
 queries[i] == [l, r]
 1 <= l < r <= 109
 */
-class Solution {
+class MinimumOperationsToMakeArrayElementsZero {
     private long solveHelper(long a, long b){
         long l = 1, r = 3, s = 1, res = 0;
 

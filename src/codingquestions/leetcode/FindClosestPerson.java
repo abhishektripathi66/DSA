@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3516. Find Closest Person
 Solved
@@ -64,7 +66,7 @@ Constraints:
 
 1 <= x, y, z <= 100
 */
-class Solution {
+class FindClosestPerson {
     public int findClosest(int x, int y, int z) {
         if(Math.abs(x - z) == Math.abs(y - z))
             return 0;

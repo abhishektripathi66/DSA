@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 966. Vowel Spellchecker
 Solved
@@ -43,7 +45,7 @@ Constraints:
 1 <= wordlist[i].length, queries[i].length <= 7
 wordlist[i] and queries[i] consist only of only English letters.
 */
-class Solution {
+class VowelSpellchecker {
 
     private boolean isVowel(char c){
         return(c == 'a' || c == 'e' || c == 'o' || c == 'u' || c == 'i');

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 37. Sudoku Solver
 Solved
@@ -33,11 +35,9 @@ board[i].length == 9
 board[i][j] is a digit or '.'.
 It is guaranteed that the input board has only one solution.
 */
-class Solution {
-public:
-    char c[9][9];
-
-    bool canBePlaced(char cc, int row, int col){
+class SudokuSolver {
+    public char[][] c = new char[9][9];
+    public boolean canBePlaced(char cc, int row, int col){
         //check the same row(
         for(int i = 0; i < 9; i++){
             if(c[row][i] == cc) return false;
@@ -58,7 +58,7 @@ public:
         return true;
     }
 
-    bool solveHelper(int row, int col){
+    public boolean solveHelper(int row, int col){
         if(col == 9){
             row++;
             col = 0;
@@ -78,7 +78,7 @@ public:
         return false;
     }
 
-    void solveSudoku(vector<vector<char>>& board) {
+    public void solveSudoku(char[][] board) {
         for(int i = 0; i < 9; i++)
             for(int j = 0; j < 9; j++) c[i][j] = board[i][j];
         

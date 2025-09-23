@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 3027. Find the Number of Ways to Place People II
 Solved
@@ -55,7 +57,7 @@ points[i].length == 2
 -109 <= points[i][0], points[i][1] <= 109
 All points[i] are distinct.
 */
-class Solution {
+class FindTheNumberOfWaysToPlacePeopleII {
     public int numberOfPairs(int[][] points) {
         int n = points.length;
         List<Integer> v = new ArrayList<>();

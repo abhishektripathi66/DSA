@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 3446. Sort Matrix by Diagonals
 Solved
@@ -60,7 +62,7 @@ grid.length == grid[i].length == n
 1 <= n <= 10
 -105 <= grid[i][j] <= 105
 */
-class Solution {
+class SortMatrixByDiagonals {
     public int[][] sortMatrix(int[][] grid) {
         int n = grid.length;
         int top_x = n - 1, top_y = 0, cur_x, cur_y;

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3021. Alice and Bob Playing Flower Game
 Solved
@@ -40,7 +42,7 @@ Constraints:
 
 1 <= n, m <= 105
 */
-class Solution {
+class AliceAndBobPlayingFlowerGame {
     public long flowerGame(int n, int m) {
         //1 <= i <= n, 1 <= j <= m, take if i + j is odd
         return (long)(n / 2) * (long)(m % 2 + m / 2) + (long)(n % 2 + n / 2) * (long)(m / 2);

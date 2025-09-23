@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1935. Maximum Number of Words You Can Type
 Solved
@@ -37,7 +39,7 @@ text consists of words separated by a single space without any leading or traili
 Each word only consists of lowercase English letters.
 brokenLetters consists of distinct lowercase English letters.
 */
-class Solution {
+class MaximumNumberOfWordsYouCanType {
     public int canBeTypedWords(String text, String brokenLetters) {
         String[] words = text.split(" ");
         int res = 0;

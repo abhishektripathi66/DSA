@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 2785. Sort Vowels in a String
 Solved
@@ -33,7 +35,7 @@ Constraints:
 1 <= s.length <= 105
 s consists only of letters of the English alphabet in uppercase and lowercase.
 */
-class Solution {
+class SortVowelsInAString {
     private static String vowels = "aeiouAEIOU";
 
     private boolean isVowel(char c){

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3541. Find Most Frequent Vowel and Consonant
 Solved
@@ -48,7 +50,7 @@ Constraints:
 1 <= s.length <= 100
 s consists of lowercase English letters only.
 */
-class Solution {
+class FindMostFrequentVowelAndConsonant {
     private static String vowels = "aeiou";
 
     private boolean isVowel(int x){
