@@ -1,11 +1,14 @@
 package algorithms.dp;
 
+import java.util.Arrays;
+
 public class MaxCuts {
     public static void main(String[] args) {
         int n = 11; 
         int a = 2, b = 3, c = 5;
         
         System.out.println("Max cuts : "+maxCutsRec(n, a, b, c));
+        System.out.println("Max cuts : "+maxCutsTabulation(n, a, b, c));
     }
 
 
@@ -27,4 +30,26 @@ public class MaxCuts {
         else //add 1 for curr segment
             return res + 1;
     }
+
+    private static int maxCutsTabulation(int n, int a, int b, int c){
+        int[] dp = new int[n+1];
+        
+        Arrays.fill(dp, -1); //unreachable
+        dp[0] = 0;
+
+        for(int i=1; i<=n; i++){
+            //check if current suggement i is greater than or equal to cuts
+            //from all posible ways, take the maximum value
+            if(i >= a && dp[i-a]!=-1)
+                dp[i] = Math.max(dp[i], 1 + dp[i - a]);
+            
+            if(i >= b && dp[i-b]!=-1)
+                dp[i] = Math.max(dp[i], 1 + dp[i - b]);
+            
+            if(i >= c && dp[i-c]!=-1)
+                dp[i] = Math.max(dp[i], 1 + dp[i - c]);
+        }
+
+        return dp[n]; //result for segment of length n
+     }
 }
