@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3000. Maximum Area of Longest Diagonal Rectangle
 Easy
@@ -34,7 +36,7 @@ Constraints:
 dimensions[i].length == 2
 1 <= dimensions[i][0], dimensions[i][1] <= 100
 */
-class Solution {
+class MaximumAreaOfLongestDiagonalRectangle {
     public int areaOfMaxDiagonal(int[][] dimensions) {
         int maxSquaredDiag = 0, area = 0;
         for(int[] i : dimensions){

@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 3025. Find the Number of Ways to Place People I
 Solved
@@ -63,7 +65,7 @@ points[i].length == 2
 0 <= points[i][0], points[i][1] <= 50
 All points[i] are distinct.
 */
-class Solution {
+class FindTheNumberOfWaysToPlacePeopleI {
     private boolean puttable(int i, int j, int[][] points){
         if(points[i][0] > points[j][0]){
             int c = j;

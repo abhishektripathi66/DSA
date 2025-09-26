@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 2749. Minimum Operations to Make the Integer Zero
 Solved
@@ -37,7 +39,7 @@ Constraints:
 1 <= num1 <= 109
 -109 <= num2 <= 109
 */
-class Solution {
+class MinimumOperationsToMakeArrayElementsZero {
     public int makeTheIntegerZero(int num1, int num2) {
         int k = 1;
         while(true){

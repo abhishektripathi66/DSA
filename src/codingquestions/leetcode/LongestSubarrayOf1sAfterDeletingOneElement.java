@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1493. Longest Subarray of 1's After Deleting One Element
 Solved
@@ -34,7 +36,7 @@ Constraints:
 1 <= nums.length <= 105
 nums[i] is either 0 or 1.
 */
-class Solution {
+class LongestSubarrayOf1sAfterDeletingOneElement {
     private int sumOf(int l, int r, int[] dp){
         return dp[r + 1] - dp[l];
     }

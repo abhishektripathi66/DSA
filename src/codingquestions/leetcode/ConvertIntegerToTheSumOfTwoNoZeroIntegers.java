@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1317. Convert Integer to the Sum of Two No-Zero Integers
 Solved
@@ -35,7 +37,7 @@ Constraints:
 
 2 <= n <= 104
 */
-class Solution {
+class ConvertIntegerToTheSumOfTwoNoZeroIntegers {
     private boolean isNoZero(int n){
         if(n == 0)
             return false;

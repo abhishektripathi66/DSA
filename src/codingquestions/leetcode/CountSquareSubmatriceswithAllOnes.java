@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 1277. Count Square Submatrices with All Ones
 Solved
@@ -45,7 +47,7 @@ Constraints:
 1 <= arr[0].length <= 300
 0 <= arr[i][j] <= 1
 */
-class Solution {
+class CountSquareSubmatriceswithAllOnes {
     private int sumOfSquares(int[][] dp, int lx, int ly, int rx, int ry){
         return dp[rx][ry] - dp[lx - 1][ry] - dp[rx][ly - 1] + dp[lx - 1][ly - 1];
     }

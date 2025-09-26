@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+
 /*
 36. Valid Sudoku
 Solved
@@ -52,7 +54,7 @@ board.length == 9
 board[i].length == 9
 board[i][j] is a digit 1-9 or '.'.
 */
-class Solution {
+class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         //row
         for(int row = 0; row < 9; row++){
