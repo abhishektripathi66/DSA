@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 611. Valid Triangle Number
 Solved
@@ -28,7 +30,7 @@ Constraints:
 1 <= nums.length <= 1000
 0 <= nums[i] <= 1000
 */
-class Solution {
+class ValidTriangleNumber {
     public int triangleNumber(int[] nums) {
         Arrays.sort(nums);
 

@@ -1,3 +1,4 @@
+package codingquestions.leetcode;
 /*
 290. Word Pattern
 

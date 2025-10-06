@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 165. Compare Version Numbers
 Solved
@@ -56,7 +58,7 @@ version1 and version2 only contain digits and '.'.
 version1 and version2 are valid version numbers.
 All the given revisions in version1 and version2 can be stored in a 32-bit integer.
 */
-class Solution {
+class CompareVersionNumbers {
     private List<Integer> revisions(String s){
         List<Integer> res = new ArrayList<>();
         int cur = 0;
