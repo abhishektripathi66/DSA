@@ -1,0 +1,110 @@
+########################################################
+#  A Beginner's Guide to Tree Traversal: DFS
+########################################################
+
+
+1. Definition: What is Depth-First Search (DFS)?
+
+Depth-First Search (DFS) is a tree traversal algorithm that explores as far as possible down one branch before backtracking.
+
+Think of it like navigating a maze. You follow one path until you hit a dead end, then you backtrack to the last junction and try a different path. You explore the tree in deep, vertical dives. DFS is typically implemented using recursion, which uses the program's internal call stack.
+
+There are three common ways to perform a DFS traversal: Pre-order, In-order, and Post-order.
+
+---
+
+2. Pre-order Traversal (Root, Left, Right)
+
+In Pre-order traversal, we visit the current node first, then recursively visit its left subtree, and finally, its right subtree.
+
+The name "Pre-order" helps you remember that the root (node) is visited PRE (before) its children.
+
+Algorithm:
+1. Visit the Root node.
+2. Traverse the Left subtree.
+3. Traverse the Right subtree.
+
+Example Tree:
+          1
+         / \
+        2   3
+       / \   \
+      4   5   6
+
+Traversal Order:
+- Visit 1.
+- Go Left to 2. Visit 2.
+- Go Left to 4. Visit 4. Backtrack.
+- Go Right from 2 to 5. Visit 5. Backtrack.
+- Backtrack from 2 to 1.
+- Go Right from 1 to 3. Visit 3.
+- Go Left from 3 (nothing).
+- Go Right from 3 to 6. Visit 6.
+
+Final Pre-order Traversal Order: 1, 2, 4, 5, 3, 6
+
+---
+
+3. In-order Traversal (Left, Root, Right)
+
+In In-order traversal, we recursively visit the left subtree first, then visit the current node, and finally, visit the right subtree.
+
+The name "In-order" helps you remember that the root is visited IN-between the left and right children. For a Binary Search Tree (BST), this traversal visits the nodes in ascending order.
+
+Algorithm:
+1. Traverse the Left subtree.
+2. Visit the Root node.
+3. Traverse the Right subtree.
+
+Example Tree:
+          1
+         / \
+        2   3
+       / \   \
+      4   5   6
+
+Traversal Order:
+- Go Left from 1 to 2.
+- Go Left from 2 to 4. Visit 4. Backtrack.
+- Visit 2.
+- Go Right from 2 to 5. Visit 5. Backtrack.
+- Backtrack to 1. Visit 1.
+- Go Right from 1 to 3.
+- Go Left from 3 (nothing).
+- Visit 3.
+- Go Right from 3 to 6. Visit 6.
+
+Final In-order Traversal Order: 4, 2, 5, 1, 3, 6
+
+---
+
+4. Post-order Traversal (Left, Right, Root)
+
+In Post-order traversal, we recursively visit the left subtree, then the right subtree, and finally, we visit the current node itself.
+
+The name "Post-order" helps you remember that the root is visited POST (after) its children. This is often used to delete nodes from a tree because you can safely delete a parent after its children have been deleted.
+
+Algorithm:
+1. Traverse the Left subtree.
+2. Traverse the Right subtree.
+3. Visit the Root node.
+
+Example Tree:
+          1
+         / \
+        2   3
+       / \   \
+      4   5   6
+
+Traversal Order:
+- Go Left from 1 to 2.
+- Go Left from 2 to 4. Visit 4. Backtrack.
+- Go Right from 2 to 5. Visit 5. Backtrack.
+- Visit 2. Backtrack.
+- Go Right from 1 to 3.
+- Go Left from 3 (nothing).
+- Go Right from 3 to 6. Visit 6. Backtrack.
+- Visit 3. Backtrack.
+- Visit 1.
+
+Final Post-order Traversal Order: 4, 5, 2, 6, 3, 1

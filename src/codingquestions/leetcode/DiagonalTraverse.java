@@ -40,7 +40,7 @@ n == mat[i].length
 
 (0, i) -> (i, 0)
 */
-class DeletetheMiddleNodeofaLinkedList {
+class DiagonalTraverse {
     public int[] findDiagonalOrder(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int[] res = new int[m * n];

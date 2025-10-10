@@ -1,0 +1,66 @@
+#######################################################
+#  A Beginner's Guide to Tree Traversal: BFS
+#######################################################
+
+
+1. Definition: What is Breadth-First Search (BFS)?
+
+Breadth-First Search (BFS) is a tree traversal algorithm that explores the tree level by level. It visits all the nodes at the current depth before moving on to the nodes at the next depth.
+
+Think of it like exploring a family tree: you meet the parent first, then all of their children (the siblings), and only then do you meet all of their grandchildren. You explore the tree in wide, horizontal layers.
+
+---
+
+2. How BFS Works: The Queue
+
+BFS uses a data structure called a Queue to keep track of the nodes to visit next. A queue follows a "First-In, First-Out" (FIFO) principle, just like a line at a grocery store. The first person to get in line is the first person to be served.
+
+This is perfect for BFS because we want to visit nodes in the order we discover them.
+
+---
+
+3. The BFS Algorithm
+
+1.  Create an empty queue.
+2.  Add the root node to the queue.
+3.  Start a loop that continues as long as the queue is not empty.
+4.  Inside the loop:
+    a. Remove the node from the front of the queue. Let's call it 'currentNode'.
+    b. "Visit" the currentNode (e.g., print its value).
+    c. Add all of currentNode's children (from left to right) to the back of the queue.
+
+---
+
+4. Example Traversal
+
+Let's use this tree:
+
+          1
+         / \
+        2   3
+       / \   \
+      4   5   6
+
+- Initial Step: Queue = [1]
+- Step 1: Remove 1, Visit 1. Add its children (2, 3).
+  - Traversal Order: 1
+  - Queue: [2, 3]
+- Step 2: Remove 2, Visit 2. Add its children (4, 5).
+  - Traversal Order: 1, 2
+  - Queue: [3, 4, 5]
+- Step 3: Remove 3, Visit 3. Add its child (6).
+  - Traversal Order: 1, 2, 3
+  - Queue: [4, 5, 6]
+- Step 4: Remove 4, Visit 4. It has no children.
+  - Traversal Order: 1, 2, 3, 4
+  - Queue: [5, 6]
+- Step 5: Remove 5, Visit 5. It has no children.
+  - Traversal Order: 1, 2, 3, 4, 5
+  - Queue: [6]
+- Step 6: Remove 6, Visit 6. It has no children.
+  - Traversal Order: 1, 2, 3, 4, 5, 6
+  - Queue: []
+
+The queue is now empty, and the loop ends.
+
+Final BFS Traversal Order: 1, 2, 3, 4, 5, 6

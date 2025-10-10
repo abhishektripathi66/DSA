@@ -13,6 +13,9 @@ The interview related questions and its solution from different coding websites 
 This is the structure of the Project where we would be able to find the required solutions and even add the new solutions at the same place.
 
 - src
+  - patterns
+    - normalPatterns
+    - patternsUsingRecursion
   - algorithms
     - backtracking
     - breadthfirstsearch
@@ -64,5 +67,5 @@ This is the structure of the Project where we would be able to find the required
 
 [![Star History Chart](https://api.star-history.com/svg?repos=abhishektripathi66/DSA&type=Date)](https://www.star-history.com/#abhishektripathi66/DSA&Date)
 
-## Joke of the time
+## Joke of the moment
 <a href="https://readme-jokes.vercel.app"><img align="center" src="https://readme-jokes.vercel.app/api" alt="README Jokes"></a>
