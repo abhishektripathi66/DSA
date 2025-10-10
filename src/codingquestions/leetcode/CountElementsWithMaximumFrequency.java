@@ -1,3 +1,4 @@
+package codingquestions.leetcode;
 /*
 3005. Count Elements With Maximum Frequency
 Solved
@@ -33,7 +34,7 @@ Constraints:
 1 <= nums.length <= 100
 1 <= nums[i] <= 100
 */
-class Solution {
+class CountElementsWithMaximumFrequency {
     public int maxFrequencyElements(int[] nums) {
         int[] cnt = new int[101];
         int max_cnt = 0;

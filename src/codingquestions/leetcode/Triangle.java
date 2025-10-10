@@ -1,3 +1,5 @@
+package codingquestions.leetcode;
+import java.util.*;
 /*
 120. Triangle
 Solved
@@ -37,7 +39,7 @@ triangle[i].length == triangle[i - 1].length + 1
 
 Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?
 */
-class Solution {
+class Triangle {
     public int minimumTotal(List<List<Integer>> triangle) {
         int[][] res = new int[202][202];
         for(int i = 0; i < triangle.size(); i++){
