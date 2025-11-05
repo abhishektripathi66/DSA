@@ -13,6 +13,8 @@ public class AllocateMinimumPages {
         for(int[] row : memo)
             Arrays.fill(row, -1);
         System.out.println("Minimized maximum pages : "+allocateMinimumPagesMemo(arr, n, k, memo));
+
+        System.out.println("Minimized maximum pages : "+allocateMinimumPagesTabulation(arr, n, k));
     }
     
     //Time complexity: O(2^n)
@@ -62,6 +64,32 @@ public class AllocateMinimumPages {
 
         //store and return the result
         return memo[n][k] = res;
+    }
+
+    private static int allocateMinimumPagesTabulation(int[] arr, int n, int k){
+        
+        int[][] dp = new int[k+1][n+1]; //reverse ordering compared to memoization table
+
+        for(int i=1; i<=k; i++)
+            dp[i][1] = arr[0];
+
+        for(int j=1; j<=n; j++)
+            dp[1][j] = sum(arr, 0, j-1);
+        
+        for(int i=2; i<=k; i++){
+            for(int j=2; j<=n; j++){
+                int res = Integer.MAX_VALUE;
+
+                //try partitioning from 1 to j-1
+                for(int p = 1; p<j; p++){
+                    res = Math.min(res, Math.max(dp[i-1][p], sum(arr, p, j-1)));
+                }
+
+                dp[i][j] = res;
+            }
+        }
+
+        return dp[k][n];
     }
 
     //utility method to count number of pages in given range
