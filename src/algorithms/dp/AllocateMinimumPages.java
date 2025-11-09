@@ -2,6 +2,34 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
+/*
+ * Allocate Minimum Pages Problem
+ *
+ * Given an array of integers where each element represents the number of pages in a book, 
+ * and 'k' students, the task is to allocate all books to the students such that:
+ *   1. Each student gets at least one book.
+ *   2. Each book is allocated to exactly one student.
+ *   3. Book allocation to a student is contiguous.
+ * The goal is to minimize the maximum number of pages assigned to any student.
+ *
+ * This problem can be solved using: Recursive approach, Dynamic Programming (Memoization and Tabulation), and Binary Search with Greedy Feasibility Check (Optimal)
+ *
+ * Example:
+ *   arr = [10, 20, 30, 40], k = 2
+ *   → Optimal allocation: [10, 20, 30] and [40]
+ *   → Minimum of the maximum pages = 60
+ *
+ * Time Complexity:
+ *   Recursive: Exponential (~O(2^n))
+ *   DP (Memoization / Tabulation): O(k * n²)
+ *   Binary Search + Greedy: O(n log(sum of pages))
+ *
+ * Space Complexity:
+ *   Recursive: O(n)
+ *   DP: O(k * n)
+ *   Binary Search: O(1)
+ */
+
 public class AllocateMinimumPages {
     public static void main(String[] args){
         int[] arr = {10, 20, 30, 40};
@@ -96,7 +124,7 @@ public class AllocateMinimumPages {
     }
 
     //Time Complexity: O(nlog(sum))
-    //allocation should be continous, okay if given array is not sorted
+    //allocation should be contiguous, okay if given array is not sorted
     private static int allocateMinimumPagesBinarySearch(int[] arr, int n, int k){
         int sum = 0, max = 0;
         for(int page : arr){
