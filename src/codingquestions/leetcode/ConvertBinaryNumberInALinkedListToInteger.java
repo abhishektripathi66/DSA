@@ -45,26 +45,36 @@ import codingquestions.leetcode.ds.ListNode;
 *Number of nodes will not exceed 30.
 *Each node's value is either 0 or 1.
  */
-
-public class ConvertBinaryNumberInALinkedListToInteger {
+class Solution {
     public int getDecimalValue(ListNode head) {
-        
-        List<Integer> l = new ArrayList<>();
-        while(head!=null){
-            l.add(head.val);
-            head=head.next;
+        int res = 0;
+        while(head != null){
+            res = res * 2 + head.val;
+            head = head.next;
         }
+        return res;
+    }
+}
+
+// public class ConvertBinaryNumberInALinkedListToInteger {
+//     public int getDecimalValue(ListNode head) {
         
-        int val=0;
-        int id=1;
-        for(int i=l.size()-1;i>=0;i--){
-            val+=l.get(i)*id;
-            id*=2;
-        }
+//         List<Integer> l = new ArrayList<>();
+//         while(head!=null){
+//             l.add(head.val);
+//             head=head.next;
+//         }
+        
+//         int val=0;
+//         int id=1;
+//         for(int i=l.size()-1;i>=0;i--){
+//             val+=l.get(i)*id;
+//             id*=2;
+//         }
         
 
-        return val;
-    }
+//         return val;
+//     }
 
     
-}
+// }
