@@ -2,6 +2,9 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
+import codingquestions.leetcode.IntegertoRoman;
+import codingquestions.linkedlist.leetcode;
+
 public class PalindromePartitioning {
 
     //minimum number of cuts required to make all strings palindrome
@@ -14,6 +17,9 @@ public class PalindromePartitioning {
         for(int[] row : memo)
             Arrays.fill(row, -1);
         System.out.println("Mimum cuts required : "+isPalindromeMemo(s, 0, n-1, memo));
+
+        System.out.println("Mimum cuts required : "+isPalindromeTabulation(s, n));
+
 
     }
     
@@ -50,6 +56,36 @@ public class PalindromePartitioning {
 
         //store and return result
         return memo[i][j] = res;
+    }
+
+    private static int isPalindromeTabulation(String s, int n){
+        int[][] dp = new int[n][n];
+        boolean[][] isPalindrome = new boolean[n][n]; //so we don't have to call isPalindrome function for overlalping substrings
+
+        for(int i=0; i<n; i++){
+            isPalindrome[i][i] = true;
+            dp[i][i] = 0;
+        }
+
+        for(int gap=1; gap<n; gap++){
+            for(int i=0, j = i+gap; j<n; i++, j++){ //i,j will be of substring of aleast length 2
+
+                if(isPalindrome[i][j] || isPalindrome(s, i, j)){
+                    isPalindrome[i][j] = true;
+                    dp[i][j] = 0;
+                }
+                else{
+                    int res = Integer.MAX_VALUE;
+                    //try putting cuts for substring s[i..j]
+                    for(int k=i; k<j; k++){
+                        res = Math.min(res, 1 + dp[i][k] + dp[k+1][j]);
+                    }
+                    dp[i][j] = res;
+                }
+            }
+        }
+
+        return dp[0][n-1];
     }
 
     private static boolean isPalindrome(String s, int i, int j){
