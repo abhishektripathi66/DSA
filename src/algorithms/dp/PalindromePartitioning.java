@@ -2,8 +2,18 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
-import codingquestions.leetcode.IntegertoRoman;
-import codingquestions.linkedlist.leetcode;
+/*
+ * Palindrome Partitioning – Minimum Cuts
+ *
+ * Given a string s, partition it so that every substring in the partition is a palindrome.
+ * Return the minimum number of cuts required to achieve such a partition.
+ *
+ * Example:
+ *   s = "aab"
+ *   Possible partitions: ["aa" | "b"], ["a" | "a" | "b"]
+ *   → Minimum cuts = 1
+ */
+
 
 public class PalindromePartitioning {
 
@@ -23,6 +33,7 @@ public class PalindromePartitioning {
 
     }
     
+    //Time complexity: O(2^n), Space complexity: O(n)
     private static int isPalindromeRec(String s, int i, int j){
 
         //Base case
@@ -39,6 +50,8 @@ public class PalindromePartitioning {
         return res;
     }
 
+    //Time complexity: O(n^3) -> Total states = O(n^2), Work per state = O(n)
+    //Space complexity: O(n^2)
     private static int isPalindromeMemo(String s, int i, int j, int[][] memo){
         //Base case
         if(i>=j || isPalindrome(s, i, j))
@@ -58,6 +71,8 @@ public class PalindromePartitioning {
         return memo[i][j] = res;
     }
 
+    //Time complexity: O(n^3), Space complexity: O(n^2)
+    //Time complexity can be O(n^2) if we precompute isPalindrome array
     private static int isPalindromeTabulation(String s, int n){
         int[][] dp = new int[n][n];
         boolean[][] isPalindrome = new boolean[n][n]; //so we don't have to call isPalindrome function for overlalping substrings
@@ -70,7 +85,8 @@ public class PalindromePartitioning {
         for(int gap=1; gap<n; gap++){
             for(int i=0, j = i+gap; j<n; i++, j++){ //i,j will be of substring of aleast length 2
 
-                if(isPalindrome[i][j] || isPalindrome(s, i, j)){
+                //if both characters are same and substring(i+1, j-1) is already palidrome
+                if (s.charAt(i) == s.charAt(j) && (j - i == 1 || isPalindrome[i+1][j-1])) {
                     isPalindrome[i][j] = true;
                     dp[i][j] = 0;
                 }
