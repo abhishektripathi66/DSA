@@ -17,15 +17,19 @@ public class JumpGame {
         res = minJumpMemo(0, arr, n, memo);
         System.out.println("Min jumps : " + (res == Integer.MAX_VALUE ? -1 : res ));
 
+        System.out.println("Min jumps : " +minJumpTabulation(arr, n));
+
+
     }
 
-    //Time Complexity: O(maxJumpLength^n), Space Complexity: O(n) for recursion stack
+    //Time Complexity: O(2^n), Space Complexity: O(n) for recursion stack
     private static int minJumpRec(int currIdx, int[] arr, int n){
         if(currIdx >= n-1) //reached end, no jumps required
             return 0;
         
         int res = Integer.MAX_VALUE;
         //take the min possible jump from upcoming steps and add +1 for curr jump
+        //assumes that the current index has at least 1 step to jump that's why starting from currIdx+1
         for(int i = currIdx+1; i<=Math.min(currIdx + arr[currIdx], n-1); i++){ //min function used here to keep i within boundry range
             int sub_res = minJumpRec(i, arr, n);
             if(sub_res != Integer.MAX_VALUE)
@@ -56,6 +60,27 @@ public class JumpGame {
 
         //store and return result
         return memo[currIdx] = res;
+    }
+
+     //Time Complexity: O(n^2), //Space Complexity: O(n)
+    private static int minJumpTabulation(int[] arr, int n){
+
+        int[] dp = new int[n];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+
+        for(int i=1; i<n; i++){
+
+            for(int j=0; j<i; j++){
+                
+                //if i can be reached from j, then update dp[i] from j
+                if( j + arr[j] >= i)
+                    dp[i] = Math.min(dp[i], 1 + dp[j]);
+
+            }
+        }
+
+        return dp[n-1] == Integer.MAX_VALUE ? -1 : dp[n-1];
     }
 
 }
