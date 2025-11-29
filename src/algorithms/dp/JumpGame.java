@@ -2,6 +2,21 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
+/*
+ * Minimum Jumps to Reach the End (Jump Game II)
+
+ * This is a classic dynamic programming / greedy optimization problem.
+ *
+ * Given an array where each element represents the maximum jump length from that position,
+ * determine the minimum number of jumps required to reach the last index.
+ * From index i, you may jump to any index in the range (i+1) to (i + arr[i]).
+ * 
+ * Example:
+ *   arr = [3, 4, 2, 1, 2, 1]
+ *   → Minimum jumps = 2   (0 → 1 → 5)
+ */
+
+
 public class JumpGame {
     public static void main(String[] args) {
         int[] arr = {3, 4, 2, 1, 2, 1};
@@ -22,7 +37,8 @@ public class JumpGame {
 
     }
 
-    //Time Complexity: O(2^n), Space Complexity: O(n) for recursion stack
+    //Time Complexity: O(k^n), k = average “jump range” at each index (arr[i])
+    //Space Complexity: O(n) for recursion stack
     private static int minJumpRec(int currIdx, int[] arr, int n){
         if(currIdx >= n-1) //reached end, no jumps required
             return 0;
