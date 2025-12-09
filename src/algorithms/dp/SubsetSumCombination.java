@@ -16,6 +16,8 @@ public class SubsetSumCombination {
                 Arrays.fill(row, -1);
         System.out.println("Number of subsets with given sum : "+countSubsetMemo(arr, n, sum, memo));
 
+        System.out.println("Number of subsets with given sum : "+countSubsetTabulation(arr, n, sum));
+
     }
 
     //Time Complexity: O(2^n) with include and exclude approach, Space Complexity: O(n) for recursion stack
@@ -51,4 +53,28 @@ public class SubsetSumCombination {
         //exlude and include approach
         return memo[n][sum] = countSubsetMemo(arr, n-1, sum, memo) + countSubsetMemo(arr, n-1, sum - arr[n-1], memo);
     }
+
+    private static int countSubsetTabulation(int[] arr, int n, int sum){
+        int[][] dp = new int[n+1][sum+1];
+
+        //when sum is achieved
+        for(int i=0; i<=n; i++)
+            dp[i][0] = 1;
+        
+        //when no values left and sum > 0
+        for(int j=1; j<=sum; j++)
+            dp[0][j] = 0;
+
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=sum; j++){
+                dp[i][j] += dp[i-1][j]; //exluding current value
+
+                if(arr[i-1] <= j) //include curr value if less than curr sum value
+                    dp[i][j] += dp[i][j - arr[i-1]];
+            }
+        }
+
+        return dp[n][sum];
+    }
+
 }
