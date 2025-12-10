@@ -2,7 +2,21 @@ package algorithms.dp;
 
 import java.util.Arrays;
 
-//Same as Coin Change Combination
+
+/*
+ * Subset Sum Problem (Counting Subsets)
+ *
+ * Given a set of integers and a target sum, determine the number of subsets
+ * whose elements add up exactly to the given sum.
+ *
+ * Example:
+ *   arr = [10, 5, 2, 3, 6], sum = 8
+ *   Valid subsets: {5, 3}, {2, 6}
+ *   → Number of subsets = 2
+ */
+
+//Subset sum -> 0/1 knapsack
+//Change Combination -> unbounded knapsack
 public class SubsetSumCombination {
     public static void main(String[] args) {
         int[] arr = {10, 5, 2, 3, 6};
@@ -27,7 +41,7 @@ public class SubsetSumCombination {
         if( sum < 0)
             return 0;
 
-        //at the end and found valid combination then return 0
+        //at the end and found valid combination then return 1
         if(n == 0)
             return (sum == 0) ? 1 : 0;
         
@@ -54,6 +68,7 @@ public class SubsetSumCombination {
         return memo[n][sum] = countSubsetMemo(arr, n-1, sum, memo) + countSubsetMemo(arr, n-1, sum - arr[n-1], memo);
     }
 
+    //Time Complexity: O(n*sum), Space Complexity: O(n*sum) 
     private static int countSubsetTabulation(int[] arr, int n, int sum){
         int[][] dp = new int[n+1][sum+1];
 
@@ -69,8 +84,8 @@ public class SubsetSumCombination {
             for(int j=1; j<=sum; j++){
                 dp[i][j] += dp[i-1][j]; //exluding current value
 
-                if(arr[i-1] <= j) //include curr value if less than curr sum value
-                    dp[i][j] += dp[i][j - arr[i-1]];
+                if(arr[i-1] <= j) //if value less than curr sum, include curr value and move further (0/1)
+                    dp[i][j] += dp[i-1][j - arr[i-1]];
             }
         }
 
