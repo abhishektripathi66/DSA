@@ -2,7 +2,8 @@ package datastructures.trie;
 
 public class Trie {
     
-    public class TrieNode{
+    //static inner node class, so no reference to outer Trie instance
+    static public class TrieNode{
         TrieNode[] children;
         boolean isEnd;
 
@@ -12,7 +13,13 @@ public class Trie {
         }
     }
 
-    private TrieNode root = new TrieNode();
+    //each trie object will have their own root
+    private TrieNode root;
+
+    public Trie() {
+        root = new TrieNode();
+    }
+
     public static void main(String[] args) {
         
         Trie trie = new Trie();
