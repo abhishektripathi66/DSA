@@ -1,5 +1,37 @@
 package datastructures.trie;
 
+/*
+ * Trie (Prefix Tree) Data Structure
+ *
+ * A Trie is a tree-based data structure used to efficiently store and retrieve
+ * strings, especially for prefix-based operations.
+ * Each node represents a character, and paths from the root to a node form words or prefixes.
+ *
+ * In this class, we have done:
+ *  - Insertion of words
+ *  - Search for complete words
+ *  - Prefix search (startsWith)
+ *  - Deletion of words while preserving shared prefixes
+ *
+ *  - here in this implementation, only lowercase English letters ('a' to 'z') are allowed
+ *
+ * Time Complexity:
+ *  - Insert: O(L)
+ *  - Search: O(L)
+ *  - StartsWith: O(L)
+ *  - Delete: O(L)
+ *    where L is the length of the word or prefix
+ *
+ * Space Complexity:
+ *  - O(N * L) in the worst case, where N is the number of words stored
+ *
+ * Use Cases:
+ *  - Autocomplete systems
+ *  - Dictionary word lookup
+ *  - Prefix-based searching
+ *  - Spell checkers
+ */
+
 public class Trie {
     
     //static inner node class, so no reference to outer Trie instance
@@ -23,16 +55,16 @@ public class Trie {
     public static void main(String[] args) {
         
         Trie trie = new Trie();
-        //lower-case letters only
+        //use lower-case letters only
         trie.insert("abc");
         trie.insert("pqr");
         trie.insert("xyz");
 
-        System.out.println(" "+trie.search("abc"));//true
-        System.out.println(" "+trie.search("abd"));//false
-        System.out.println(" "+trie.startsWith("ab"));//true
+        System.out.println(" "+trie.search("abc")); //true
+        System.out.println(" "+trie.search("abd")); //false
+        System.out.println(" "+trie.startsWith("ab")); //true
         trie.delete("abc");
-        System.out.println(" "+trie.search("abc"));//false
+        System.out.println(" "+trie.search("abc")); //false
     }
 
     //Inserts a word into the trie
