@@ -53,9 +53,22 @@ public class SegmentTreeAnother {
         constructST(arr, tree, 0, n - 1, 0);
 
         // Print segment tree
-        for (int i = 0; i < 2 * n; i++) {
-            System.out.print(tree[i] + " ");
-        }
+        // for (int i = 0; i < 4*n; i++) {
+        //     System.out.print(tree[i] + " ");
+        // }
+
+        int qs = 1, qe = 3; //query
+        int ss = 0, se = n - 1; //segment range in original array
+        int si = 0; //index in segment tree 
+        System.out.println("getSumRec(1, 3) : "+getSumRec(tree, qs, qe, ss, se, si));
+
+        
+        int i = 2; //change made at index 2
+        arr[i] = 5;
+        updateRec(tree, ss, se, i, si, 2);
+        System.out.println("After updating arr[2] to 5 from 3");
+        System.out.println("getSumRec(1, 3) : "+getSumRec(tree, qs, qe, ss, se, si));
+
     }
 
 
@@ -74,7 +87,7 @@ public class SegmentTreeAnother {
 
         //build left and right subtrees
         //left subtree result is stored at index 2*si + 1
-        //right subtree result is stored at index 2*si + 1
+        //right subtree result is stored at index 2*si + 2
         int leftSum = constructST(arr, tree, ss, mid, 2 * si + 1);
         int rightSum = constructST(arr, tree, mid + 1, se, 2 * si + 2);
 
@@ -83,5 +96,53 @@ public class SegmentTreeAnother {
 
         return tree[si];
     }
+
+    //qs = Query Start index
+    //qe = Query End index
+    //ss = Segment Start index (current node range)
+    //se = Segment End index (current node range)
+    //si = Segment Tree index
+    //O(log n) average for all queries
+    private static int getSumRec(int[] tree, int qs, int qe, int ss, int se, int si) {
+
+        // total overlap
+        if (qs <= ss && qe >= se) {
+            return tree[si];
+        }
+
+        // no overlap
+        if ( qs > se || qe < ss) {
+            return 0;
+        }
+
+        // partial overlap
+        int mid = ss + (se - ss) / 2;
+
+        return getSumRec(tree, qs, qe, ss, mid, 2 * si + 1)
+         + getSumRec(tree, qs, qe, mid + 1, se, 2 * si + 2);
+    }
+
+    //i = index in original array that was updated
+    //diff = newValue − oldValue
+    //O(log n) time complexity
+    private static void updateRec(int[] tree, int ss, int se, int i, int si, int diff) {
+
+        //index out of this segment
+        if (i < ss || i > se) {
+            return;
+        }
+
+        //update this node
+        tree[si] += diff;
+
+        //if not a leaf, propagate further
+        if (ss != se) {
+            int mid = ss + (se - ss) / 2;
+
+            updateRec(tree, ss, mid, i, 2 * si + 1, diff);
+            updateRec(tree, mid + 1, se, i, 2 * si + 2, diff);
+        }
+}
+
 
 }
