@@ -1,5 +1,35 @@
 package datastructures.segmenttree;
 
+/*
+ * Segment Tree for Range Query and Point Update
+ *
+ * A Segment Tree is a tree-based data structure used to efficiently answer
+ * range queries (such as sum, minimum, maximum, gcd, etc.) on an array.
+ * It also supports updating individual elements in logarithmic time.
+ *
+ * The tree is built recursively where:
+ *  - Each leaf node represents a single array element
+ *  - Each internal node represents a combination (e.g., sum) of a segment
+ *
+ * This implementation supports:
+ *  - Range Sum Query
+ *  - Point Update using difference propagation
+ *
+ * Time Complexity:
+ *  - Build Tree: O(n)
+ *  - Range Query: O(log n)
+ *  - Point Update: O(log n)
+ *
+ * Auxiliary Space Complexity:
+ *  - O(n) for the segment tree array (commonly allocated as 4*n for safety)
+ *
+ * Example:
+ *   arr = [0, 1, 3, 5, -2, 3]
+ *   Query sum(1, 3) → 9
+ *   Update index 2 to value 5
+ *   Query sum(1, 3) → 11
+ */
+
 //useful for problems involving range queries, such as finding the sum, minimum, maximum, or any other operation over a specific range of elements in an array
 //it is built recursively, until each segment represents a one element
 //fast query and update operations with a time complexity of O(log n)
@@ -63,9 +93,13 @@ public class SegmentTreeAnother {
         System.out.println("getSumRec(1, 3) : "+getSumRec(tree, qs, qe, ss, se, si));
 
         
-        int i = 2; //change made at index 2
-        arr[i] = 5;
-        updateRec(tree, ss, se, i, si, 2);
+    
+        //change made at index i = 2
+        int i = 2;
+        int newVal = 5;
+        int diff = newVal - arr[i]; // compute diff first
+        arr[i] = newVal;
+        updateRec(tree, ss, se, i, si, diff);
         System.out.println("After updating arr[2] to 5 from 3");
         System.out.println("getSumRec(1, 3) : "+getSumRec(tree, qs, qe, ss, se, si));
 
