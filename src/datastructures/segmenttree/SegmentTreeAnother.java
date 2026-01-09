@@ -30,14 +30,18 @@ package datastructures.segmenttree;
  *   Query sum(1, 3) → 11
  */
 
-//useful for problems involving range queries, such as finding the sum, minimum, maximum, or any other operation over a specific range of elements in an array
+
+//rough work comment
+//useful for problems involving range queries, such as finding the sum, minimum, 
+//maximum, or any other operation over a specific range of elements in an array
 //it is built recursively, until each segment represents a one element
 //fast query and update operations with a time complexity of O(log n)
 
 
-//Visual example with array representation
+/*
 
-/* 
+Visual example with array representation
+
 0-based indexing:
 Parent → i
 Left child → 2i + 1
@@ -67,8 +71,8 @@ tree[0] = sum(0..5) //whole range
 └── tree[2] = sum(3..5)
     ├── tree[5] = sum(3..4)
     └── tree[6] = arr[5]
-
 */
+
 public class SegmentTreeAnother {
     public static void main(String[] args) {
         int arr[] = { 0, 1, 3, 5, -2, 3 };
@@ -89,11 +93,15 @@ public class SegmentTreeAnother {
 
         int qs = 1, qe = 3; //query
         int ss = 0, se = n - 1; //segment range in original array
-        int si = 0; //index in segment tree 
+        int si = 0; //index in segment tree
+        
+        //if invlaid query range is passed 
+        if (qs < 0 || qe >= n || qs > qe) {
+            throw new IllegalArgumentException("Invalid query range");
+        }
         System.out.println("getSumRec(1, 3) : "+getSumRec(tree, qs, qe, ss, se, si));
 
         
-    
         //change made at index i = 2
         int i = 2;
         int newVal = 5;
