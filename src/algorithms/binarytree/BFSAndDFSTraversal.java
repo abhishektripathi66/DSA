@@ -30,7 +30,22 @@ public class BFSAndDFSTraversal{
         root.left.left = new Node(25);
         root.right.left = new Node(30);
 
+        System.out.println("BFS Traversal : ");
         bfsTraversal(root);
+        System.out.println();
+
+        System.out.println("DFS Traversals :");
+        System.out.print("Inorder traversal : ");
+        inorderTraversal(root);
+        System.out.println();
+
+        System.out.print("Preorder traversal : ");
+        preorderTraversal(root);
+        System.out.println();
+
+        System.out.print("Postorder traversal : ");
+        postorderTraversal(root);
+        System.out.println();
     }
 
     //Time complexity: O(n), Space Complexity:(w), n = number of nodes, w = max nodes at any level(max width of tree)
@@ -62,5 +77,33 @@ public class BFSAndDFSTraversal{
 
             System.out.println(""); //for new line
         }
+    }
+
+    // Time complexity: O(n), Space complexity: O(height of tree), so average case: O(log n); worst case: O(n)
+    private static void inorderTraversal(Node root){
+        if(root == null)
+            return;
+        //proceec left child first, then curr node, then right child
+        inorderTraversal(root.left);
+        System.out.print(root.key+" ");
+        inorderTraversal(root.right);
+    }
+
+    private static void preorderTraversal(Node root){
+        if(root == null)
+            return;
+        //curr node, left child, right child
+        System.out.print(root.key+" ");
+        preorderTraversal(root.left);
+        preorderTraversal(root.right);
+    }
+
+    private static void postorderTraversal(Node root){
+        if(root == null)
+            return;
+        //left child, right child, curr node
+        postorderTraversal(root.left);
+        postorderTraversal(root.right);
+        System.out.print(root.key+" ");
     }
 }
