@@ -37,6 +37,57 @@ import java.util.Arrays;
  *     Explanation: Either {4, 1} or {3, 1, 1}
  */
 
+/*
+ * Minimum Coin Change Problem
+ *
+ * Problem:
+ *   Given an array of coin denominations and a target sum,
+ *   find the minimum number of coins required to make the sum.
+ *   Each coin can be used an unlimited number of times.
+ *   Return -1 if the sum cannot be formed.
+ *
+ * 1-D dp Approaches:
+ *   1. Memoization (Top-Down):
+ *      Use recursion with caching where dp[s] represents the
+ *      minimum coins needed to form sum 's'.
+ *
+ *   2. Tabulation (Bottom-Up):
+ *      Build a DP array iteratively where dp[s] stores the
+ *      minimum number of coins required to make sum 's'.
+ * 
+ *   3. Memoization / Tabulation using 2-D DP:
+ *      Use a DP table where dp[i][s] represents the minimum
+ *      number of coins required to make sum 's' using coins
+ *      from index i to n-1. 
+ *
+ * Time Complexity:
+ *   - O(n * sum), where n is the number of coins.
+ *
+ * Space Complexity:
+ *   - O(sum) using optimized 1-D DP.
+ *   - O(n * sum) when using a 2-D DP table.
+ *
+ * Example:
+ *   Input:
+ *     coins = {3, 4, 1}, sum = 5
+ *
+ *   Output:
+ *     2  (using coins {4,1} or {3,1,1})
+ */
+
+/*
+ * Note: Here, 1-D dp can be used instead of 2-D dp because index or order of the coins does not matter.
+ *  - 1-D dp is Used in problems like:
+ *       • Coin Change (unlimited coins)
+ *       • Unbounded Knapsack
+ *       • Rod Cutting
+ * 
+ *  - 1-D dp used in problems like:
+ *       • 0/1 Knapsack
+ *       • Subset Sum
+ *       • Coin Change (for explanation/learning)
+ */
+
 public class MinCoins {
     public static void main(String[] args) {
 
@@ -44,6 +95,16 @@ public class MinCoins {
         int sum = 5;
         int n = coins.length;
 
+        System.out.println("In Following implemetations 1-D dp is used:");
+        int[] memo1D = new int[sum + 1];
+        Arrays.fill(memo1D, -1);
+
+        int ans = minCoinsMemo1D(sum, coins, memo1D);
+        System.out.println("Min coins required: "+ (ans == Integer.MAX_VALUE ? -1 : ans));
+        System.out.println("Min coins required: "+minCoinsTabulation1D(coins, sum) );
+
+
+        System.out.println("\nIn Following implemetations 2-D dp is used:");
         int[][] memo = new int[n+1][sum+1];
         for(int[] row : memo)
             Arrays.fill(row, -1);
@@ -66,9 +127,55 @@ public class MinCoins {
         System.out.println("Min coins required: "+minCoinsLoopTab(coins, sum));
     }
 
+    private static int minCoinsMemo1D(int sum, int[] coins, int[] memo) {
+
+        if(sum == 0)
+            return 0;
+
+        if(sum < 0)
+            return Integer.MAX_VALUE;
+
+        if(memo[sum] != -1)
+            return memo[sum];
+
+        int min = Integer.MAX_VALUE;
+
+        for(int coin : coins) {
+            if(coin <= sum) {
+                //if currSum  - currCoin amount is achievable
+                //consider that option and get the minimum value among all options 
+                int sub = minCoinsMemo1D(sum - coin, coins, memo);
+                if(sub != Integer.MAX_VALUE) {
+                    min = Math.min(min, 1 + sub);
+                }
+            }
+        }
+
+        return memo[sum] = min;
+    }
+
+    private static int minCoinsTabulation1D(int[] coins, int sum) {
+
+        int[] dp = new int[sum + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+
+        dp[0] = 0;
+
+        for(int coin : coins) {
+            for(int s = coin; s <= sum; s++) {
+                //if s-coin[i] amount consist valid answer
+                if(dp[s - coin] != Integer.MAX_VALUE) {  
+                    dp[s] = Math.min(dp[s], 1 + dp[s - coin]);
+                }
+            }
+        }
+
+        return dp[sum] == Integer.MAX_VALUE ? -1 : dp[sum];
+    }
+
     private static int minCoinsMemo(int i, int sum, int[] coins, int[][] memo) {
 
-        // base case
+        //base case
         if(sum == 0) 
             return 0;
 
