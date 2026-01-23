@@ -1,5 +1,32 @@
 package algorithms.binarytree;
 
+/*
+ * Height of a Binary Tree
+ *
+ * Given the root of a binary tree, find the height or max depth of the tree.
+ * The height is defined as the number of nodes on the longest
+ * path from the root node down to a leaf node.
+ *
+ * This is a fundamental Tree problem and is commonly solved
+ * using Depth-First Search (DFS) with recursion.
+ *
+ * Time Complexity: O(n)
+ * Space Complexity: O(height of tree) for recursion stack, so in average case: O(log n); worst case: O(n)
+ *
+ * Where:
+ *   n = number of nodes in the tree
+ *   h = height of the tree
+ *
+ * Example:
+ *         5
+ *        / \
+ *      10   20
+ *      /     /
+ *    25     30
+ *
+ *   Height = 3
+ */
+
 public class HeightOfBinaryTree {
 
      static class Node{
@@ -29,6 +56,7 @@ public class HeightOfBinaryTree {
         System.out.println("Height of given binary tree : "+heightOfBinaryTree(root));
     }
 
+    //Time complexity: O(n), Space Complexity: O(height of tree)
     private static int heightOfBinaryTree(Node root){
 
         //return 0 for null
