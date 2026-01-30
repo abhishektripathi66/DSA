@@ -25,12 +25,16 @@ public class BinarySearchTree {
         root.right = new Node(10);
         root.right.left = new Node(7);
 
-        System.out.println("For x=10 : "+searchRec(root, 10));
-        System.out.println("For x=12 : "+searchIterative(root, 12));
+        System.out.println("Search for x=10 : "+searchRec(root, 10));
+        System.out.println("Search for x=12 : "+searchIterative(root, 12));
         
+        System.out.println("\nSearch for x=3 : "+searchIterative(root, 3));
         //reassign the root, otherwise changes won't reflect
         root = insertRec(root, 3);
+        System.out.println("After insertion, search for x=3 : "+searchRec(root, 3));
 
+        root = delNode(root, 10);
+        System.out.println("\nAfter deletion, search for x=10 : "+searchRec(root, 10));
     }
 
     private static boolean searchRec(Node root, int x){
@@ -92,6 +96,45 @@ public class BinarySearchTree {
             parent.right = temp;
 
         return root;
+    }
+
+    //3 cases for a node to be deleted
+    //leaf node -> delete directly
+    //non-leaf node with single child -> replace with child
+    //non-leaf node with two children -> replace with closest higher or lower valued child, have to follow either of the ways everytime
+    private static Node delNode(Node root, int x){
+        if(root == null)
+            return null;
+
+        //first reach towards correct node
+        if(root.key > x)
+            root.left = delNode(root.left, x);
+        else if(root.key < x)
+            root.right = delNode(root.right, x);
+        //then check conditions either leaf, non-leaf one child, or non-leaf two children
+        else{
+            if(root.left == null)
+                return root.right;
+            else if(root.right == null)
+                return root.left;
+            else{
+                Node succ = getSucc(root);
+                root.key = succ.key;
+                root.right = delNode(root.right, succ.key);
+            }
+        }
+        return root;
+    }
+
+    private static Node getSucc(Node root){
+        if(root == null) //won't occur
+            return null;
+        
+        Node curr = root.right; //if chosen left child, then have to go rightside afterwards
+        while(curr!=null && curr.left!=null)
+            curr = curr.left;
+
+        return curr; //minimum higher value compared to root
     }
 }
 
