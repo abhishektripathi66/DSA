@@ -1,5 +1,42 @@
 package algorithms.binarytree;
 
+/*
+ * Binary Search Tree (BST)
+ *
+ * A Binary Search Tree is a binary tree data structure in which:
+ *  - The left subtree of a node contains only keys smaller than the node’s key.
+ *  - The right subtree of a node contains only keys greater than the node’s key.
+ *  - Both left and right subtrees are also binary search trees.
+ *
+ * This structure allows efficient searching, insertion, and deletion operations.
+ *
+ * Supported Operations:
+ *  - Search (recursive and iterative)
+ *  - Insertion (recursive and iterative)
+ *  - Deletion using inorder successor
+ *
+ * Time Complexity:
+ *  - Search:     O(h)
+ *  - Insert:     O(h)
+ *  - Delete:     O(h)
+ *    where h is the height of the tree.
+ *    In the worst case (skewed tree), h = O(n).
+ *    In the best case (balanced tree), h = O(log n).
+ *
+ * Space Complexity:
+ *  - Recursive operations: O(h) due to recursion stack
+ *  - Iterative operations: O(1)
+ *
+ * Example:
+ *           5
+ *          / \
+ *         2   10
+ *        / \  /
+ *       1   3 7
+ *
+ *   Insert(3), Delete(10), Search(7) → true
+ */
+
 public class BinarySearchTree {
 
     static class Node{
@@ -41,15 +78,16 @@ public class BinarySearchTree {
         if(root == null)
             return false;
 
-        if(root.key == x)
+        if(root.key == x) //found value
             return true;
-        else if(root.key < x)
+        else if(root.key < x) //if x is greater than curr node value, go toward right
             return searchRec(root.right, x);
-        else
+        else //else towards left
             return searchRec(root.left, x);
     }
 
     private static boolean searchIterative(Node root, int x){
+        //same as recurisve approach, but using loop instead of recursive calls to go through tree
         while(root != null){
             if(root.key == x)
                 return true;
@@ -65,17 +103,17 @@ public class BinarySearchTree {
         if(root == null)
             return new Node(x);
         
-        if(root.key > x)
+        if(root.key > x) //if x is less than curr node value, then have to perform insertion on left
             root.left = insertRec(root.left, x);
-        else if(root.key < x)
+        else if(root.key < x) //else, on right side
             root.right = insertRec(root.right, x);
 
         return root;
     }
 
     private static Node insertIterative(Node root, int x){
-        Node temp = new Node(x);
-        Node parent = null, curr = root;
+        Node temp = new Node(x); //node to be added
+        Node parent = null, curr = root; //parent to keep track on prev. node
 
         while(curr != null){
             parent = curr;
@@ -88,11 +126,11 @@ public class BinarySearchTree {
                 return root;
         }
 
-        if(parent == null)
+        if(parent == null) //tree was empty
             return temp;
-        else if(parent.key > x)
+        else if(parent.key > x) //if value is less that parent, insert on left
             parent.left = temp;
-        else
+        else //else on right side
             parent.right = temp;
 
         return root;
