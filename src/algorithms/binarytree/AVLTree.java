@@ -14,7 +14,25 @@ public class AVLTree {
     }
 
     public static void main(String[] args) {
+         Node root = null; 
         
+        // Constructing tree given in the above figure 
+        root = insert(root, 10); 
+        root = insert(root, 20); 
+        root = insert(root, 30); 
+        root = insert(root, 40); 
+        root = insert(root, 50); 
+        root = insert(root, 25); 
+        
+        /* The constructed AVL Tree would be 
+                  30 
+                /   \ 
+              20     40 
+             /  \      \ 
+           10   25     50 
+        */
+
+        preOrder(root);
     }
 
 
@@ -78,4 +96,68 @@ public class AVLTree {
         //return new root
         return y;
     }
+
+
+    //balance factor > 1 then tree/substree is left heavy
+    //balance factor < -1 then tree/substree is right heavy
+    //4 Cases for imbalanced tree/substree
+    //Left-Left Case : when new node is inserted into left subtree of left child -> single right rotation
+    //Right-Right Case: when new node is inserted into right substree of right child -> single left rotation
+    //Left-Right Case: new node is inserted into right substree of left child -> left rotation on left child so it becomes Left-Left case so right rotation on current node
+    //Right-Left Case: new node is inserted into left substree of right child -> right rotation on right child then left rotation on current node
+    private static Node insert(Node node, int key){
+
+        //normal BST insertion
+        if(node == null)
+            return new Node(key);
+
+
+        if(key < node.key)
+            node.left = insert(node.left, key);
+        else if(key > node.key)
+            node.right = insert(node.right, key);
+        else //duplicate values are not allowed
+            return node;
+
+        node.height = 1 + Math.max(height(node.left), height(node.right));
+
+        //check balance factor
+        int balance = getBalance(node);
+
+        //check 4 cases to verify and manage if tree/substree is imbalanced
+        //LL Case
+        if(balance > 1 && key < node.left.key){
+             return rightRotate(node);
+        }
+        
+        //RR Case
+        if(balance < -1 && key > node.right.key){
+            return leftRotate(node);
+        }
+        
+        //LR Case
+        if(balance > 1 && key > node.left.key){
+            node.left = leftRotate(node.left);
+            //after left rotation, it becomes LL Case so single right rotation on node 
+            return rightRotate(node);
+        }
+        
+        //RL Case
+        if( balance < -1 && key < node.right.key){
+            node.right = rightRotate(node.right);
+            //RR case occurs, then to handle RR Case left rotation on current node
+            return leftRotate(node);
+        }
+
+        return node;
+    }
+
+    //print preorder traversal
+    private static void preOrder(Node root) { 
+        if (root != null) { 
+            System.out.print(root.key + " "); 
+            preOrder(root.left); 
+            preOrder(root.right); 
+        } 
+    } 
 }
