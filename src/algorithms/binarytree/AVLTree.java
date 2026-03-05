@@ -1,5 +1,56 @@
 package algorithms.binarytree;
 
+/*
+ * AVL Tree
+ *
+ * An AVL Tree is a self-balancing Binary Search Tree (BST) where the height
+ * difference between the left and right subtree of any node (called the
+ * balance factor) is at most 1.
+ *
+ * Balance Factor:
+ *      balance = height(left subtree) - height(right subtree)
+ *
+ * If the balance factor becomes less than -1 or greater than 1 after an
+ * insertion or deletion, the tree performs rotations to restore balance.
+ *
+ * Rotations Used for Rebalancing:
+ *  - Left Rotation (RR case)
+ *  - Right Rotation (LL case)
+ *  - Left-Right Rotation (LR case)
+ *  - Right-Left Rotation (RL case)
+ *
+ * These rotations ensure that the tree remains approximately balanced,
+ * guaranteeing efficient operations.
+ *
+ * Supported Operations:
+ *  - Search
+ *  - Insert (with rebalancing)
+ *  - Delete (with rebalancing)
+ *  - Tree Rotations (Left and Right)
+ *
+ * Time Complexity:
+ *  - Search:     O(log n)
+ *  - Insert:     O(log n)
+ *  - Delete:     O(log n)
+ *
+ * Because the tree remains balanced, the height of an AVL tree is
+ * always O(log n).
+ *
+ * Space Complexity:
+ *  - Recursive operations: O(log n) due to recursion stack
+ *  - Iterative operations: O(1)
+ *
+ * Example AVL Tree:
+ *
+ *           30
+ *          /  \
+ *        20    40
+ *       /  \
+ *     10   25
+ *
+ *   Insert(50) → may cause imbalance → rotation performed
+ */
+
 public class AVLTree {
 
     static class Node{
@@ -23,6 +74,7 @@ public class AVLTree {
         root = insert(root, 40); 
         root = insert(root, 50); 
         root = insert(root, 25); 
+
         
         /* The constructed AVL Tree would be 
                   30 
@@ -33,6 +85,10 @@ public class AVLTree {
         */
 
         preOrder(root);
+        root = delete(root, 20);
+        System.out.println("\nAfter deleting 20:");
+        preOrder(root);
+
     }
 
 
@@ -150,6 +206,73 @@ public class AVLTree {
         }
 
         return node;
+    }
+
+    private static Node delete(Node node, int key){
+        //normal BST deletion
+        if(node == null)
+            return null;
+    
+        if(node.key > key)
+            node.left = delete(node.left, key);
+        else if(node.key < key)
+            node.right = delete(node.right, key);
+        else{
+            if(node.left == null)
+                return node.right; //parent function call will rebalance the height
+            else if(node.right == null)
+                return node.left;
+            else{
+                //replace with either smallest greatest value or greatest smallest value if both children are not null
+                Node succ = getSuccessor(node);
+                node.key = succ.key;
+                node.right = delete(node.right, succ.key);
+
+            }
+        }
+
+        //Same rotaion logic done in insert operation
+        //since deleteion is performed, balance of the child node is considered instead of key comparision
+        //same getBalance method can be used while inserting as well
+        node.height = 1 + Math.max(height(node.left), height(node.right));
+        int balance = getBalance(node);
+
+        //LL Case
+        if(balance > 1 && getBalance(node.left) >= 0){ //left child balance -> 1 or 0
+             return rightRotate(node);
+        }
+        
+        //RR Case
+        if(balance < -1 && getBalance(node.right) <= 0){//right child balance -> 0 or -1
+            return leftRotate(node);
+        }
+        
+        //LR Case
+        if(balance > 1 && getBalance(node.left) < 0){ //left child balance -1
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+        
+        //RL Case
+        if( balance < -1 && getBalance(node.right) > 0){ //right child balance 1
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
+        }
+
+        return node;
+    }
+
+    //method to get inorder successor, inorder predessor can be used as well
+    private static Node getSuccessor(Node node){ 
+        if(node == null)
+            return null;
+
+        Node curr = node.right;
+
+        while(curr!=null && curr.left!=null)
+            curr = curr.left;
+
+        return curr;
     }
 
     //print preorder traversal
