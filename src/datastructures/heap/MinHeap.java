@@ -50,6 +50,24 @@ public class MinHeap {
         }
     }
 
+    //Time complexity: O(logn)
+    //minHeapify can be done if only one violation at current index with correct minHeap order on left and right children
+    private void minHeapify(int i){
+        int lt = left(i), rt = right(i);
+        int smallest = i;
+
+        if(lt<size && arr[lt] < arr[smallest]) //check if left child value is valid or not
+            smallest = lt;
+
+        if(rt<size && arr[rt] < arr[smallest]) //check if right child value is valid or not
+            smallest = rt;
+
+        if(smallest != i){ //if there is violation in order, swap smallest value with current index i
+            swap(i, smallest);
+            minHeapify(smallest); //then perform minHeapify on one of the child
+        }
+    }
+
     private void printHeap() {
         for (int i = 0; i < size; i++) {
             System.out.print(arr[i] + " ");
