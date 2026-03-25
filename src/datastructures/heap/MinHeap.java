@@ -68,6 +68,25 @@ public class MinHeap {
         }
     }
 
+    //Same time complexity as minHeapify
+    private int extractMin(){
+
+        if(size == 0)
+            return -1;
+
+        if(size == 1){
+            size--;
+            return arr[0];
+        }
+
+        //swap the first(min) and last(max) elements
+        //perform minHeapify from 0th index to n-2 before swapped min Value
+        swap(0, size-1);
+        size--;
+        minHeapify(0);
+        return arr[size]; //return min value
+    }
+
     private void printHeap() {
         for (int i = 0; i < size; i++) {
             System.out.print(arr[i] + " ");
