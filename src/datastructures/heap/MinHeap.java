@@ -68,6 +68,17 @@ public class MinHeap {
         }
     }
 
+    //Time complexity: O(nlogn), afterward not every node takes logn time so it is close to O(n)
+    //given a random array, to rearrange its elements to form a minHeap
+    //if inserting elements one by one, then no need to use buildHeap
+    private void buildHeap(){
+
+        //minHeapify from last non-leaf node to root
+        for(int i=(size-2)/2; i>=0; i--){
+            minHeapify(i);
+        }
+    }
+
     //Same time complexity as minHeapify
     private int extractMin(){
 
