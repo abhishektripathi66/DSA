@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package algorithms.sortingalgorithms.bucketsort;
 
 import java.util.Collection;
@@ -56,3 +57,22 @@ public class BucketSort {
     }
 
 }
+=======
+ 
+import java.util.*;
+
+public class Main {
+
+   
+
+
+    public static void main(String[] args) {
+          int[] arr = {2000 , 200 , 50 , 1};
+       
+        System.out.println(Arrays.toString(new DL().bucketSort(arr)));
+        int bucket = (int) Math.ceil(num);
+
+   }
+
+}
+>>>>>>> a317b4c (added bucket sort algorithm)
