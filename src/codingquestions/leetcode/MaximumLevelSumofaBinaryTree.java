@@ -1,119 +1,78 @@
-package codingquestions.leetcode;
+/*
+1161. Maximum Level Sum of a Binary Tree
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Hint
+Given the root of a binary tree, the level of its root is 1, the level of its children is 2, and so on.
 
-/**
- * 1161. Maximum Level Sum of a Binary Tree
- * Solved
- * Medium
- * Topics
- * Companies
- * Hint
- * Given the root of a binary tree, the level of its root is 1, the level of its children is 2, and so on.
- * <p>
- * Return the smallest level x such that the sum of all the values of nodes at level x is maximal.
- **/
+Return the smallest level x such that the sum of all the values of nodes at level x is maximal.
 
-// Using Arrays
+ 
 
-import java.util.HashMap;
-import java.util.Map;
+Example 1:
 
-import codingquestions.leetcode.ds.TreeNode;
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode() {}
- * TreeNode(int val) { this.val = val; }
- * TreeNode(int val, TreeNode left, TreeNode right) {
- * this.val = val;
- * this.left = left;
- * this.right = right;
- * }
- * }
- */
-public class MaximumLevelSumofaBinaryTree {
-    int maxSum;
-    int levels;
-    int[] arrSum = new int[10001];
+Input: root = [1,7,0,7,-8,null,null]
+Output: 2
+Explanation: 
+Level 1 sum = 1.
+Level 2 sum = 7 + 0 = 7.
+Level 3 sum = 7 + -8 = -1.
+So we return the level with the maximum sum which is level 2.
+Example 2:
 
-    public int maxLevelSum(TreeNode root) {
-        maxSum = Integer.MIN_VALUE;
-        levels = 1;
-        int ret = 0;
-        findLevelSum(root, levels);
-        System.out.println(levels);
-        for (int i = 1; i <= levels; i++) {
-            if (arrSum[i] > maxSum) {
-                maxSum = arrSum[i];
-                ret = i;
+Input: root = [989,null,10250,98693,-89388,null,null,null,-32127]
+Output: 2
+ 
 
-            }
+Constraints:
 
-        }
-        return ret;
-    }
-
-    public void findLevelSum(TreeNode root, int level) {
-        if (root == null) return;
-
-        findLevelSum(root.left, level + 1);
-        findLevelSum(root.right, level + 1);
-        arrSum[level] += root.val;
-        levels = Math.max(levels, level);
-
-    }
-
-}
-
-//Using Map
-
+The number of nodes in the tree is in the range [1, 104].
+-105 <= Node.val <= 105
+*/
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode() {}
- * TreeNode(int val) { this.val = val; }
- * TreeNode(int val, TreeNode left, TreeNode right) {
- * this.val = val;
- * this.left = left;
- * this.right = right;
- * }
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
-class MaximumLevelSumofaBinaryTree1 {
-    int maxSum;
-    int levels;
-    Map<Integer, Integer> m = new HashMap<>();
+class Solution {
+    int[] levelSum;
+    int maxLevel;
+    void dfs(TreeNode node, int level){
+        if(node == null)
+            return;
+        
+        maxLevel = Math.max(maxLevel, level);
+        levelSum[level] += node.val;
+
+        dfs(node.left, level + 1);
+        dfs(node.right, level + 1);
+    }
 
     public int maxLevelSum(TreeNode root) {
-        maxSum = Integer.MIN_VALUE;
-        levels = 1;
-        findLevelSum(root, levels);
-
-        for (Map.Entry<Integer, Integer> ma : m.entrySet()) {
-            if (ma.getValue() > maxSum) {
-                maxSum = ma.getValue();
-                levels = ma.getKey();
-            }
-
+        levelSum = new int[10002];
+        maxLevel = 0;
+        dfs(root, 0);
+        int res = 0;
+        
+        for(int i = 0; i <= maxLevel; i++){
+            if(levelSum[i] > levelSum[res])
+                res = i;
         }
-        return levels;
+        
+        return ++res;
     }
-
-    public void findLevelSum(TreeNode root, int level) {
-        if (root == null) return;
-
-        m.put(level, m.getOrDefault(level, 0) + root.val);
-
-        findLevelSum(root.left, level + 1);
-        findLevelSum(root.right, level + 1);
-
-
-    }
-
 }
