@@ -68,7 +68,7 @@ public class MinHeap {
         }
     }
 
-    //Time complexity: O(nlogn), afterward not every node takes logn time so it is close to O(n)
+    //Time complexity: O(n), it may seem O(nlogn) but afterward not every node takes logn time so it is O(n)
     //given a random array, to rearrange its elements to form a minHeap
     //if inserting elements one by one, then no need to use buildHeap
     private void buildHeap(){
@@ -96,6 +96,40 @@ public class MinHeap {
         size--;
         minHeapify(0);
         return arr[size]; //return min value
+    }
+
+    //Time complexity: O(logn)
+    //used in delete operation
+    private void decreaseKey(int i, int x){
+
+        if(i >= size)
+            throw new RuntimeException("Invalid index");
+        if(x > arr[i])
+            throw new RuntimeException("New value is greater than current value");
+
+        arr[i] = x;
+
+        while(i!=0 && arr[parent(i)] > arr[i]){ //check if parent became greater, it is violation and rearrangement needed
+            swap(i, parent(i));
+            i = parent(i);
+        }
+    }
+
+    //rarely used in minHeap 
+    private void increaseKey(int i, int x){
+         if(i >= size)
+            throw new RuntimeException("Invalid index");
+        if(x < arr[i])
+            throw new RuntimeException("New value is smaller than current value");
+
+        arr[i] = x;
+
+        minHeapify(i); //check with children nodes and push it down if needed
+    }
+
+    private void delete(int i){
+        decreaseKey(i, Integer.MIN_VALUE); //assign smallest possible value and take that to root
+        extractMin(); //then call extractMin to remove that value
     }
 
     private void printHeap() {
