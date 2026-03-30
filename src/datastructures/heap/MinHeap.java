@@ -1,5 +1,46 @@
 package datastructures.heap;
 
+/*
+ * Min Heap (Binary Heap)
+ *
+ * A Min Heap is a complete binary tree where the value of each node
+ * is less than or equal to the values of its children.
+ * The minimum element is always present at the root.
+ *
+ * This implementation uses an array to represent the heap:
+ *  - For a node at index i:
+ *      left child  → 2*i + 1
+ *      right child → 2*i + 2
+ *      parent      → (i - 1) / 2
+ *
+ * Core Operations:
+ *  - insert(x): Adds a new element and maintains heap property using heapify-up
+ *  - extractMin(): Removes and returns the minimum element (root) using heapify-down
+ *  - minHeapify(i): Fixes heap property at index i assuming subtrees are already heaps
+ *  - buildHeap(): Converts an arbitrary array into a heap in O(n) time
+ *  - decreaseKey(i, x): Decreases value at index i and moves it upward if needed
+ *  - delete(i): Deletes element at index i using decreaseKey + extractMin
+ *
+ * Time Complexity:
+ *  - insert        → O(log n)
+ *  - extractMin    → O(log n)
+ *  - minHeapify    → O(log n)
+ *  - buildHeap     → O(n)
+ *  - decreaseKey   → O(log n)
+ *  - delete        → O(log n)
+ *
+ * Space Complexity:
+ *  - O(n) for storing heap elements in array
+ *
+ * Example:
+ *   Insert: [10, 20, 30, 40]
+ *   Heap:   [10, 20, 30, 40]  (min element at root)
+ *
+ * Notes:
+ *  - The heap is not a sorted structure; it only guarantees parent ≤ children
+ *  - Efficiently used in priority queues, Dijkstra’s algorithm, and heap sort
+ */
+
 public class MinHeap {
 
     private int[] arr;
@@ -14,7 +55,10 @@ public class MinHeap {
 
 
     public static void main(String[] args) {
-        MinHeap minHeap = new MinHeap(6);
+       
+        MinHeap minHeap = new MinHeap(10);
+
+        //Insert elements
         minHeap.insert(10);
         minHeap.insert(30);
         minHeap.insert(50);
@@ -22,22 +66,51 @@ public class MinHeap {
         minHeap.insert(60);
         minHeap.insert(40);
 
+        System.out.print("Initial Heap: ");
+        minHeap.printHeap();  
+        //expected: [10, 20, 40, 30, 60, 50] (order may vary but must satisfy heap)
+
+        //extract Min
+        System.out.println("Extract Min: " + minHeap.extractMin());
+
+        System.out.print("After extractMin: ");
+        minHeap.printHeap();
+
+        //decrease Key (make a value smaller → should move up)
+        minHeap.decreaseKey(2, 5);
+
+        System.out.print("After decreaseKey (index 2 -> 5): ");
+        minHeap.printHeap();
+
+        //increase Key (make a value larger → should move down)
+        minHeap.increaseKey(1, 100);
+
+        System.out.print("After increaseKey (index 1 -> 100): ");
+        minHeap.printHeap();
+
+        //delete element at index 2
+        minHeap.delete(2);
+
+        System.out.print("After delete index 2: ");
         minHeap.printHeap();
     }
     
+    //left child
     private int left(int i){
         return 2*i + 1;
     }
 
+    //right child 
     private int right(int i){
         return 2*i + 2;
     }
 
+    //parent node
     private int parent(int i){
         return (i-1)/2;
     }
 
-
+    //Time complexity: O(logn)
     private void insert(int x){
         if(size == capacity)
             return;
