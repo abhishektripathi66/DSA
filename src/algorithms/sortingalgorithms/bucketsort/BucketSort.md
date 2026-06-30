@@ -1,3 +1,8 @@
+1. Bucket Sort is a distribution-based sorting algorithm.
+2. Average time complexity is O(n + k) when data is uniformly distributed.
+3. Not an in-place sorting algorithm.
+4. Works best for floating-point numbers.
+5. Performance degrades when data is poorly distributed.
 Overview
 
 Bucket Sort is a distribution-based sorting algoritm that works by breaking up an array into a number of buckets. Then, each bucket is sorted individually using a diffenet sorting algorithm (here it was Insertion Sort). 
