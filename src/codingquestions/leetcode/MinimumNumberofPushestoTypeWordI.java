@@ -1,5 +1,7 @@
 package codingquestions.leetcode;
 /*
+
+new pr update
 3014. Minimum Number of Pushes to Type Word I
 
 Solved
